@@ -14,7 +14,7 @@ const Layout = ({ children }: Props) => {
     return (
         <>
             <NavBar />
-            <main className="flex w-full flex-col justify-center pt-16">
+            <main className="z-0 flex w-full flex-col justify-center pt-16">
                 {children}
             </main>
         </>
