@@ -28,11 +28,9 @@ const HeroComponent = ({
             <div
                 className={`${
                     reverse ? "md:order-first " : " md:justify-center"
-                } flex items-center justify-start md:col-span-5   xl:col-span-4`}
+                } flex items-center justify-start md:col-span-5 xl:col-span-4`}
             >
-                <div className="xl:h-2/3">
-                    <Image src={img} alt="Search Food" />
-                </div>
+                <Image src={img} alt="Search Food" />
             </div>
         </div>
     );
