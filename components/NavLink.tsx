@@ -17,7 +17,7 @@ const NavLink = ({ children, href }: Props) => {
                     pathname === href
                         ? "font-semibold text-green-500"
                         : "hover:text-green-500"
-                } w-max p-4 text-start   transition-all lg:mx-4 lg:p-0 lg:px-2`}
+                } p-4 text-start transition-all lg:mx-2 lg:p-0 lg:px-2`}
             >
                 {children}
             </button>
