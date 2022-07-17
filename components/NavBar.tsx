@@ -8,8 +8,8 @@ const NavBar = () => {
     const [navOpen, setNavOpen] = useState<boolean>(false);
 
     return (
-        <header className="fixed z-50 flex w-full bg-white">
-            <div className="flex w-full justify-between bg-white p-4 lg:px-12">
+        <header className="fixed z-50 flex w-full bg-white/95 backdrop-blur-sm">
+            <div className="flex w-full justify-between  p-4 md:px-12 xl:px-32">
                 <NavLogo />
                 <div className=" lg:flex lg:items-center">
                     <button
