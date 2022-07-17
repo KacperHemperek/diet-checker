@@ -1,6 +1,8 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import NavLink from "./NavLink";
+import NavLinksGroup from "./NavLinksGroup";
+import NavLogo from "./NavLogo";
 
 const NavBar = () => {
     const [navOpen, setNavOpen] = useState<boolean>(false);
@@ -8,12 +10,7 @@ const NavBar = () => {
     return (
         <header className="fixed flex w-full">
             <div className="flex w-full justify-between bg-white p-4 lg:px-12">
-                <Link href="/">
-                    <h1 className="text-xl font-semibold">
-                        <span className="text-green-400 ">Diet </span>
-                        Checker
-                    </h1>
-                </Link>
+                <NavLogo />
                 <div>
                     <button
                         onClick={() => setNavOpen((prev) => !prev)}
@@ -28,9 +25,7 @@ const NavBar = () => {
                         </svg>
                     </button>
                     <div className="hidden lg:block">
-                        <NavLink href="/">Home </NavLink>
-                        <NavLink href="/about">About</NavLink>
-                        <NavLink href="/item">Item</NavLink>
+                        <NavLinksGroup />
                     </div>
                 </div>
             </div>
@@ -40,12 +35,7 @@ const NavBar = () => {
                 }  fixed flex h-screen w-screen flex-col border bg-white transition duration-500 lg:hidden`}
             >
                 <div className="flex w-full justify-between bg-white p-4">
-                    <Link href="/">
-                        <h1 className="text-xl font-semibold">
-                            <span className="text-green-400 ">Diet </span>
-                            Checker
-                        </h1>
-                    </Link>
+                    <NavLogo />
                     <button onClick={() => setNavOpen((prev) => !prev)}>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -57,9 +47,7 @@ const NavBar = () => {
                     </button>
                 </div>
 
-                <NavLink href="/">Home </NavLink>
-                <NavLink href="/about">About</NavLink>
-                <NavLink href="/item">Item</NavLink>
+                <NavLinksGroup />
             </div>
         </header>
     );
