@@ -8,9 +8,16 @@ const NavBar = () => {
     const [navOpen, setNavOpen] = useState<boolean>(false);
 
     return (
-        <header className="fixed z-50 flex w-full bg-white/95 backdrop-blur-sm">
+        <header className="fixed z-50 flex w-full bg-white/95 backdrop-blur">
             <div className="flex w-full justify-between  p-4 md:px-12 xl:px-32">
-                <NavLogo />
+                <div className="flex ">
+                    <NavLogo />
+                    <input
+                        type="text"
+                        className="ml-8 hidden rounded-lg border px-2 py-1 focus:outline-1 focus:outline-green-500 md:block md:min-w-[300px] lg:min-w-[400px]"
+                        placeholder="Search"
+                    />
+                </div>
                 <div className=" lg:flex lg:items-center">
                     <button
                         onClick={() => setNavOpen((prev) => !prev)}
@@ -32,9 +39,9 @@ const NavBar = () => {
             <div
                 className={`${
                     navOpen ? "translate-x-0" : "translate-x-full"
-                }  fixed flex h-screen w-screen flex-col border bg-white transition duration-500 lg:hidden`}
+                }  fixed flex h-screen w-screen flex-col  border bg-white transition duration-500 lg:hidden`}
             >
-                <div className="flex w-full justify-between bg-white p-4">
+                <div className="flex w-full justify-between bg-white p-4 md:px-12 xl:px-32">
                     <NavLogo />
                     <button onClick={() => setNavOpen((prev) => !prev)}>
                         <svg
@@ -46,8 +53,14 @@ const NavBar = () => {
                         </svg>
                     </button>
                 </div>
-
-                <NavLinksGroup />
+                <div className="flex flex-col p-4 md:px-12">
+                    <input
+                        type="text"
+                        className="mb-3 rounded-lg border px-2 py-1 focus:outline-1 focus:outline-green-500 md:hidden "
+                        placeholder="Search"
+                    />
+                    <NavLinksGroup />
+                </div>
             </div>
         </header>
     );
