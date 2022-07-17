@@ -2,34 +2,33 @@ import React from "react";
 import Layout from "../layouts/Layout";
 import Image from "next/image";
 import Link from "next/link";
-import HeroImage from "../public/undraw_diet_ghvw.svg"
+import HeroImage from "../public/undraw_diet_ghvw.svg";
 
 const about = () => {
-    return <Layout>
-        <div className="grid">
-        <div className="mt-12 grid gap-4 p-4 md:grid-cols-2">
-                <div className="items-start justify-start grid gap-4 p-4 md:grid-rows-2 ">
-                    <div className=" pb-16 text-base md:pr-8 md:pb-0 lg:text-xl  text-right justify-self-center">
-                        <h1 className=" mb-4 text-4xl text-green-500 md:mb-6 lg:text-6xl">
+    return (
+        <Layout>
+            <div className="grid">
+                <div className="mt-12 grid gap-8  md:grid-cols-2">
+                    <div className="p-12 text-base md:pr-8  md:pb-0 lg:text-xl">
+                        <h1 className=" mb-4 text-4xl text-green-500 md:mb-6 lg:text-5xl">
                             Perfect Tool To Control And Create Your Own Diet
                         </h1>
                         <p>
                             This easy-to-use application saves you a lot of time
                             <br />
                             by bringing the creation of a diet down
-                            <br/>
-                             to simply adding items to a list.
-                             <br/>
-                             <br/>
-                             You also don't have to count all the 
-                             <br/>
-                             micro and macro elements yourself, we'll do it for you!
+                            <br />
+                            to simply adding items to a list.
+                            <br />
+                            <br />
+                            You also don't have to count all the
+                            <br />
+                            micro and macro elements yourself, we'll do it for
+                            you!
                         </p>
-                       
-                    </div>
-                    <div className="justify-self-end">
-                    <Link href="/about">
-                            <button className="group mr-8 flex items-baseline gap-2 rounded-lg border border-green-500 fill-green-500 px-4 py-1 text-green-500 transition-all hover:bg-green-500 hover:fill-white hover:text-white">
+
+                        <Link href="/about">
+                            <button className="group mt-8 flex items-baseline gap-2 rounded-lg border border-green-500 fill-green-500 px-4 py-1 text-green-500 transition-all hover:bg-green-500 hover:fill-white hover:text-white">
                                 Create Account{" "}
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -41,19 +40,17 @@ const about = () => {
                             </button>
                         </Link>
                     </div>
-                </div>
-                <div className="flex items-start justify-center md:justify-center">
-                    <div className="w-3/4 md:w-3/3">
-                        <Image src={HeroImage} alt="Make Diet" />
+
+                    <div className="flex items-center justify-center md:justify-center">
+                        <div className="w-3/4">
+                            <Image src={HeroImage} alt="Make Diet" />
+                        </div>
                     </div>
                 </div>
+                <div className="flex items-center bg-green-500"></div>
             </div>
-            <div className="bg-green-500 flex items-center">
-                
-            </div>
-        </div>
-        
-    </Layout>;
+        </Layout>
+    );
 };
 
 export default about;
