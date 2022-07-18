@@ -1,16 +1,23 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React, {
     ChangeEvent,
     FormEventHandler,
     SyntheticEvent,
     useState,
 } from "react";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import { setSearchValue } from "../redux/features/searchData";
+import { RootState } from "../redux/store";
 import NavLinksGroup from "./NavLinksGroup";
 import NavLogo from "./NavLogo";
 
 const NavBar = () => {
+    const dispatch = useDispatch();
     const [navOpen, setNavOpen] = useState<boolean>(false);
     const [searchTerm, setSearchTerm] = useState<string>("");
+    const router = useRouter();
 
     const handleSearchInput = (e: ChangeEvent<HTMLInputElement>) => {
         setSearchTerm(e.target.value);
@@ -18,7 +25,8 @@ const NavBar = () => {
 
     const handleSubmit = (e: SyntheticEvent) => {
         e.preventDefault();
-        console.log(searchTerm); 
+        dispatch(setSearchValue(searchTerm));
+        router.push(`/search/${searchTerm}`);
     };
 
     return (
@@ -26,9 +34,7 @@ const NavBar = () => {
             <div className="flex w-full justify-between  p-4 md:px-12 xl:px-32">
                 <div className="flex ">
                     <NavLogo />
-                    {
-
-                    }
+                    {}
                     <form onSubmit={handleSubmit}>
                         <input
                             onChange={handleSearchInput}
