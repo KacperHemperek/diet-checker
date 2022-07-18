@@ -1,22 +1,39 @@
 import Link from "next/link";
-import React, { useState } from "react";
-import NavLink from "./NavLink";
+import React, {
+    ChangeEvent,
+    FormEventHandler,
+    SyntheticEvent,
+    useState,
+} from "react";
 import NavLinksGroup from "./NavLinksGroup";
 import NavLogo from "./NavLogo";
 
 const NavBar = () => {
     const [navOpen, setNavOpen] = useState<boolean>(false);
+    const [searchTerm, setSearchTerm] = useState<string>("");
+
+    const handleSearchInput = (e: ChangeEvent<HTMLInputElement>) => {
+        setSearchTerm(e.target.value);
+    };
+
+    const handleSubmit = (e: SyntheticEvent) => {
+        e.preventDefault();
+        console.log(searchTerm);
+    };
 
     return (
         <header className="fixed z-50 flex w-full bg-white/95 backdrop-blur">
             <div className="flex w-full justify-between  p-4 md:px-12 xl:px-32">
                 <div className="flex ">
                     <NavLogo />
-                    <input
-                        type="text"
-                        className="ml-8 hidden rounded-lg border px-2 py-1 focus:outline-1 focus:outline-green-500 md:block md:min-w-[300px] lg:min-w-[400px]"
-                        placeholder="Search"
-                    />
+                    <form onSubmit={handleSubmit}>
+                        <input
+                            onChange={handleSearchInput}
+                            type="text"
+                            className="ml-8 hidden rounded-lg border px-2 py-1 focus:outline-1 focus:outline-green-500 md:block md:min-w-[300px] lg:min-w-[400px]"
+                            placeholder="Search"
+                        />
+                    </form>
                 </div>
                 <div className=" lg:flex lg:items-center">
                     <button
@@ -54,11 +71,14 @@ const NavBar = () => {
                     </button>
                 </div>
                 <div className="flex flex-col p-4 md:px-12">
-                    <input
-                        type="text"
-                        className="mb-3 rounded-lg border px-2 py-1 focus:outline-1 focus:outline-green-500 md:hidden "
-                        placeholder="Search"
-                    />
+                    <form onSubmit={handleSubmit}>
+                        <input
+                            onChange={handleSearchInput}
+                            type="text"
+                            className="mb-3 rounded-lg border px-2 py-1 focus:outline-1 focus:outline-green-500 md:hidden "
+                            placeholder="Search"
+                        />
+                    </form>
                     <NavLinksGroup />
                 </div>
             </div>
