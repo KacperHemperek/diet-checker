@@ -12,8 +12,6 @@ export default async function handler(
     res: NextApiResponse
 ) {
     try {
-        console.log(process.env.FAT_SECRET_CLIENT_ID);
-        console.log(process.env.FAT_SECRET_CLIENT_SECRET);
         const response = await fetch(
             "https://oauth.fatsecret.com/connect/token",
             {
@@ -21,7 +19,7 @@ export default async function handler(
                     "content-type": "application/x-www-form-urlencoded",
                 },
                 method: "POST",
-                body: `grant_type:client_credentials&client_id=5afd0822cfd346bab5c17403d8d05bed&client_secret=9ca3e7cb5d2a4965995245e31b45ff67&scope=premier`,
+                body: `grant_type=client_credentials&client_id=${process.env.FAT_SECRET_CLIENT_ID}&client_secret=${process.env.FAT_SECRET_CLIENT_SECRET}&scope=basic`,
             }
         );
         console.log(response);
