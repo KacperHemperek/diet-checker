@@ -5,7 +5,7 @@ import AboutHero from "../components/AboutHero";
 import HomepageCards from "../components/HomepageCards";
 import SearchHero from "../components/SearchHero";
 import Layout from "../layouts/Layout";
-import { getAuthAccesToken, updateData } from "../redux/features/authData";
+import { updateData } from "../redux/features/authData";
 
 const Home: NextPage = () => {
     const dispatch = useDispatch();
@@ -17,7 +17,7 @@ const Home: NextPage = () => {
                 const data = await res.json();
 
                 dispatch(updateData(data));
-                dispatch(getAuthAccesToken());
+                
             } catch (error) {
                 console.error(error);
             }

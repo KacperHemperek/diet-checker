@@ -25,21 +25,18 @@ let authSlice = createSlice({
     name: "auth",
     initialState,
     reducers: {
-        getAuthAccesToken: (state) => {
-            console.log({ ...state });
-        },
         updateData: function (state, { payload }: PayloadAction<AccessToken>) {
-            console.log(payload);
             state = {
                 accessToken: payload.access_token,
                 expiresIn: payload.expires_in,
                 scope: payload.scope,
                 tokenType: payload.token_type,
             };
+            console.log({ ...state });
         },
     },
 });
 
-export const { getAuthAccesToken, updateData } = authSlice.actions;
+export const { updateData } = authSlice.actions;
 
 export default authSlice.reducer;
