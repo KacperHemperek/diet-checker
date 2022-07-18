@@ -26,13 +26,10 @@ let authSlice = createSlice({
     initialState,
     reducers: {
         updateData: function (state, { payload }: PayloadAction<AccessToken>) {
-            state = {
-                accessToken: payload.access_token,
-                expiresIn: payload.expires_in,
-                scope: payload.scope,
-                tokenType: payload.token_type,
-            };
-            console.log({ ...state });
+            state.accessToken = payload.access_token;
+            state.expiresIn = payload.expires_in;
+            state.scope = payload.scope;
+            state.tokenType = payload.token_type;
         },
     },
 });

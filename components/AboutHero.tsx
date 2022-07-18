@@ -1,11 +1,13 @@
 import Link from "next/link";
 import React from "react";
+import { useSelector } from "react-redux";
 import HeroImage from "../public/undraw_diet_ghvw.svg";
+import { RootState } from "../redux/store";
 import Card from "./Card";
 import HeroComponent from "./HeroComponent";
 
 const AboutHero = () => {
-    
+    const auth = useSelector((state: RootState) => state.auth);
 
     return (
         <>
@@ -33,7 +35,6 @@ const AboutHero = () => {
                     </button>
                 </Link>
             </HeroComponent>
-            
         </>
     );
 };
