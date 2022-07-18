@@ -20,3 +20,17 @@ a {
     margin: 0;
     box-sizing: border-box;
 }
+
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #22c55e;
+    border-radius: 5px;
+}
