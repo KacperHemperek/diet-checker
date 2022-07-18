@@ -13,7 +13,7 @@ const Home: NextPage = () => {
     useEffect(() => {
         const fetchToken = async () => {
             try {
-                const res = await fetch(`/api/search`);
+                const res = await fetch(`/api/get_token`);
                 const data = await res.json();
 
                 dispatch(updateData(data));
