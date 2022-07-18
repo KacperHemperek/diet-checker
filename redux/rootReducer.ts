@@ -1,7 +1,7 @@
-import authDataReducer from "./features/authData.feature";
+import authReducer from "./features/authData";
 
 const rootReducer = {
-  authData: authDataReducer,
+    auth: authReducer,
 };
 
 export default rootReducer;
