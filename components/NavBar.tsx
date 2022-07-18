@@ -18,7 +18,7 @@ const NavBar = () => {
 
     const handleSubmit = (e: SyntheticEvent) => {
         e.preventDefault();
-        console.log(searchTerm);
+        console.log(searchTerm); 
     };
 
     return (
@@ -26,6 +26,9 @@ const NavBar = () => {
             <div className="flex w-full justify-between  p-4 md:px-12 xl:px-32">
                 <div className="flex ">
                     <NavLogo />
+                    {
+
+                    }
                     <form onSubmit={handleSubmit}>
                         <input
                             onChange={handleSearchInput}
