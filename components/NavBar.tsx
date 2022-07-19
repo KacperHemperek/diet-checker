@@ -4,6 +4,7 @@ import React, {
     ChangeEvent,
     FormEventHandler,
     SyntheticEvent,
+    useRef,
     useState,
 } from "react";
 import { useDispatch } from "react-redux";
@@ -12,6 +13,7 @@ import { setSearchValue } from "../redux/features/searchData";
 import { RootState } from "../redux/store";
 import NavLinksGroup from "./NavLinksGroup";
 import NavLogo from "./NavLogo";
+import SearchBar from "./SearchBar";
 
 const NavBar = () => {
     const dispatch = useDispatch();
@@ -25,8 +27,9 @@ const NavBar = () => {
 
     const handleSubmit = (e: SyntheticEvent) => {
         e.preventDefault();
-        dispatch(setSearchValue(searchTerm));
-        router.push(`/search/${searchTerm}`);
+        console.log(searchTerm);
+        // dispatch(setSearchValue(searchTerm));
+        // router.push(`/search`);
     };
 
     return (
@@ -34,15 +37,13 @@ const NavBar = () => {
             <div className="flex w-full justify-between  p-4 md:px-12 xl:px-32">
                 <div className="flex ">
                     <NavLogo />
-                    {}
-                    <form onSubmit={handleSubmit}>
-                        <input
+                    {!router.pathname.includes("search") && (
+                        <SearchBar
+                            onSubmit={handleSubmit}
                             onChange={handleSearchInput}
-                            type="text"
-                            className="ml-8 hidden rounded-lg border px-2 py-1 focus:outline-1 focus:outline-green-500 md:block md:min-w-[300px] lg:min-w-[400px]"
-                            placeholder="Search"
+                            className="ml-8 hidden min-w-[360px] md:block"
                         />
-                    </form>
+                    )}
                 </div>
                 <div className=" lg:flex lg:items-center">
                     <button
@@ -80,14 +81,13 @@ const NavBar = () => {
                     </button>
                 </div>
                 <div className="flex flex-col p-4 md:px-12">
-                    <form onSubmit={handleSubmit}>
-                        <input
+                    {!router.pathname.includes("search") && (
+                        <SearchBar
+                            onSubmit={handleSubmit}
                             onChange={handleSearchInput}
-                            type="text"
-                            className="mb-3 w-full rounded-lg border px-2 py-1 focus:outline-1 focus:outline-green-500 md:hidden "
-                            placeholder="Search"
+                            className="flex w-full md:hidden"
                         />
-                    </form>
+                    )}
                     <NavLinksGroup />
                 </div>
             </div>

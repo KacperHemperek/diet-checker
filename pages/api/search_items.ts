@@ -1,7 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import Error from "next/error";
-import { useSelector } from "react-redux";
-import { RootState } from "../../redux/store";
 
 export default async function handler(
     req: NextApiRequest,
@@ -9,8 +6,9 @@ export default async function handler(
 ) {
     if (req.method === "POST") {
         try {
+            console.log(req.query.query);
             const response = await fetch(
-                "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch?query=pasta",
+                `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch?query=${req.query.query}`,
                 {
                     headers: {
                         "X-RapidAPI-Key": `${process.env.NEXT_APP_API_KEY}`,
@@ -28,6 +26,6 @@ export default async function handler(
             }
         }
     } else {
-        res.status(401).json({ message: "Wrong method" });
+        res.status(405).json({ message: "Method not allowed" });
     }
 }
