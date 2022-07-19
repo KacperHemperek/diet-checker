@@ -84,7 +84,7 @@ const NavBar = () => {
                         <input
                             onChange={handleSearchInput}
                             type="text"
-                            className="mb-3 rounded-lg border px-2 py-1 focus:outline-1 focus:outline-green-500 md:hidden "
+                            className="mb-3 w-full rounded-lg border px-2 py-1 focus:outline-1 focus:outline-green-500 md:hidden "
                             placeholder="Search"
                         />
                     </form>
