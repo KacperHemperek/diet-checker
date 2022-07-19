@@ -6,15 +6,8 @@ export default async function handler(
 ) {
     if (req.method === "POST") {
         try {
-            console.log(req.query.query);
             const response = await fetch(
-                `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch?query=${req.query.query}`,
-                {
-                    headers: {
-                        "X-RapidAPI-Key": `${process.env.NEXT_APP_API_KEY}`,
-                        "X-RapidAPI-Host": `${process.env.NEXT_APP_API_HOST}`,
-                    },
-                }
+                `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.SPOONACULAR_API_KEY}&query=${req.query.query}`
             );
 
             const data = await response.json();

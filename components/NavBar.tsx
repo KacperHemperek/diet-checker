@@ -27,9 +27,8 @@ const NavBar = () => {
 
     const handleSubmit = (e: SyntheticEvent) => {
         e.preventDefault();
-        console.log(searchTerm);
-        // dispatch(setSearchValue(searchTerm));
-        // router.push(`/search`);
+        dispatch(setSearchValue(searchTerm));
+        router.push(`/search`);
     };
 
     return (
