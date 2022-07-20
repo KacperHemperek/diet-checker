@@ -11,7 +11,15 @@ export default async function handler(
             );
 
             const data = await response.json();
-            res.status(200).json({ ...data });
+            const ids = data.results.map((result: any) => result.id).join(",");
+
+            const bulkResponse = await fetch(
+                `https://api.spoonacular.com/recipes/informationBulk?apiKey=${process.env.SPOONACULAR_API_KEY}&ids=${ids}`
+            );
+
+            const bulkData = await bulkResponse.json();
+            
+            res.status(200).json({ ...bulkData });
         } catch (error: any) {
             console.error(error);
             if (error?.message) {
