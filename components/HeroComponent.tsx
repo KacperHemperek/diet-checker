@@ -17,7 +17,7 @@ const HeroComponent = ({
     return (
         <div
             className={`${
-                dark ? "bg-slate-900 text-white" : ""
+                dark ? "bg-slate-800 text-white" : ""
             }  grid min-h-[50vh] gap-12 p-12 px-4 md:grid-cols-8 md:p-12 lg:min-h-[80vh] xl:px-32`}
         >
             <div className="flex items-center justify-center md:col-span-3  lg:justify-start xl:col-span-4">
