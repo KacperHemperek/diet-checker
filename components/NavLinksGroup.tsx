@@ -8,7 +8,7 @@ const NavLinksGroup = () => {
       <NavLink href="/">Home </NavLink>
       <NavLink href="/about">About</NavLink>
       <NavLink href="/item">Item</NavLink>
-      <LogInButton />
+      
     </>
   );
 };
