@@ -2,7 +2,7 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyA2cqwwcxNb-iZIZiaZrhJPxA-EI4wsyiM",
+    apiKey: process.env.NEXT_APP_FIREBASE_,
     authDomain: "diet-checker-b2156.firebaseapp.com",
     projectId: "diet-checker-b2156",
     storageBucket: "diet-checker-b2156.appspot.com",
