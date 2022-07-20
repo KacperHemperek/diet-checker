@@ -79,7 +79,7 @@ const NavBar = () => {
                         </svg>
                     </button>
                 </div>
-                <div className="flex flex-col p-4 md:px-12">
+                <div className="flex flex-col px-4 pb-4 md:px-12">
                     {!router.pathname.includes("search") && (
                         <SearchBar
                             onSubmit={handleSubmit}

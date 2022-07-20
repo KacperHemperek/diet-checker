@@ -31,9 +31,13 @@ const search = () => {
         if (!isMounted.current) {
             initialSearchValue.current = searchValue;
             isMounted.current = true;
-            fetchSearchResults(searchValue);
+            console.log("render");
+        } else if (!isMounted.current && searchValue !== "") {
+            console.log("render with search value");
+            //fetchSearchResults(searchValue);
         } else if (searchValue !== initialSearchValue.current) {
-            fetchSearchResults(searchValue);
+            console.log("search value changed");
+            //fetchSearchResults(searchValue);
         }
     }, [searchValue]);
 
@@ -50,7 +54,7 @@ const search = () => {
                 <SearchBar
                     onSubmit={handleSubmit}
                     ref={searchRef}
-                    className="w-1/2"
+                    className="w-full md:w-2/3 lg:w-1/2"
                 />
             </div>
         </Layout>
