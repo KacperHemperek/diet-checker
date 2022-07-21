@@ -5,10 +5,10 @@ type Props = {
   mobile?: boolean;
 };
 
-const LogInButton = ({ mobile = false }: Props) => {
+const SignUpButton = ({ mobile = false }: Props) => {
   return mobile ? (
-    <Link href="/login">
-      <button className="mb-4 aspect-square rounded-full border-2 border-green-500 bg-white fill-green-500 p-5">
+    <Link href="/register">
+      <button className="aspect-square rounded-full bg-green-500 fill-white p-5">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 512 512"
@@ -19,12 +19,12 @@ const LogInButton = ({ mobile = false }: Props) => {
       </button>
     </Link>
   ) : (
-    <Link href="/login">
-      <button className="mr-4 rounded-full border-2 border-green-500  bg-white px-4 py-1 text-green-500 transition-all hover:bg-green-500/90 hover:text-white ">
-        Log In
+    <Link href="/register">
+      <button className="rounded-full  bg-green-500  px-4 py-1 text-white transition-all hover:bg-green-500/90  ">
+        Sign Up
       </button>
     </Link>
   );
 };
 
-export default LogInButton;
+export default SignUpButton;
