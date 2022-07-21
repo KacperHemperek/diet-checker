@@ -57,6 +57,7 @@ const NavBar = () => {
                     <div className="hidden lg:flex ">
                         <NavLinksGroup />
                         <LogInButton />
+                        <SignUpButton />
                     </div>
                 </div>
             </div>
@@ -89,7 +90,7 @@ const NavBar = () => {
                         <NavLinksGroup />
                     </div>
                     <div className="w-full text-right">
-                        <LogInButton mobile={true} />
+                        <SignUpButton mobile={true} />
                     </div>
                 </div>
             </div>
