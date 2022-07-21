@@ -25,14 +25,12 @@ const FormInput = ({
         <div className={`${className}  relative pb-8`}>
             <div
                 className={`${
-                    error ? "border-red-500" : "focus-within:border-green-500 "
-                } group flex items-center overflow-hidden rounded-lg border border-r transition `}
+                    error ? "border-red-500" : " focus-within:border-green-500"
+                } group flex items-center overflow-hidden rounded-lg border-2 border-r transition `}
             >
                 <label
                     className={`${
-                        error
-                            ? "bg-red-500 text-white"
-                            : "group-focus-within:bg-green-500 group-focus-within:text-white"
+                        error && "bg-red-500 text-white"
                     } border-r bg-gray-100 px-2 py-1 transition `}
                 >
                     {label}
