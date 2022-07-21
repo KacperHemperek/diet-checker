@@ -1,9 +1,28 @@
 import React from "react";
 import Layout from "../layouts/Layout";
 import { useFormik } from "formik";
-import * as Yup from "yup";
+import * as yup from "yup";
 import FormInput from "../components/FormInput";
-const register = () => {
+
+const login = () => {
+    let schema = yup.object().shape({
+        email: yup
+            .string()
+            .email("Enter correct email address")
+            .required("Email is required"),
+        password: yup
+            .string()
+            .required("No password provided")
+            .matches(
+                /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&_-])[A-Za-z\d@$!#%*?&_-]{8,}$/,
+                "Password is too weak"
+            ),
+        repeatPassword: yup
+            .string()
+            .required("Confirm your password")
+            .oneOf([yup.ref("password"), null], "Passwords must match"),
+    });
+
     const formik = useFormik({
         initialValues: {
             email: "",
@@ -13,62 +32,58 @@ const register = () => {
         onSubmit: (values) => {
             alert(JSON.stringify(values, null, 2));
         },
+        validationSchema: schema,
     });
 
+    console.log({ ...formik });
     return (
         <Layout>
-            <div className="flex min-h-[90vh] items-center justify-center">
+            <div className="mt-12 flex justify-center p-4">
                 <form
+                    className="w-full text-center md:w-1/2"
                     onSubmit={formik.handleSubmit}
-                    className="flex min-w-full flex-col p-6"
                 >
                     <FormInput
                         label="Email"
                         name="email"
-                        placeholder="email@example.com"
+                        type="text"
                         onChange={formik.handleChange}
                         value={formik.values.email}
-                        type="email"
-                        className="mb-8"
+                        error={formik.errors.email}
                     />
-                    <div className="group flex items-center overflow-hidden rounded-lg border border-r transition focus-within:border-green-500 focus-within:outline focus-within:outline-green-500  ">
-                        <label className="border-r bg-gray-100 px-2 py-1 transition ">
-                            Email
-                        </label>
-                        <input
-                            id="email"
-                            name="email"
-                            type="email"
-                            onChange={formik.handleChange}
-                            value={formik.values.email}
-                            placeholder="email@example.com"
-                            className=" h-full w-full px-2 focus:outline-none"
-                        />
-                    </div>
-
-                    <label htmlFor="password">Password</label>
-                    <input
-                        id="password"
+                    <FormInput
+                        label="Password"
                         name="password"
                         type="password"
                         onChange={formik.handleChange}
                         value={formik.values.password}
+                        error={formik.errors.password}
                     />
 
-                    <label htmlFor="repeatPassword">Repeat Password</label>
-                    <input
-                        id="repeatPassword"
+                    <FormInput
+                        label="Confirm "
                         name="repeatPassword"
                         type="password"
                         onChange={formik.handleChange}
                         value={formik.values.repeatPassword}
+                        error={formik.errors.repeatPassword}
                     />
 
-                    <button type="submit">Submit</button>
+                    <button
+                        type="submit"
+                        className={`${
+                            formik.isValid
+                                ? "bg-green-500"
+                                : "cursor-not-allowed bg-green-500/70"
+                        } rounded-full px-4 py-2 text-white`}
+                        disabled={formik.isValid}
+                    >
+                        Sign Up
+                    </button>
                 </form>
             </div>
         </Layout>
     );
 };
 
-export default register;
+export default login;

@@ -33,7 +33,7 @@ const FormInput = ({
                         error
                             ? "border-r-red-500 bg-red-500 text-white"
                             : " group-focus-within:border-r-green-500"
-                    } border-r-2 bg-gray-100 px-2 py-1 transition `}
+                    } border-r-2 bg-gray-100 py-1 px-2  transition `}
                 >
                     {label}
                 </label>
@@ -44,7 +44,7 @@ const FormInput = ({
                     onChange={onChange}
                     value={value}
                     placeholder={placeholder}
-                    className=" h-full w-full px-2 focus:outline-none"
+                    className=" w-full bg-transparent py-1 px-2 autofill:bg-transparent focus:outline-none"
                 />
             </div>
             <span className="absolute text-sm text-red-500">{error}</span>

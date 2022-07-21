@@ -28,13 +28,15 @@ const NavBar = () => {
             <div className="flex w-full justify-between  p-4 md:px-12 xl:px-32">
                 <div className="flex ">
                     <NavLogo />
-                    {!router.pathname.includes("search") && (
-                        <SearchBar
-                            onSubmit={handleSubmit}
-                            onChange={handleSearchInput}
-                            className="ml-8 hidden min-w-[360px] md:block"
-                        />
-                    )}
+                    {!router.pathname.includes("search") &&
+                        !router.pathname.includes("login") &&
+                        !router.pathname.includes("register") && (
+                            <SearchBar
+                                onSubmit={handleSubmit}
+                                onChange={handleSearchInput}
+                                className="ml-8 hidden min-w-[360px] md:block"
+                            />
+                        )}
                 </div>
                 <div className=" lg:flex lg:items-center">
                     <button
