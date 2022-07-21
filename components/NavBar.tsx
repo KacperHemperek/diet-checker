@@ -13,6 +13,10 @@ const NavBar = () => {
     const [searchTerm, setSearchTerm] = useState<string>("");
     const router = useRouter();
 
+    const showSearchBar = ["search", "login", "register"].some((el: string) =>
+        router.pathname.includes(el)
+    );
+
     const handleSearchInput = (e: ChangeEvent<HTMLInputElement>) => {
         setSearchTerm(e.target.value);
     };
@@ -28,15 +32,13 @@ const NavBar = () => {
             <div className="flex w-full justify-between  p-4 md:px-12 xl:px-32">
                 <div className="flex ">
                     <NavLogo />
-                    {!router.pathname.includes("search") &&
-                        !router.pathname.includes("login") &&
-                        !router.pathname.includes("register") && (
-                            <SearchBar
-                                onSubmit={handleSubmit}
-                                onChange={handleSearchInput}
-                                className="ml-8 hidden min-w-[360px] md:block"
-                            />
-                        )}
+                    {!showSearchBar && (
+                        <SearchBar
+                            onSubmit={handleSubmit}
+                            onChange={handleSearchInput}
+                            className="ml-8 hidden min-w-[360px] md:block"
+                        />
+                    )}
                 </div>
                 <div className=" lg:flex lg:items-center">
                     <button
@@ -76,7 +78,7 @@ const NavBar = () => {
                 </div>
                 <div className="flex h-full flex-col justify-between p-4 md:px-12">
                     <div className="flex flex-col">
-                        {!router.pathname.includes("search") && (
+                        {showSearchBar && (
                             <SearchBar
                                 onSubmit={handleSubmit}
                                 onChange={handleSearchInput}
