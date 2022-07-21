@@ -5,7 +5,7 @@ const NavLogo = () => {
     return (
         <Link href="/">
             <button className="text-xl font-semibold lg:text-2xl">
-                <span className="text-green-400 ">Diet </span>
+                <span className="text-green-500 ">Diet </span>
                 Checker
             </button>
         </Link>
