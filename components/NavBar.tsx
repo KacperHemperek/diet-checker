@@ -6,6 +6,7 @@ import LogInButton from "./LogInButton";
 import NavLinksGroup from "./NavLinksGroup";
 import NavLogo from "./NavLogo";
 import SearchBar from "./SearchBar";
+import SignUpButton from "./SignUpButton";
 
 const NavBar = () => {
     const dispatch = useDispatch();
