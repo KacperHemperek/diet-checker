@@ -31,13 +31,13 @@ const NavBar = () => {
     return (
         <header className="fixed z-50 flex w-full bg-white/95 backdrop-blur">
             <div className="flex w-full justify-between  p-4 md:px-12 xl:px-32">
-                <div className="flex ">
+                <div className="flex">
                     <NavLogo />
                     {!doNotShowSearchBar && (
                         <SearchBar
                             onSubmit={handleSubmit}
                             onChange={handleSearchInput}
-                            className="ml-8 hidden min-w-[360px] md:block"
+                            className="ml-8 hidden md:block md:min-w-[300px] lg:min-w-[240px] xl:min-w-[360px]"
                         />
                     )}
                 </div>
@@ -80,11 +80,11 @@ const NavBar = () => {
                 </div>
                 <div className="flex h-full flex-col justify-between p-4 md:px-12">
                     <div className="flex flex-col">
-                        {doNotShowSearchBar && (
+                        {!doNotShowSearchBar && (
                             <SearchBar
                                 onSubmit={handleSubmit}
                                 onChange={handleSearchInput}
-                                className="flex w-full md:hidden"
+                                className="mb-6 flex w-full md:hidden"
                             />
                         )}
                         <NavLinksGroup />
