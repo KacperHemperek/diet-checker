@@ -38,40 +38,47 @@ const login = () => {
     console.log({ ...formik });
     return (
         <Layout>
-            <form className="p-4" onSubmit={formik.handleSubmit}>
-                <FormInput
-                    label="Email"
-                    name="email"
-                    type="email"
-                    onChange={formik.handleChange}
-                    value={formik.values.email}
-                    error={formik.errors.email}
-                />
-                <FormInput
-                    label="Password"
-                    name="password"
-                    type="password"
-                    onChange={formik.handleChange}
-                    value={formik.values.password}
-                    error={formik.errors.password}
-                />
+            <div className="p-4">
+                <form className="" onSubmit={formik.handleSubmit}>
+                    <FormInput
+                        label="Email"
+                        name="email"
+                        type="text"
+                        onChange={formik.handleChange}
+                        value={formik.values.email}
+                        error={formik.errors.email}
+                    />
+                    <FormInput
+                        label="Password"
+                        name="password"
+                        type="password"
+                        onChange={formik.handleChange}
+                        value={formik.values.password}
+                        error={formik.errors.password}
+                    />
 
-                <FormInput
-                    label="Confirm "
-                    name="repeatPassword"
-                    type="password"
-                    onChange={formik.handleChange}
-                    value={formik.values.repeatPassword}
-                    error={formik.errors.repeatPassword}
-                />
+                    <FormInput
+                        label="Confirm "
+                        name="repeatPassword"
+                        type="password"
+                        onChange={formik.handleChange}
+                        value={formik.values.repeatPassword}
+                        error={formik.errors.repeatPassword}
+                    />
 
-                <button
-                    type="submit"
-                    className="rounded-full bg-green-500 px-4 py-2 text-white"
-                >
-                    Submit
-                </button>
-            </form>
+                    <button
+                        type="submit"
+                        className={`${
+                            formik.isValid
+                                ? "bg-green-500"
+                                : "cursor-not-allowed bg-green-500/70"
+                        } rounded-full px-4 py-2 text-white`}
+                        disabled={formik.isValid}
+                    >
+                        Sign Up
+                    </button>
+                </form>
+            </div>
         </Layout>
     );
 };

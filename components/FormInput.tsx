@@ -22,7 +22,7 @@ const FormInput = ({
     error,
 }: Props) => {
     return (
-        <div className={`${className}  relative pb-8`}>
+        <div className={`${className} relative pb-8`}>
             <div
                 className={`${
                     error ? "border-red-500" : " focus-within:border-green-500"
