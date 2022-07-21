@@ -1,12 +1,12 @@
 import React, { SyntheticEvent, useRef } from "react";
 import { useSelector } from "react-redux";
-import Layout from "../../layouts/Layout";
-import { RootState } from "../../redux/store";
+import Layout from "../layouts/Layout";
+import { RootState } from "../redux/store";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useRouter } from "next/router";
-import SearchBar from "../../components/SearchBar";
-import { setSearchValue } from "../../redux/features/searchData";
+import SearchBar from "../components/SearchBar";
+import { setSearchValue } from "../redux/features/searchData";
 
 const search = () => {
     const searchValue = useSelector((state: RootState) => state.search.value);
