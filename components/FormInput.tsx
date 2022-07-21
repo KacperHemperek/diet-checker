@@ -30,8 +30,10 @@ const FormInput = ({
             >
                 <label
                     className={`${
-                        error && "bg-red-500 text-white"
-                    } border-r bg-gray-100 px-2 py-1 transition `}
+                        error
+                            ? "bg-red-500 text-white"
+                            : " group-focus-within:border-r-green-500"
+                    } border-r-2 bg-gray-100 px-2 py-1 transition `}
                 >
                     {label}
                 </label>
