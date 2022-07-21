@@ -11,7 +11,7 @@ const CustomFormWrapper = ({ children, onSubmit, description }: Props) => {
         <form
             className={`${
                 description ? "lg:w-4/5 xl:w-7/12" : "lg:w-1/2 xl:w-1/4"
-            } flex w-full md:w-3/5 `}
+            } mb-8 flex w-full md:mb-0 md:w-3/5`}
             onSubmit={onSubmit}
         >
             {description && (
