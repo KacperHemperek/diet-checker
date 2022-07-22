@@ -5,8 +5,8 @@ const NavLinksGroup = () => {
   return (
     <>
       <NavLink href="/">Home </NavLink>
+      <NavLink href="/search">Search </NavLink>
       <NavLink href="/about">About</NavLink>
-      <NavLink href="/item">Item</NavLink>
     </>
   );
 };

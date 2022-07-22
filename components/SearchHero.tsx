@@ -11,7 +11,7 @@ const SearchHero = () => {
       </h1>
       <p>
         Find your new favourite products out of thousands of items on our site,{" "}
-        <span className="text-green-500 underline">completly free</span>
+        <span className="text-green-500">completly free</span>
       </p>
       <Link href="/search">
         <button className="group mt-6 flex items-baseline gap-2 rounded-lg border border-green-500 fill-green-500 px-4 py-1 text-green-500 transition-all hover:bg-green-500 hover:fill-white hover:text-white">
