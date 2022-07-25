@@ -12,11 +12,12 @@ import { createUserWithEmailAndPassword } from "@firebase/auth";
 import {useDispatch, useSelector} from "react-redux";
 import {RootState} from "../redux/store";
 import {setRegistrationError, setUser} from "../redux/features/userData";
+import {useRouter} from "next/router";
 
 const Register = () => {
   const dispatch = useDispatch();
   const userError = useSelector((state:RootState) => state.user.registerError)
-
+  const router = useRouter();
 
   let schema = yup.object().shape({
     email: yup
@@ -51,8 +52,11 @@ const Register = () => {
         );
         dispatch(setUser(userCred.user))
         dispatch(setRegistrationError(""))
+        await router.push("/")
       } catch (e: any) {
         console.log(e.code);
+        values.password = "";
+        values.repeatPassword = "";
         dispatch(setRegistrationError(e.code));
       }
 
