@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="fix: not needed additional state updates">
+    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="feat: add header to login form">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/NavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/NavBar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/SignUpButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SignUpButton.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redux/features/userData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/redux/features/userData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/register.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +72,7 @@
       <workItem from="1658747404198" duration="102000" />
       <workItem from="1658757220935" duration="2722000" />
       <workItem from="1658761226534" duration="4468000" />
-      <workItem from="1658768168358" duration="703000" />
+      <workItem from="1658768168358" duration="1102000" />
     </task>
     <task id="LOCAL-00001" summary="fix: changed button to div to prevent focusing">
       <created>1658695165120</created>
@@ -181,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658767982655</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="feat: add header to login form">
+      <created>1658768904867</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1658768904867</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,7 +220,8 @@
     <MESSAGE value="feat: add auth listener on root component and make it possible to log out" />
     <MESSAGE value="fix: user is set more than once on login or register" />
     <MESSAGE value="fix: not needed additional state updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: not needed additional state updates" />
+    <MESSAGE value="feat: add header to login form" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add header to login form" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -183,9 +183,9 @@ const Register = () => {
           <p className="text-sm">
             If you already have an account you can{" "}
             <Link href="/login">
-              <span className=" cursor-pointer whitespace-nowrap text-green-500 underline hover:text-green-400">
+              <a className="whitespace-nowrap text-green-500 underline hover:text-green-400">
                 log in here
-              </span>
+              </a>
             </Link>
           </p>
         </CustomFormWrapper>

@@ -78,7 +78,15 @@ const Login = () => {
             onChange={formik.handleChange}
             value={formik.values.password}
           />
-
+          <p className="mb-8 text-sm">
+            {/*chnage login to remember password page*/}
+            Forgot your password?{" "}
+            <Link href="/login">
+              <a className="text-green-500 underline hover:text-green-400">
+                Remember it here
+              </a>
+            </Link>
+          </p>
           {userError && (
             <p className="mb-6 w-full rounded-lg border border-red-500 bg-red-200 p-2 text-center text-red-500 first-letter:uppercase">
               {userError}
@@ -95,9 +103,9 @@ const Login = () => {
           <p className="text-sm">
             If you don&apos;t have an account you can{" "}
             <Link href="/register">
-              <span className=" cursor-pointer whitespace-nowrap text-green-500 underline hover:text-green-400">
+              <a className=" cursor-pointer whitespace-nowrap text-green-500 underline hover:text-green-400">
                 sign up here
-              </span>
+              </a>
             </Link>
           </p>
         </CustomFormWrapper>
