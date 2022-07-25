@@ -70,7 +70,7 @@ const Register = () => {
 
   const benefits = [
     "search for your favourite food products",
-    "find awesome recipies",
+    "find awesome recipes",
     "keep your nutrients in check",
     "control your daily caloric intake",
   ];
