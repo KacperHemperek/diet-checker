@@ -56,6 +56,14 @@ const Login = () => {
           onSubmit={formik.handleSubmit}
           description={description}
         >
+          <div className="flex flex-col lg:hidden">
+            <h1 className=" mb-4 text-xl font-semibold">
+              <span className="text-green-500">Welcome</span> Back!
+            </h1>
+            <p className="mb-8">
+              Log in to access your personalised diet plans.{" "}
+            </p>
+          </div>
           <FormInput
             label="Email"
             name="email"

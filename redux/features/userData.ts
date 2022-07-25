@@ -28,7 +28,6 @@ const userData = createSlice({
         state.verified = payload.emailVerified;
         state.uid = payload.uid;
       }
-      console.log({ payload });
     },
     clearUserInfo: (state: UserSlice) => {
       state.email = "";
