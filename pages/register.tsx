@@ -9,14 +9,14 @@ import Image from "next/image";
 import descImg from "../public/sign_up_form_img.svg";
 import { auth } from "../utils/firebase.utils";
 import { createUserWithEmailAndPassword } from "@firebase/auth";
-import {useDispatch, useSelector} from "react-redux";
-import {RootState} from "../redux/store";
-import {setRegistrationError, setUser} from "../redux/features/userData";
-import {useRouter} from "next/router";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../redux/store";
+import { setRegistrationError } from "../redux/features/userData";
+import { useRouter } from "next/router";
 
 const Register = () => {
   const dispatch = useDispatch();
-  const userError = useSelector((state:RootState) => state.user.registerError)
+  const userError = useSelector((state: RootState) => state.user.registerError);
   const router = useRouter();
 
   let schema = yup.object().shape({
@@ -45,21 +45,19 @@ const Register = () => {
     },
     onSubmit: async (values) => {
       try {
-        const userCred = await createUserWithEmailAndPassword(
+        await createUserWithEmailAndPassword(
           auth,
           values.email,
           values.password
         );
-        dispatch(setUser(userCred.user))
-        dispatch(setRegistrationError(""))
-        await router.push("/")
+        dispatch(setRegistrationError(""));
+        await router.push("/");
       } catch (e: any) {
-        console.log(e.code)
-        values.password = ""
-        values.repeatPassword = ""
-        dispatch(setRegistrationError(e.code))
+        console.log(e.code);
+        values.password = "";
+        values.repeatPassword = "";
+        dispatch(setRegistrationError(e.code));
       }
-
     },
     validationSchema: schema,
   });
@@ -148,11 +146,11 @@ const Register = () => {
             error={formik.errors.repeatPassword}
           />
 
-          { userError && (
-            <p className="w-full first-letter:uppercase text-center p-2 mb-6 bg-red-200 border text-red-500 border-red-500 rounded-lg">
+          {userError && (
+            <p className="mb-6 w-full rounded-lg border border-red-500 bg-red-200 p-2 text-center text-red-500 first-letter:uppercase">
               {userError}
-            </p>)
-          }
+            </p>
+          )}
 
           <p className="mb-2 text-sm">Your password must contain: </p>
           <ul className="ml-2 mb-6 fill-green-500 text-sm">

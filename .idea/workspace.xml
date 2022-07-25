@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="feat: add auth listener on root component and make it possible to log out">
-      <change afterPath="$PROJECT_DIR$/components/AppWrapper.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/CustomButton.tsx" afterDir="false" />
+    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="fix: user is set more than once on login or register">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/NavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/NavBar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/NavLinksGroup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/NavLinksGroup.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redux/features/userData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/redux/features/userData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/register.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +71,7 @@
       <workItem from="1658738610157" duration="2986000" />
       <workItem from="1658747404198" duration="102000" />
       <workItem from="1658757220935" duration="2722000" />
-      <workItem from="1658761226534" duration="3050000" />
+      <workItem from="1658761226534" duration="3172000" />
     </task>
     <task id="LOCAL-00001" summary="fix: changed button to div to prevent focusing">
       <created>1658695165120</created>
@@ -161,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658762861489</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="feat: add auth listener on root component and make it possible to log out">
+      <created>1658764313968</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1658764313968</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,7 +196,8 @@
     <MESSAGE value="fix: login error and registration error are the same" />
     <MESSAGE value="chore: minor changes" />
     <MESSAGE value="feat: add auth listener on root component and make it possible to log out" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add auth listener on root component and make it possible to log out" />
+    <MESSAGE value="fix: user is set more than once on login or register" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: user is set more than once on login or register" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

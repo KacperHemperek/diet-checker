@@ -9,7 +9,7 @@ import Image from "next/image";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../utils/firebase.utils";
 import { useRouter } from "next/router";
-import { setLoginError, setUser } from "../redux/features/userData";
+import { setLoginError } from "../redux/features/userData";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../redux/store";
 
@@ -24,12 +24,7 @@ const Login = () => {
     },
     onSubmit: async (values) => {
       try {
-        const userCred = await signInWithEmailAndPassword(
-          auth,
-          values.email,
-          values.password
-        );
-        dispatch(setUser(userCred.user));
+        await signInWithEmailAndPassword(auth, values.email, values.password);
         dispatch(setLoginError(""));
         await router.push("/");
       } catch (e: any) {
