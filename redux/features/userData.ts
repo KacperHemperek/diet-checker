@@ -6,6 +6,7 @@ export interface UserSlice {
   email: string
   verified: boolean
   uid: string
+  loginError: string
 }
 
 const initialState: UserSlice = {
@@ -13,6 +14,7 @@ const initialState: UserSlice = {
   email:"",
   verified: false,
   uid: "",
+  loginError: ""
 };
 
 const userData = createSlice({
@@ -27,10 +29,13 @@ const userData = createSlice({
     },
     setRegistrationError: (state, {payload}:PayloadAction<string>) => {
       state.registerError = simplifyError(payload);
+    },
+    setLoginError: (state:UserSlice, {payload}:PayloadAction<string>) => {
+      state.loginError = simplifyError(payload)
     }
   },
 });
 
-export const {setUser, setRegistrationError} = userData.actions;
+export const {setUser, setRegistrationError, setLoginError} = userData.actions;
 
 export default userData.reducer;

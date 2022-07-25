@@ -9,13 +9,13 @@ import Image from "next/image";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../utils/firebase.utils";
 import { useRouter } from "next/router";
-import { setRegistrationError, setUser } from "../redux/features/userData";
+import { setLoginError, setUser } from "../redux/features/userData";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../redux/store";
 
 const Login = () => {
   const dispatch = useDispatch();
-  const userError = useSelector((state: RootState) => state.user.registerError);
+  const userError = useSelector((state: RootState) => state.user.loginError);
   const router = useRouter();
   const formik = useFormik({
     initialValues: {
@@ -30,12 +30,12 @@ const Login = () => {
           values.password
         );
         dispatch(setUser(userCred.user));
-        dispatch(setRegistrationError(""));
+        dispatch(setLoginError(""));
         await router.push("/");
       } catch (e: any) {
         console.log(e.code);
         values.password = "";
-        dispatch(setRegistrationError(e.code));
+        dispatch(setLoginError(e.code));
       }
     },
   });
