@@ -54,10 +54,10 @@ const Register = () => {
         dispatch(setRegistrationError(""))
         await router.push("/")
       } catch (e: any) {
-        console.log(e.code);
-        values.password = "";
-        values.repeatPassword = "";
-        dispatch(setRegistrationError(e.code));
+        console.log(e.code)
+        values.password = ""
+        values.repeatPassword = ""
+        dispatch(setRegistrationError(e.code))
       }
 
     },
@@ -139,7 +139,6 @@ const Register = () => {
             value={formik.values.password}
             error={formik.errors.password}
           />
-
           <FormInput
             label="Confirm"
             name="repeatPassword"
