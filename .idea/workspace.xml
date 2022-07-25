@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="feat: add header to login form">
+    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="feat: change spans to anchor tags, add link to remember password page &#10;&#10;todo: change remember password link, so it goes to remember password page, add password page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/register.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/NavLinksGroup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/NavLinksGroup.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/account.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/account/[id].tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +43,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kacpe\Desktop\Projekty\diet-checker\pages\account" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="dev" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
@@ -72,7 +77,7 @@
       <workItem from="1658747404198" duration="102000" />
       <workItem from="1658757220935" duration="2722000" />
       <workItem from="1658761226534" duration="4468000" />
-      <workItem from="1658768168358" duration="1102000" />
+      <workItem from="1658768168358" duration="3120000" />
     </task>
     <task id="LOCAL-00001" summary="fix: changed button to div to prevent focusing">
       <created>1658695165120</created>
@@ -186,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658768904867</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="feat: change spans to anchor tags, add link to remember password page &#10;&#10;todo: change remember password link, so it goes to remember password page, add password page">
+      <created>1658769429261</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1658769429261</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,7 +233,8 @@
     <MESSAGE value="fix: user is set more than once on login or register" />
     <MESSAGE value="fix: not needed additional state updates" />
     <MESSAGE value="feat: add header to login form" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add header to login form" />
+    <MESSAGE value="feat: change spans to anchor tags, add link to remember password page &#10;&#10;todo: change remember password link, so it goes to remember password page, add password page" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: change spans to anchor tags, add link to remember password page &#10;&#10;todo: change remember password link, so it goes to remember password page, add password page" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

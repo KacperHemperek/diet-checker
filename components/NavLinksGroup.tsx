@@ -11,7 +11,7 @@ const NavLinksGroup = () => {
       <NavLink href="/">Home </NavLink>
       <NavLink href="/search">Search </NavLink>
       <NavLink href="/about">About</NavLink>
-      {uid && <NavLink href="/account">Account</NavLink>}
+      {uid && <NavLink href={`/account/${uid}`}>Account</NavLink>}
     </>
   );
 };
