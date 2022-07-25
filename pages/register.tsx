@@ -11,7 +11,7 @@ import { auth } from "../utils/firebase.utils";
 import { createUserWithEmailAndPassword } from "@firebase/auth";
 import {useDispatch, useSelector} from "react-redux";
 import {RootState} from "../redux/store";
-import {setRegistrationError} from "../redux/features/userData";
+import {setRegistrationError, setUser} from "../redux/features/userData";
 
 const Register = () => {
   const dispatch = useDispatch();
@@ -49,13 +49,13 @@ const Register = () => {
           values.email,
           values.password
         );
-
-        console.log(userCred);
+        dispatch(setUser(userCred.user))
+        dispatch(setRegistrationError(""))
       } catch (e: any) {
         console.log(e.code);
         dispatch(setRegistrationError(e.code));
       }
-      alert(JSON.stringify(values, null, 2));
+
     },
     validationSchema: schema,
   });
