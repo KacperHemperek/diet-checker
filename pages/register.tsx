@@ -7,8 +7,10 @@ import CustomFormWrapper from "../components/CustomFormWrapper";
 import Link from "next/link";
 import Image from "next/image";
 import descImg from "../public/sign_up_form_img.svg";
+import { auth } from "../utils/firebase.utils";
+import { createUserWithEmailAndPassword } from "@firebase/auth";
 
-const login = () => {
+const Register = () => {
   let schema = yup.object().shape({
     email: yup
       .string()
@@ -33,7 +35,18 @@ const login = () => {
       password: "",
       repeatPassword: "",
     },
-    onSubmit: (values) => {
+    onSubmit: async (values) => {
+      try {
+        const userCred = await createUserWithEmailAndPassword(
+          auth,
+          values.email,
+          values.password
+        );
+
+        console.log(userCred);
+      } catch (e: any) {
+        console.log(e.code);
+      }
       alert(JSON.stringify(values, null, 2));
     },
     validationSchema: schema,
@@ -67,8 +80,11 @@ const login = () => {
         <span className="font-semibold text-green-500">Main</span> features:{" "}
       </h2>
       <ul className="mb-8 ml-2">
-        {benefits.map((item) => (
-          <li className="mb-1 flex items-baseline gap-2 fill-green-500">
+        {benefits.map((item, index) => (
+          <li
+            className="mb-1 flex items-baseline gap-2 fill-green-500"
+            key={index}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 448 512"
@@ -82,7 +98,7 @@ const login = () => {
       </ul>
       <div className="flex w-full ">
         <div className="w-full xl:w-3/4">
-          <Image src={descImg} />
+          <Image src={descImg} alt="register image" />
         </div>
       </div>
     </div>
@@ -113,7 +129,7 @@ const login = () => {
           />
 
           <FormInput
-            label="Confirm "
+            label="Confirm"
             name="repeatPassword"
             type="password"
             onChange={formik.handleChange}
@@ -123,8 +139,8 @@ const login = () => {
 
           <p className="mb-2 text-sm">Your password must contain: </p>
           <ul className="ml-2 mb-6 fill-green-500 text-sm">
-            {passwordRules.map((rule) => (
-              <li className="flex items-baseline gap-2">
+            {passwordRules.map((rule, index) => (
+              <li className="flex items-baseline gap-2" key={index}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 448 512"
@@ -163,4 +179,4 @@ const login = () => {
   );
 };
 
-export default login;
+export default Register;

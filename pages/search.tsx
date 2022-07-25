@@ -10,7 +10,7 @@ import Image from "next/image";
 import descImg from "../public/search_page_img.svg";
 import SearchBarWithAdvanced from "../components/SearchBarWithAdvanced";
 
-const search = () => {
+const Search = () => {
   const searchValue = useSelector((state: RootState) => state.search.value);
   const dispatch = useDispatch();
   const isMounted = useRef<boolean>(false);
@@ -53,7 +53,7 @@ const search = () => {
   return (
     <Layout>
       <div className="mx-auto w-1/2  md:w-3/12 lg:w-2/12">
-        <Image src={descImg} />
+        <Image src={descImg} alt="search image" />
       </div>
       <div className="flex flex-col items-center px-4 py-12 md:px-12 lg:px-32">
         <SearchBarWithAdvanced
@@ -66,4 +66,4 @@ const search = () => {
   );
 };
 
-export default search;
+export default Search;

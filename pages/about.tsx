@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../layouts/Layout";
 
 
-const about = () => {
+const About = () => {
   return (
     <Layout>
       <div className="p-10">
@@ -12,4 +12,4 @@ const about = () => {
   );
 };
 
-export default about;
+export default About;

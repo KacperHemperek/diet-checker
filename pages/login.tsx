@@ -7,7 +7,7 @@ import Link from "next/link";
 import descImg from "../public/login_form_img.svg";
 import Image from "next/image";
 
-const login = () => {
+const Login = () => {
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -26,7 +26,7 @@ const login = () => {
       <p className="mb-4">Log in to access your personalised diet plans. </p>
       <div className="flex w-full ">
         <div className="w-full">
-          <Image src={descImg} />
+          <Image src={descImg} alt="register page image"/>
         </div>
       </div>
     </div>
@@ -61,7 +61,7 @@ const login = () => {
             Log In
           </button>
           <p className="text-sm">
-            If you don't have an account you can{" "}
+            If you don&apos;t have an account you can{" "}
             <Link href="/register">
               <span className=" cursor-pointer whitespace-nowrap text-green-500 underline hover:text-green-400">
                 sign up here
@@ -74,4 +74,4 @@ const login = () => {
   );
 };
 
-export default login;
+export default Login;
