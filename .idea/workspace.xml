@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="feat: created user slice in redux">
-      <change beforePath="$PROJECT_DIR$/redux/rootReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/redux/rootReducer.ts" afterDir="false" />
+    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="fix: add userReducer to rootReducer">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/features/userData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/redux/features/userData.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +74,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658737514048</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fix: add userReducer to rootReducer">
+      <created>1658737695423</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1658737695423</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -95,7 +103,8 @@
     <MESSAGE value="fix: changed button to div to prevent focusing" />
     <MESSAGE value="chore: removed unused plugins and elements" />
     <MESSAGE value="feat: created user slice in redux" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: created user slice in redux" />
+    <MESSAGE value="fix: add userReducer to rootReducer" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: add userReducer to rootReducer" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
