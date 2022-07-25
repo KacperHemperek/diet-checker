@@ -9,8 +9,15 @@ import Image from "next/image";
 import descImg from "../public/sign_up_form_img.svg";
 import { auth } from "../utils/firebase.utils";
 import { createUserWithEmailAndPassword } from "@firebase/auth";
+import {useDispatch, useSelector} from "react-redux";
+import {RootState} from "../redux/store";
+import {setRegistrationError} from "../redux/features/userData";
 
 const Register = () => {
+  const dispatch = useDispatch();
+  const userError = useSelector((state:RootState) => state.user.registerError)
+
+
   let schema = yup.object().shape({
     email: yup
       .string()
@@ -46,6 +53,7 @@ const Register = () => {
         console.log(userCred);
       } catch (e: any) {
         console.log(e.code);
+        dispatch(setRegistrationError(e.code));
       }
       alert(JSON.stringify(values, null, 2));
     },
@@ -136,6 +144,12 @@ const Register = () => {
             value={formik.values.repeatPassword}
             error={formik.errors.repeatPassword}
           />
+
+          { userError && (
+            <p className="w-full first-letter:uppercase text-center p-2 mb-6 bg-red-200 border text-red-500 border-red-500 rounded-lg">
+              {userError}
+            </p>)
+          }
 
           <p className="mb-2 text-sm">Your password must contain: </p>
           <ul className="ml-2 mb-6 fill-green-500 text-sm">
