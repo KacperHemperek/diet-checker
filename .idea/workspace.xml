@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="fix: user is set more than once on login or register">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/register.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/AppWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/AppWrapper.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +70,7 @@
       <workItem from="1658738610157" duration="2986000" />
       <workItem from="1658747404198" duration="102000" />
       <workItem from="1658757220935" duration="2722000" />
-      <workItem from="1658761226534" duration="3172000" />
+      <workItem from="1658761226534" duration="4370000" />
     </task>
     <task id="LOCAL-00001" summary="fix: changed button to div to prevent focusing">
       <created>1658695165120</created>
@@ -164,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658764313968</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="fix: user is set more than once on login or register">
+      <created>1658764435631</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1658764435631</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
