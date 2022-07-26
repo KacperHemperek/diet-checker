@@ -50,7 +50,7 @@ const HomepageCards = () => {
     ];
 
     return (
-        <div className="my-12 grid gap-4 p-4 md:grid-cols-3 md:px-12 xl:px-32">
+        <div className="my-12 grid gap-8 p-4 md:grid-cols-3 md:gap-4 md:px-12 xl:px-32">
             {cards.map((card, idx) => (
                 <Card
                     title={card.title}

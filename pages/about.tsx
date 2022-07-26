@@ -1,15 +1,15 @@
 import React from "react";
 import Layout from "../layouts/Layout";
-import Image from "next/image";
-import Link from "next/link";
-import HeroImage from "../public/undraw_diet_ghvw.svg";
 
-const about = () => {
-    return (
-        <Layout>
-            
-        </Layout>
-    );
+
+const About = () => {
+  return (
+    <Layout>
+      <div className="p-10">
+
+      </div>
+    </Layout>
+  );
 };
 
-export default about;
+export default About;

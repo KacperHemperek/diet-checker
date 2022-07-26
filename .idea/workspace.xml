@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a82be70c-d6f4-4d88-b6b1-5a1d0ce83fca" name="Changes" comment="merge dev into main">
+      <change afterPath="$PROJECT_DIR$/.idea/diet-checker.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/AppWrapper.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/CustomButton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/CustomFormWrapper.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/FoodCard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/FormInput.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/LogInButton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ProfileData.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/SearchBar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/SearchBarWithAdvanced.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/SignUpButton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/helpers/errorHelper.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/account/[id]/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/account/[id]/settings.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/api/create_user.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/api/get_user_by_id.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/api/search_items.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/api/update_user.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/login.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/register.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/search.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/login_form_img.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/message.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/profile_pic.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/search_page_img.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sign_up_form_img.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redux/features/searchData.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redux/features/userData.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redux/hooks.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redux/rootReducer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redux/store.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/firebase.utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/AboutHero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/AboutHero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/HeroComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/HeroComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/HomepageCards.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/HomepageCards.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/NavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/NavBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/NavLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/NavLink.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/NavLinksGroup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/NavLinksGroup.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/NavLogo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/NavLogo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SearchHero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SearchHero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/about.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/about.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/get_token.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2CUw6TRrExhIq70tZs2sMbW3cFO" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "ts.external.directory.path": "C:\\Users\\kacpe\\Desktop\\Projekty\\diet-checker\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a82be70c-d6f4-4d88-b6b1-5a1d0ce83fca" name="Changes" comment="" />
+      <created>1658870298549</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1658870298549</updated>
+      <workItem from="1658870300778" duration="427000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="merge dev into main" />
+    <option name="LAST_COMMIT_MESSAGE" value="merge dev into main" />
+  </component>
+</project>
