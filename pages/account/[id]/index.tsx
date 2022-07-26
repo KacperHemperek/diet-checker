@@ -67,5 +67,3 @@ export const getServerSideProps = async (context: NextPageContext) => {
     props: { ...data },
   };
 };
-
-//get user info from  (create endpoint that will get info from firebase) and use getStaticProps and getStaticPaths to fetch data
