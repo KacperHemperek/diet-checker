@@ -9,7 +9,7 @@ type Props = {
 
 const NavLink = ({ children, href }: Props) => {
   const router = useRouter();
-  console.log(router.asPath);
+
   return (
     <Link href={href}>
       <button
