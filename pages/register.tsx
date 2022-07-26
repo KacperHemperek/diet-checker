@@ -45,10 +45,13 @@ const Register = () => {
     },
     onSubmit: async (values) => {
       try {
-        await createUserWithEmailAndPassword(
+        const userCred = await createUserWithEmailAndPassword(
           auth,
           values.email,
           values.password
+        );
+        await fetch(
+          `/api/create_user?uid=${userCred.user.uid}&email=${userCred.user.email}`
         );
         dispatch(setRegistrationError(""));
         await router.push("/");

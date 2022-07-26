@@ -24,8 +24,17 @@ const Login = () => {
     },
     onSubmit: async (values) => {
       try {
-        await signInWithEmailAndPassword(auth, values.email, values.password);
+        const userCred = await signInWithEmailAndPassword(
+          auth,
+          values.email,
+          values.password
+        );
+        console.log({ userCred });
+
         dispatch(setLoginError(""));
+        await fetch(
+          `/api/create_user?uid=${userCred.user.uid}&email=${userCred.user.email}`
+        );
         await router.push("/");
       } catch (e: any) {
         console.log(e.code);
