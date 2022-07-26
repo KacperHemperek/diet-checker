@@ -4,6 +4,7 @@ import { auth } from "../utils/firebase.utils";
 import { useDispatch, useSelector } from "react-redux";
 import { clearUserInfo, setUser } from "../redux/features/userData";
 import { RootState } from "../redux/store";
+import { useRouter } from "next/router";
 
 type Props = {
   children: any;
@@ -12,7 +13,7 @@ type Props = {
 const AppWrapper = ({ children }: Props) => {
   const dispatch = useDispatch();
   const uid = useSelector((state: RootState) => state.user.uid);
-
+  const router = useRouter();
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, () => {
       if (auth.currentUser) {
@@ -22,6 +23,7 @@ const AppWrapper = ({ children }: Props) => {
       } else {
         if (uid) {
           dispatch(clearUserInfo());
+          router.push("/login");
         }
       }
     });
