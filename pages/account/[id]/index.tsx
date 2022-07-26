@@ -4,10 +4,10 @@ import Layout from "../../../layouts/Layout";
 import ProfileData from "../../../components/ProfileData";
 import FoodCard from "../../../components/FoodCard";
 
-type Recipe = {
+export interface Recipe {
   name: string;
-  calorie: number;
-};
+  cal: number;
+}
 
 type Props = {
   email: string;
@@ -34,30 +34,21 @@ const Account: NextPage<Props> = (props) => {
             <span className="text-green-500">Your</span> favorite recipes
           </h2>
           <div className="grid grid-cols-2 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            <FoodCard
-              name="Pizza"
-              type="Vegan"
-              calories="2000"
-              image="https://cdn.galleries.smcloud.net/t/galleries/gf-cgdk-p5yy-aE4f_pizza-pepperoni-z-jalapeno-to-jadl-joe-biden-z-zolnierzami-w-rzeszowie-1920x1080-nocrop.jpg"
-            />
-            <FoodCard
-              name="Pizza"
-              type="Vegan"
-              calories="2000"
-              image="https://cdn.galleries.smcloud.net/t/galleries/gf-cgdk-p5yy-aE4f_pizza-pepperoni-z-jalapeno-to-jadl-joe-biden-z-zolnierzami-w-rzeszowie-1920x1080-nocrop.jpg"
-            />
-            <FoodCard
-              name="Pizza"
-              type="Vegan"
-              calories="2000"
-              image="https://cdn.galleries.smcloud.net/t/galleries/gf-cgdk-p5yy-aE4f_pizza-pepperoni-z-jalapeno-to-jadl-joe-biden-z-zolnierzami-w-rzeszowie-1920x1080-nocrop.jpg"
-            />
-            <FoodCard
-              name="Pizza"
-              type="Vegan"
-              calories="2000"
-              image="https://cdn.galleries.smcloud.net/t/galleries/gf-cgdk-p5yy-aE4f_pizza-pepperoni-z-jalapeno-to-jadl-joe-biden-z-zolnierzami-w-rzeszowie-1920x1080-nocrop.jpg"
-            />
+            {/*https://cdn.galleries.smcloud.net/t/galleries/gf-cgdk-p5yy-aE4f_pizza-pepperoni-z-jalapeno-to-jadl-joe-biden-z-zolnierzami-w-rzeszowie-1920x1080-nocrop.jpg*/}
+            {props.recipes &&
+              props.recipes
+                .splice(4)
+                .map((item: Recipe, index) => (
+                  <FoodCard
+                    key={index}
+                    image={
+                      "https://cdn.galleries.smcloud.net/t/galleries/gf-cgdk-p5yy-aE4f_pizza-pepperoni-z-jalapeno-to-jadl-joe-biden-z-zolnierzami-w-rzeszowie-1920x1080-nocrop.jpg"
+                    }
+                    name={item.name}
+                    type={"Vegan"}
+                    calories={item.cal}
+                  />
+                ))}
           </div>
         </div>
       </div>

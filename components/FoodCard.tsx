@@ -4,7 +4,7 @@ type Props = {
   image: string;
   name: string;
   type: string;
-  calories: string;
+  calories: number;
 };
 
 const FoodCard = ({ image, name, type, calories }: Props) => {
