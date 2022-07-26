@@ -14,7 +14,7 @@ const FoodCard = ({ image, name, type, calories }: Props) => {
         <img
           className="object-cover transition duration-500  group-hover:scale-105"
           src={image}
-          alt=""
+          alt="recipe thumbnail"
         />
       </div>
 
