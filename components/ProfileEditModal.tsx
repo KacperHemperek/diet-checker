@@ -44,19 +44,16 @@ const ProfileEditModal = ({ isOpen, setIsOpen }: Props) => {
           `/api/get_user_by_id?uid=G9Fe7V2hOocz7yLseNWOsQS1Rmg2`
         );
         const data = await res.json();
-        console.log({ ...data });
         setUserData({
           ...data,
         });
+        formik.values.age = data.age;
+        formik.values.height = data.height;
+        formik.values.weight = data.weight;
       } catch (e: any) {
         console.error(e);
       }
     };
-
-    if (!isOpen) return;
-    Object.entries(formik.values).forEach((item) => {
-      console.log(item);
-    });
 
     fetchUserInfo();
   }, [isOpen]);
