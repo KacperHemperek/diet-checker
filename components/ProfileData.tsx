@@ -4,6 +4,8 @@ import profilePic from "../public/profile_pic.svg";
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
 import Modal from "./Modal";
+import ProfileEditForm from "./ProfileEditForm";
+import ProfileEditModal from "./ProfileEditModal";
 
 type Props = {
   email: string | undefined;
@@ -16,7 +18,6 @@ type Props = {
 const ProfileData = ({ email, name, age, height, weight }: Props) => {
   const uid = useSelector((state: RootState) => state.user.uid);
   const [dialogOpen, setDialogOpen] = useState<boolean>(false);
-
   return (
     <div className="grid gap-6 rounded-lg md:col-span-6 md:border md:p-10 lg:col-span-5 xl:col-span-4 ">
       <div className="z-0">
@@ -56,9 +57,7 @@ const ProfileData = ({ email, name, age, height, weight }: Props) => {
           {weight ? weight + " kg" : "Add your weight"}
         </h2>
       </div>
-      <Modal isOpen={dialogOpen} setIsOpen={setDialogOpen}>
-        hi
-      </Modal>
+      <ProfileEditModal isOpen={dialogOpen} setIsOpen={setDialogOpen} />
     </div>
   );
 };
