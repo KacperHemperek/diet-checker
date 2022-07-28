@@ -1,10 +1,11 @@
-import React, { Dispatch, SetStateAction, useEffect, useRef } from "react";
+import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { useFormik } from "formik";
 import * as yup from "yup";
 import FormInput from "./FormInput";
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
 import Modal from "./Modal";
+import { UserInformations } from "../interface/UserInformations";
 
 type Props = {
   isOpen: boolean;
@@ -13,7 +14,7 @@ type Props = {
 
 const ProfileEditModal = ({ isOpen, setIsOpen }: Props) => {
   const uid = useSelector((state: RootState) => state.user.uid);
-  const firstRender = useRef<boolean>(false);
+  const [userData, setUserData] = useState<UserInformations>();
 
   let schema = yup.object().shape({
     age: yup.number().required("No age provided").moreThan(0).integer(),
@@ -27,12 +28,13 @@ const ProfileEditModal = ({ isOpen, setIsOpen }: Props) => {
 
   const formik = useFormik({
     initialValues: {
-      age: "",
-      height: "",
-      weight: "",
+      age: userData?.age ?? "",
+      height: userData?.height ?? "",
+      weight: userData?.weight ?? "",
     },
     onSubmit: async (values) => {},
     validationSchema: schema,
+    enableReinitialize: true,
   });
 
   useEffect(() => {
@@ -40,26 +42,32 @@ const ProfileEditModal = ({ isOpen, setIsOpen }: Props) => {
       try {
         const res = await fetch(`/api/get_user_by_id?uid=${uid}`);
         const data = await res.json();
-        formik.values.age = data.age;
-        formik.values.height = data.height;
-        formik.values.weight = data.weight;
+        console.log({ ...data });
+        setUserData({
+          ...data,
+        });
       } catch (e: any) {
         console.error(e);
       }
     };
 
-    if (firstRender.current) return;
-    firstRender.current = true;
+    if (!isOpen) return;
+    Object.entries(formik.values).forEach((item) => {
+      console.log(item);
+    });
 
     fetchUserInfo();
-  }, [uid, formik.values]);
+  }, [isOpen]);
 
   return (
     <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
       <div className="p-10">
         <button
           className="absolute right-5 top-5"
-          onClick={() => setIsOpen(false)}
+          onClick={() => {
+            Object.entries(formik.values).forEach((item) => {});
+            setIsOpen(false);
+          }}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
