@@ -34,7 +34,7 @@ function CustomButton({
         empty
           ? "bg-white fill-green-500 text-green-500 hover:bg-green-500 hover:fill-white hover:text-white "
           : "bg-green-500 fill-white text-white hover:bg-green-500/90"
-      } flex items-center gap-2 rounded-full border-2 border-green-500 px-4 py-1 transition-all`}
+      } flex items-center justify-center gap-2 rounded-full border-2 border-green-500 px-4 py-1 transition-all`}
       onClick={onClick}
       type={type}
     >

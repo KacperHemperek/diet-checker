@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="feat: added type props to custom button component">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ProfileEditModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProfileEditModal.tsx" afterDir="false" />
+    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="fix: submit button doesn't cover whole width of form">
+      <change beforePath="$PROJECT_DIR$/components/CustomButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/CustomButton.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +86,7 @@
       <workItem from="1658855084456" duration="7243000" />
       <workItem from="1658863913431" duration="5000" />
       <workItem from="1658869192199" duration="948000" />
-      <workItem from="1659016773767" duration="18431000" />
+      <workItem from="1659016773767" duration="18580000" />
     </task>
     <task id="LOCAL-00001" summary="fix: changed button to div to prevent focusing">
       <created>1658695165120</created>
@@ -376,7 +375,21 @@
       <option name="project" value="LOCAL" />
       <updated>1659044747158</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="refactor: hardcoded updating formik values now update dynamically">
+      <created>1659044977761</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1659044977761</updated>
+    </task>
+    <task id="LOCAL-00043" summary="fix: submit button doesn't cover whole width of form">
+      <created>1659045011824</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1659045011824</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -395,8 +408,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: change spans to anchor tags, add link to remember password page &#10;&#10;todo: change remember password link, so it goes to remember password page, add password page" />
-    <MESSAGE value="feat: create dynamic page and change account link &#10;&#10;todo: get data from firebase with an endpoint" />
     <MESSAGE value="fix: account navlink is highlighted when user is on account page" />
     <MESSAGE value="chore: removed console log from navlink" />
     <MESSAGE value="feat: after log out user is redirected to login page" />
@@ -420,7 +431,9 @@
     <MESSAGE value="feat: added type to custom button" />
     <MESSAGE value="chore: swapped buttons with custom button component" />
     <MESSAGE value="feat: added type props to custom button component" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: added type props to custom button component" />
+    <MESSAGE value="refactor: hardcoded updating formik values now update dynamically" />
+    <MESSAGE value="fix: submit button doesn't cover whole width of form" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: submit button doesn't cover whole width of form" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
