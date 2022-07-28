@@ -1,10 +1,9 @@
-import React, { Dispatch, SetStateAction, useState } from "react";
+import React, { Dispatch, SetStateAction, useEffect, useRef } from "react";
 import { useFormik } from "formik";
 import * as yup from "yup";
 import FormInput from "./FormInput";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
-import { useRouter } from "next/router";
 import Modal from "./Modal";
 
 type Props = {
@@ -13,9 +12,8 @@ type Props = {
 };
 
 const ProfileEditModal = ({ isOpen, setIsOpen }: Props) => {
-  const dispatch = useDispatch();
-  const userError = useSelector((state: RootState) => state.user.registerError);
-  const router = useRouter();
+  const uid = useSelector((state: RootState) => state.user.uid);
+  const firstRender = useRef<boolean>(false);
 
   let schema = yup.object().shape({
     age: yup.number().required("No age provided").moreThan(0).integer(),
@@ -37,6 +35,25 @@ const ProfileEditModal = ({ isOpen, setIsOpen }: Props) => {
     validationSchema: schema,
   });
 
+  useEffect(() => {
+    const fetchUserInfo = async () => {
+      try {
+        const res = await fetch(`/api/get_user_by_id?uid=${uid}`);
+        const data = await res.json();
+        formik.values.age = data.age;
+        formik.values.height = data.height;
+        formik.values.weight = data.weight;
+      } catch (e: any) {
+        console.error(e);
+      }
+    };
+
+    if (firstRender.current) return;
+    firstRender.current = true;
+
+    fetchUserInfo();
+  }, [uid, formik.values]);
+
   return (
     <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
       <div className="p-10">
@@ -55,21 +72,21 @@ const ProfileEditModal = ({ isOpen, setIsOpen }: Props) => {
         <FormInput
           label="Age"
           name="age"
-          type="number"
+          type="text"
           onChange={formik.handleChange}
           value={`${formik.values.age ? formik.values.age : ""}`}
         />
         <FormInput
           label="Height"
           name="height"
-          type="number"
+          type="text"
           onChange={formik.handleChange}
           value={`${formik.values.height ? formik.values.height : ""}`}
         />
         <FormInput
           label="Weight"
           name="weight"
-          type="number"
+          type="text"
           onChange={formik.handleChange}
           value={`${formik.values.weight ? formik.values.weight : ""}`}
         />

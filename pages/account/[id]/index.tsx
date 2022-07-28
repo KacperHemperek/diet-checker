@@ -3,22 +3,10 @@ import { NextPage, NextPageContext } from "next";
 import Layout from "../../../layouts/Layout";
 import ProfileData from "../../../components/ProfileData";
 import FoodCard from "../../../components/FoodCard";
+import { UserInformations } from "../../../interface/UserInformations";
+import { Recipe } from "../../../interface/Recipe";
 
-export interface Recipe {
-  name: string;
-  cal: number;
-}
-
-type Props = {
-  email: string;
-  age?: number;
-  recipes?: Recipe[];
-  height?: number;
-  weight?: number;
-  name?: string;
-};
-
-const Account: NextPage<Props> = (props) => {
+const Account: NextPage<UserInformations> = (props) => {
   return (
     <Layout>
       <div className="mx-4 grid gap-12 pt-8 md:mx-12 md:grid-cols-12  xl:mx-32">
@@ -57,6 +45,7 @@ export default Account;
 
 export const getServerSideProps = async (context: NextPageContext) => {
   const { id } = context.query;
+  //change hardcoded id to id that is from firebase
   const response = await fetch(
     `${process.env.APP_URL}/api/get_user_by_id?uid=G9Fe7V2hOocz7yLseNWOsQS1Rmg2`
   );

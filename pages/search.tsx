@@ -4,7 +4,6 @@ import Layout from "../layouts/Layout";
 import { RootState } from "../redux/store";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import SearchBar from "../components/SearchBar";
 import { setSearchValue } from "../redux/features/searchData";
 import Image from "next/image";
 import descImg from "../public/search_page_img.svg";
@@ -36,7 +35,7 @@ const Search = () => {
       console.log("render");
     } else if (!isMounted.current && searchValue !== "") {
       console.log("render with search value");
-      //fetchSearchResults(searchValue);
+      // fetchSearchResults(searchValue);
     } else if (searchValue !== initialSearchValue.current) {
       console.log("search value changed");
       //fetchSearchResults(searchValue);
