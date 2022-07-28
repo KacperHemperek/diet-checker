@@ -63,7 +63,6 @@ const ProfileEditModal = ({ isOpen, setIsOpen }: Props) => {
 
   return (
     <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
-<<<<<<< HEAD
       <div className="flex w-[90vw] flex-col justify-center rounded-lg bg-white p-5 md:w-[60vw] lg:w-[40vw]">
         <div className="pr-10">
           <h1 className=" mb-4 text-left text-xl font-semibold">
@@ -72,20 +71,6 @@ const ProfileEditModal = ({ isOpen, setIsOpen }: Props) => {
           <button
             className="absolute right-5 top-5"
             onClick={() => setIsOpen(false)}
-=======
-      <div className="p-10">
-        <button
-          className="absolute right-5 top-5"
-          onClick={() => {
-            Object.entries(formik.values).forEach((item) => {});
-            setIsOpen(false);
-          }}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 320 512"
-            className="h-7 w-7 fill-gray-500"
->>>>>>> 384d8920c3f8b4cd5aee6bf03b60aed7e2ebb805
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
