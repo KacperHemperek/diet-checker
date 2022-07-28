@@ -59,7 +59,7 @@ export default Account;
 export const getServerSideProps = async (context: NextPageContext) => {
   const { id } = context.query;
   const response = await fetch(
-    `${process.env.APP_URL}/api/get_user_by_id?uid=${id}`
+    `${process.env.APP_URL}/api/get_user_by_id?uid=G9Fe7V2hOocz7yLseNWOsQS1Rmg2`
   );
   const data = await response.json();
 
