@@ -47,7 +47,7 @@ export const getServerSideProps = async (context: NextPageContext) => {
   const { id } = context.query;
   //change hardcoded id to id that is from firebase
   const response = await fetch(
-    `${process.env.APP_URL}/api/get_user_by_id?uid=G9Fe7V2hOocz7yLseNWOsQS1Rmg2`
+    `${process.env.APP_URL}/api/get_user_by_id?uid=${id}`
   );
   const data = await response.json();
 
