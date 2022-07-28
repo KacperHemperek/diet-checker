@@ -44,7 +44,7 @@ const NavBar = () => {
   };
 
   return (
-    <header className="fixed z-50 flex w-full bg-white/95 backdrop-blur">
+    <header className="fixed z-30 flex w-full bg-white/95 backdrop-blur">
       <div className="flex w-full justify-between  p-4 md:px-12 xl:px-32">
         <div className="flex items-center">
           <NavLogo />

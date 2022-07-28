@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="feat: created api path for toggling favorite recipe">
+    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="feat: Modal element added">
+      <change afterPath="$PROJECT_DIR$/components/Modal.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/NavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/NavBar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/ProfileData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProfileData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/account/[id]/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/account/[id]/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +89,7 @@
       <workItem from="1658855084456" duration="7243000" />
       <workItem from="1658863913431" duration="5000" />
       <workItem from="1658869192199" duration="948000" />
-      <workItem from="1659016773767" duration="3641000" />
+      <workItem from="1659016773767" duration="8333000" />
     </task>
     <task id="LOCAL-00001" summary="fix: changed button to div to prevent focusing">
       <created>1658695165120</created>
@@ -307,7 +308,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659020257580</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="feat: modal uses dialog dialog tag">
+      <created>1659021271844</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1659021271844</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -326,8 +334,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix: after user created account successfully remove login error" />
-    <MESSAGE value="fix: typo in registration form" />
     <MESSAGE value="feat: reset form when there is some error and redirect user to homepage when registration was successful" />
     <MESSAGE value="feat: add account page" />
     <MESSAGE value="fix: login error and registration error are the same" />
@@ -351,7 +357,9 @@
     <MESSAGE value="feat: liked recipes show dynamically on users page" />
     <MESSAGE value="chore: removed unnecessary comments" />
     <MESSAGE value="feat: created api path for toggling favorite recipe" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: created api path for toggling favorite recipe" />
+    <MESSAGE value="feat: modal uses dialog dialog tag" />
+    <MESSAGE value="feat: Modal element added" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Modal element added" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
