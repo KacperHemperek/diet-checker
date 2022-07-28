@@ -3,6 +3,7 @@ import Link from "next/link";
 
 type Props = {
   children: ReactNode | ReactNode[];
+  type?: "button" | "submit" | "reset";
   onClick?: MouseEventHandler<HTMLButtonElement>;
   mobile?: boolean;
   empty?: boolean;
@@ -14,12 +15,14 @@ function CustomButton({
   onClick,
   mobile = false,
   empty = false,
+  type = "button",
   href,
 }: Props) {
   const mobileButton = (
     <button
       className="aspect-square rounded-full bg-green-500 fill-white p-4"
       onClick={onClick}
+      type={type}
     >
       {children}
     </button>
@@ -29,10 +32,11 @@ function CustomButton({
     <button
       className={`${
         empty
-          ? "text-green-500"
-          : "bg-green-500 text-white hover:bg-green-500/90"
-      } rounded-full border-2 border-green-500  px-4 py-1 transition-all`}
+          ? "bg-white fill-green-500 text-green-500 hover:bg-green-500 hover:fill-white hover:text-white "
+          : "bg-green-500 fill-white text-white hover:bg-green-500/90"
+      } flex items-center gap-2 rounded-full border-2 border-green-500 px-4 py-1 transition-all`}
       onClick={onClick}
+      type={type}
     >
       {children}
     </button>
