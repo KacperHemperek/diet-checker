@@ -34,7 +34,6 @@ const Account: NextPage<Props> = (props) => {
             <span className="text-green-500">Your</span> favorite recipes
           </h2>
           <div className="grid grid-cols-2 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {/*https://cdn.galleries.smcloud.net/t/galleries/gf-cgdk-p5yy-aE4f_pizza-pepperoni-z-jalapeno-to-jadl-joe-biden-z-zolnierzami-w-rzeszowie-1920x1080-nocrop.jpg*/}
             {props.recipes &&
               props.recipes.map((item: Recipe, index) => (
                 <FoodCard

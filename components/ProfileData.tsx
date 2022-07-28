@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 import profilePic from "../public/profile_pic.svg";
 import { useSelector } from "react-redux";
@@ -15,6 +15,11 @@ type Props = {
 
 const ProfileData = ({ email, name, age, height, weight }: Props) => {
   const uid = useSelector((state: RootState) => state.user.uid);
+  const dialogRef = useRef<HTMLDialogElement | null>(null);
+
+  const handleOpenDialog = () => {
+    dialogRef.current?.showModal();
+  };
 
   return (
     <div className="grid gap-6 rounded-lg md:col-span-6 md:border md:p-10 lg:col-span-5 xl:col-span-4 ">
@@ -26,10 +31,7 @@ const ProfileData = ({ email, name, age, height, weight }: Props) => {
           <h1 className="mx-auto w-full text-center text-3xl font-semibold">
             {name ?? `user${uid.slice(0, 8)}...`}
           </h1>
-          <button
-            //onClick={() => }
-            className="aspect-square"
-          >
+          <button onClick={handleOpenDialog} className="aspect-square">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
@@ -58,6 +60,12 @@ const ProfileData = ({ email, name, age, height, weight }: Props) => {
           {weight ? weight + " kg" : "Add your weight"}
         </h2>
       </div>
+      <dialog
+        className="fixed left-1/2 top-1/2 flex min-w-[90vw] -translate-x-1/2 -translate-y-1/2 flex-col rounded-lg p-4 shadow-lg backdrop:backdrop-blur-[2px]"
+        ref={dialogRef}
+      >
+        <ProfileEditModal />
+      </dialog>
     </div>
   );
 };
