@@ -110,7 +110,9 @@ const ProfileEditModal = ({ isOpen, setIsOpen }: Props) => {
           value={`${formik.values.weight ? formik.values.weight : ""}`}
           error={formik.errors.weight}
         />
-        <CustomButton type="submit">Submit</CustomButton>
+        <div>
+          <CustomButton type="submit">Submit</CustomButton>
+        </div>
       </div>
     </Modal>
   );
