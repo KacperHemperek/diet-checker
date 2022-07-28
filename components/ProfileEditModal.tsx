@@ -18,6 +18,7 @@ const ProfileEditModal = ({ isOpen, setIsOpen }: Props) => {
   const [userData, setUserData] = useState<UserInformations>();
 
   let schema = yup.object().shape({
+    name: yup.string().required("No name provided"),
     age: yup.number().required("No age provided").moreThan(0).integer(),
     height: yup.number().required("No height provided").moreThan(0).integer(),
     weight: yup
@@ -29,6 +30,7 @@ const ProfileEditModal = ({ isOpen, setIsOpen }: Props) => {
 
   const formik = useFormik({
     initialValues: {
+      name: userData?.name ?? "",
       age: userData?.age ?? "",
       height: userData?.height ?? "",
       weight: userData?.weight ?? "",
@@ -79,6 +81,13 @@ const ProfileEditModal = ({ isOpen, setIsOpen }: Props) => {
             </svg>
           </button>
         </div>
+        <FormInput
+          label="Name"
+          name="name"
+          type="text"
+          onChange={formik.handleChange}
+          value={`${formik.values.name ? formik.values.name : ""}`}
+        />
         <FormInput
           label="Age"
           name="age"
