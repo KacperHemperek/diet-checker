@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="feat: form gets information from backend">
+    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="fix: when form is not submitted values in form are back to value from firebase">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/CustomButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/CustomButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ProfileData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProfileData.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/ProfileEditModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProfileEditModal.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -87,7 +89,7 @@
       <workItem from="1658855084456" duration="7243000" />
       <workItem from="1658863913431" duration="5000" />
       <workItem from="1658869192199" duration="948000" />
-      <workItem from="1659016773767" duration="15884000" />
+      <workItem from="1659016773767" duration="18042000" />
     </task>
     <task id="LOCAL-00001" summary="fix: changed button to div to prevent focusing">
       <created>1658695165120</created>
@@ -348,7 +350,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659035281940</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="fix: when form is not submitted values in form are back to value from firebase">
+      <created>1659037520962</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1659037520962</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -367,7 +376,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: add auth listener on root component and make it possible to log out" />
     <MESSAGE value="fix: user is set more than once on login or register" />
     <MESSAGE value="fix: not needed additional state updates" />
     <MESSAGE value="feat: add header to login form" />
@@ -392,7 +400,8 @@
     <MESSAGE value="feat: modal closes when clicking escape button" />
     <MESSAGE value="feat: form gets information from existing user" />
     <MESSAGE value="feat: form gets information from backend" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: form gets information from backend" />
+    <MESSAGE value="fix: when form is not submitted values in form are back to value from firebase" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: when form is not submitted values in form are back to value from firebase" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

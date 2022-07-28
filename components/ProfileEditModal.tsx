@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
 import Modal from "./Modal";
 import { UserInformations } from "../interface/UserInformations";
+import CustomButton from "./CustomButton";
 
 type Props = {
   isOpen: boolean;
@@ -81,34 +82,28 @@ const ProfileEditModal = ({ isOpen, setIsOpen }: Props) => {
         <FormInput
           label="Age"
           name="age"
-          type="number"
+          type="text"
           onChange={formik.handleChange}
           value={`${formik.values.age ? formik.values.age : ""}`}
+          error={formik.errors.age}
         />
         <FormInput
           label="Height"
           name="height"
-          type="number"
+          type="text"
           onChange={formik.handleChange}
           value={`${formik.values.height ? formik.values.height : ""}`}
+          error={formik.errors.height}
         />
         <FormInput
           label="Weight"
           name="weight"
-          type="number"
+          type="text"
           onChange={formik.handleChange}
           value={`${formik.values.weight ? formik.values.weight : ""}`}
+          error={formik.errors.weight}
         />
-        <button
-          type="submit"
-          className={`${
-            formik.isValid
-              ? "bg-green-500"
-              : "cursor-not-allowed bg-green-500/70"
-          } mx-auto rounded-full px-4 py-2 text-white`}
-        >
-          Submit
-        </button>
+        <CustomButton type="submit">Submit</CustomButton>
       </div>
     </Modal>
   );
