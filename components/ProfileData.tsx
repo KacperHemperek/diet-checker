@@ -3,8 +3,6 @@ import Image from "next/image";
 import profilePic from "../public/profile_pic.svg";
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
-import Modal from "./Modal";
-import ProfileEditForm from "./ProfileEditForm";
 import ProfileEditModal from "./ProfileEditModal";
 
 type Props = {
@@ -28,7 +26,10 @@ const ProfileData = ({ email, name, age, height, weight }: Props) => {
           <h1 className="mx-auto w-full text-center text-3xl font-semibold">
             {name ?? `user${uid.slice(0, 8)}...`}
           </h1>
-          <button onClick={() => setDialogOpen(true)} className="aspect-square">
+          <button
+            onClick={() => setDialogOpen(true)}
+            className="aspect-square focus:outline-none"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
