@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="feat: modal closes when clicking escape button">
-      <change afterPath="$PROJECT_DIR$/interface/Recipe.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interface/UserInformations.ts" afterDir="false" />
+    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="feat: form gets information from backend">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/ProfileEditModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProfileEditModal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/account/[id]/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/account/[id]/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/search.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +87,7 @@
       <workItem from="1658855084456" duration="7243000" />
       <workItem from="1658863913431" duration="5000" />
       <workItem from="1658869192199" duration="948000" />
-      <workItem from="1659016773767" duration="12104000" />
+      <workItem from="1659016773767" duration="13733000" />
     </task>
     <task id="LOCAL-00001" summary="fix: changed button to div to prevent focusing">
       <created>1658695165120</created>
@@ -338,7 +334,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659030331493</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="feat: form gets information from existing user">
+      <created>1659033787199</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1659033787199</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -357,8 +360,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix: login error and registration error are the same" />
-    <MESSAGE value="chore: minor changes" />
     <MESSAGE value="feat: add auth listener on root component and make it possible to log out" />
     <MESSAGE value="fix: user is set more than once on login or register" />
     <MESSAGE value="fix: not needed additional state updates" />
@@ -382,7 +383,9 @@
     <MESSAGE value="feat: Modal element added" />
     <MESSAGE value="style: made modal card as a custom component" />
     <MESSAGE value="feat: modal closes when clicking escape button" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: modal closes when clicking escape button" />
+    <MESSAGE value="feat: form gets information from existing user" />
+    <MESSAGE value="feat: form gets information from backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: form gets information from backend" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
