@@ -50,9 +50,7 @@ const ProfileEditModal = ({ isOpen, setIsOpen }: Props) => {
         setUserData({
           ...data,
         });
-        formik.values.age = data.age;
-        formik.values.height = data.height;
-        formik.values.weight = data.weight;
+        formik.values = { ...data };
       } catch (e: any) {
         console.error(e);
       }
