@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="fix: submit button doesn't cover whole width of form">
-      <change beforePath="$PROJECT_DIR$/components/CustomButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/CustomButton.tsx" afterDir="false" />
+    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="feat: add favorite icon and button to foodcard component &#10;&#10;todo: add toggle function, add link to foodcard">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/FoodCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/FoodCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/account/[id]/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/account/[id]/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/account/[id]/settings.tsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +90,9 @@
       <workItem from="1658855084456" duration="7243000" />
       <workItem from="1658863913431" duration="5000" />
       <workItem from="1658869192199" duration="948000" />
-      <workItem from="1659016773767" duration="18580000" />
+      <workItem from="1659016773767" duration="18745000" />
+      <workItem from="1659045225243" duration="25000" />
+      <workItem from="1659445878355" duration="3300000" />
     </task>
     <task id="LOCAL-00001" summary="fix: changed button to div to prevent focusing">
       <created>1658695165120</created>
@@ -389,7 +395,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659045011824</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="fix: custom button isn't centered">
+      <created>1659045099396</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1659045099396</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -408,8 +421,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix: account navlink is highlighted when user is on account page" />
-    <MESSAGE value="chore: removed console log from navlink" />
     <MESSAGE value="feat: after log out user is redirected to login page" />
     <MESSAGE value="feat: created nested route for user settings" />
     <MESSAGE value="feat: get user by id endpoint returns data saved in firebase" />
@@ -433,7 +444,9 @@
     <MESSAGE value="feat: added type props to custom button component" />
     <MESSAGE value="refactor: hardcoded updating formik values now update dynamically" />
     <MESSAGE value="fix: submit button doesn't cover whole width of form" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: submit button doesn't cover whole width of form" />
+    <MESSAGE value="fix: custom button isn't centered" />
+    <MESSAGE value="feat: add favorite icon and button to foodcard component &#10;&#10;todo: add toggle function, add link to foodcard" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add favorite icon and button to foodcard component &#10;&#10;todo: add toggle function, add link to foodcard" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

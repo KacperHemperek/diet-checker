@@ -25,6 +25,7 @@ const Account: NextPage<UserInformations> = (props) => {
             {props.recipes &&
               props.recipes.map((item: Recipe, index) => (
                 <FoodCard
+                  id={String(index)}
                   key={index}
                   image={
                     "https://cdn.galleries.smcloud.net/t/galleries/gf-cgdk-p5yy-aE4f_pizza-pepperoni-z-jalapeno-to-jadl-joe-biden-z-zolnierzami-w-rzeszowie-1920x1080-nocrop.jpg"
@@ -32,6 +33,7 @@ const Account: NextPage<UserInformations> = (props) => {
                   name={item.name}
                   type={"Vegan"}
                   calories={item.cal}
+                  favorite={false}
                 />
               ))}
           </div>
