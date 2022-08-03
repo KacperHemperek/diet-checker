@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="fix: typo in UserInformation interface">
+    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="style: changed alignment in food card component">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/FoodCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/FoodCard.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/account/[id]/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/account/[id]/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/add_favorite.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/add_favorite.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,21 +92,7 @@
       <workItem from="1659045225243" duration="25000" />
       <workItem from="1659445878355" duration="3837000" />
       <workItem from="1659516437425" duration="6451000" />
-      <workItem from="1659541496974" duration="1407000" />
-    </task>
-    <task id="LOCAL-00002" summary="chore: removed unused plugins and elements">
-      <created>1658737475571</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1658737475571</updated>
-    </task>
-    <task id="LOCAL-00003" summary="feat: created user slice in redux">
-      <created>1658737514048</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1658737514048</updated>
+      <workItem from="1659541496974" duration="2593000" />
     </task>
     <task id="LOCAL-00004" summary="fix: add userReducer to rootReducer">
       <created>1658737695423</created>
@@ -438,7 +423,21 @@
       <option name="project" value="LOCAL" />
       <updated>1659527891992</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="refactor: moved creating newRecipe data, creates recipe array if it doesn't exist">
+      <created>1659543055029</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1659543055030</updated>
+    </task>
+    <task id="LOCAL-00052" summary="style: changed alignment in food card component">
+      <created>1659543120192</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1659543120192</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -457,8 +456,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: account page displays user information from firestore" />
-    <MESSAGE value="feat: added creat user endpoint, calling endpoint on login and register" />
     <MESSAGE value="feat: added update_user endpoint" />
     <MESSAGE value="feat: liked recipes show dynamically on users page" />
     <MESSAGE value="chore: removed unnecessary comments" />
@@ -482,7 +479,9 @@
     <MESSAGE value="feat: user id to get user changed to dynamic id" />
     <MESSAGE value="feat: endpoint for adding recipe to favorite updates list of favorite recipes &#10;&#10;todo: cover all cases" />
     <MESSAGE value="fix: typo in UserInformation interface" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: typo in UserInformation interface" />
+    <MESSAGE value="refactor: moved creating newRecipe data, creates recipe array if it doesn't exist" />
+    <MESSAGE value="style: changed alignment in food card component" />
+    <option name="LAST_COMMIT_MESSAGE" value="style: changed alignment in food card component" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

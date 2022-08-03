@@ -1,13 +1,22 @@
 type Props = {
-  id: string;
+  id: number;
   image: string;
   name: string;
-  type: string;
   calories: number;
+  vegan?: boolean;
+  vegetarian?: boolean;
   favorite?: boolean;
 };
 
-const FoodCard = ({ id, image, name, type, calories, favorite }: Props) => {
+const FoodCard = ({
+  id,
+  image,
+  name,
+  calories,
+  favorite = false,
+  vegan = false,
+  vegetarian = false,
+}: Props) => {
   const svgStyle = "w-4 h-4 transition";
 
   const toggleFavorite = () => {
@@ -26,10 +35,13 @@ const FoodCard = ({ id, image, name, type, calories, favorite }: Props) => {
 
       <div className="flex flex-grow flex-col justify-between p-4">
         <div>
-          <h1 className="text-xl font-bold text-gray-700">{name}</h1>
-          <div className="mt-2 w-fit rounded-lg border border-green-500 px-1  text-sm font-semibold text-green-500">
-            {type}
-          </div>
+          <h1 className="text-lg font-bold text-gray-700">{name}</h1>
+          {vegan ||
+            (vegetarian && (
+              <div className="mt-2 w-fit rounded-lg border border-green-500 px-2 text-sm  text-green-500">
+                {vegan ? "Vegan" : "Vegetarian"}
+              </div>
+            ))}
         </div>
         <div className="mt-4 flex items-center justify-between">
           <div className="text-gray-700">{calories} kcal</div>

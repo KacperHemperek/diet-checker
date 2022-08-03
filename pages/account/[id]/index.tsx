@@ -23,17 +23,16 @@ const Account: NextPage<UserInformation> = (props) => {
           </h2>
           <div className="grid grid-cols-2 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {props.recipes &&
-              props.recipes.map((item: Recipe, index) => (
+              props.recipes.map((item: Recipe) => (
                 <FoodCard
-                  id={String(index)}
-                  key={index}
-                  image={
-                    "https://cdn.galleries.smcloud.net/t/galleries/gf-cgdk-p5yy-aE4f_pizza-pepperoni-z-jalapeno-to-jadl-joe-biden-z-zolnierzami-w-rzeszowie-1920x1080-nocrop.jpg"
-                  }
+                  id={item.id}
+                  key={item.id}
+                  image={item.img}
                   name={item.name}
-                  type={"Vegan"}
                   calories={item.cal}
                   favorite={true}
+                  vegan={item.vegan}
+                  vegetarian={item.vegetarian}
                 />
               ))}
           </div>
@@ -47,7 +46,6 @@ export default Account;
 
 export const getServerSideProps = async (context: NextPageContext) => {
   const { id } = context.query;
-  //change hardcoded id to id that is from firebase
   const response = await fetch(
     `${process.env.APP_URL}/api/get_user_by_id?uid=${id}`
   );
