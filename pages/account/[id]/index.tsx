@@ -3,10 +3,10 @@ import { NextPage, NextPageContext } from "next";
 import Layout from "../../../layouts/Layout";
 import ProfileData from "../../../components/ProfileData";
 import FoodCard from "../../../components/FoodCard";
-import { UserInformations } from "../../../interface/UserInformations";
+import { UserInformation } from "../../../interface/UserInformation";
 import { Recipe } from "../../../interface/Recipe";
 
-const Account: NextPage<UserInformations> = (props) => {
+const Account: NextPage<UserInformation> = (props) => {
   return (
     <Layout>
       <div className="mx-4 grid gap-12 pt-8 md:mx-12 md:grid-cols-12  xl:mx-32">
