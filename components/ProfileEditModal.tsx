@@ -5,7 +5,7 @@ import FormInput from "./FormInput";
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
 import Modal from "./Modal";
-import { UserInformations } from "../interface/UserInformations";
+import { UserInformation } from "../interface/UserInformation";
 import CustomButton from "./CustomButton";
 
 type Props = {
@@ -15,7 +15,7 @@ type Props = {
 
 const ProfileEditModal = ({ isOpen, setIsOpen }: Props) => {
   const uid = useSelector((state: RootState) => state.user.uid);
-  const [userData, setUserData] = useState<UserInformations>();
+  const [userData, setUserData] = useState<UserInformation>();
 
   let schema = yup.object().shape({
     name: yup.string().required("No name provided"),
@@ -43,9 +43,7 @@ const ProfileEditModal = ({ isOpen, setIsOpen }: Props) => {
   useEffect(() => {
     const fetchUserInfo = async () => {
       try {
-        const res = await fetch(
-          `/api/get_user_by_id?uid=G9Fe7V2hOocz7yLseNWOsQS1Rmg2`
-        );
+        const res = await fetch(`/api/get_user_by_id?uid=${uid}`);
         const data = await res.json();
         setUserData({
           ...data,
