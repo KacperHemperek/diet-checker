@@ -24,6 +24,16 @@ export default async function handler(
     );
     const data = await response.json();
 
+    const newRecipe: Recipe = {
+      id: data.id,
+      name: data.title,
+      cal: data.nutrition.nutrients[0].amount,
+      img: data.image,
+      vegan: data.vegan,
+      vegetarian: data.vegetarian,
+      diets: data.diets,
+    };
+
     try {
       const docRef = await doc(db, "users", String(uid));
       const userSnap = await getDoc(docRef);
@@ -36,15 +46,6 @@ export default async function handler(
           res.status(200).json({ message: "recipe is already in favorite" });
           return;
         }
-        const newRecipe: Recipe = {
-          id: data.id,
-          name: data.title,
-          cal: data.nutrition.nutrients[0].amount,
-          img: data.image,
-          vegan: data.vegan,
-          vegetarian: data.vegetarian,
-          diets: data.diets,
-        };
 
         await updateDoc(docRef, {
           recipes: arrayUnion(newRecipe),
@@ -52,12 +53,18 @@ export default async function handler(
 
         res.status(200).json({ message: "successfully added recipe" });
         return;
+      } else {
+        await updateDoc(docRef, {
+          recipes: arrayUnion(newRecipe),
+        });
+        res.status(200).json({ message: "successfully added recipe" });
       }
     } catch (e) {
       console.error(e);
       res
         .status(500)
         .json({ message: "couldn't add that recipe to favorites" });
+      return;
     }
 
     return;
