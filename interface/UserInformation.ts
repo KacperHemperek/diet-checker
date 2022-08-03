@@ -1,6 +1,6 @@
 import { Recipe } from "./Recipe";
 
-export interface UserInformations {
+export interface UserInformation {
   email: string;
   age?: number;
   recipes?: Recipe[];
