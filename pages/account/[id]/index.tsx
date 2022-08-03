@@ -33,7 +33,7 @@ const Account: NextPage<UserInformation> = (props) => {
                   name={item.name}
                   type={"Vegan"}
                   calories={item.cal}
-                  favorite={false}
+                  favorite={true}
                 />
               ))}
           </div>

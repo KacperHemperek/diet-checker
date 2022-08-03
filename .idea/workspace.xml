@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="feat: endpoint for adding recipe to favorite updates list of favorite recipes &#10;&#10;todo: cover all cases">
+    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="fix: typo in UserInformation interface">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/FoodCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/FoodCard.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/account/[id]/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/account/[id]/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/api/add_favorite.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/add_favorite.tsx" afterDir="false" />
     </list>
@@ -91,14 +92,8 @@
       <workItem from="1659016773767" duration="18745000" />
       <workItem from="1659045225243" duration="25000" />
       <workItem from="1659445878355" duration="3837000" />
-      <workItem from="1659516437425" duration="6387000" />
-    </task>
-    <task id="LOCAL-00001" summary="fix: changed button to div to prevent focusing">
-      <created>1658695165120</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1658695165120</updated>
+      <workItem from="1659516437425" duration="6451000" />
+      <workItem from="1659541496974" duration="1407000" />
     </task>
     <task id="LOCAL-00002" summary="chore: removed unused plugins and elements">
       <created>1658737475571</created>
@@ -429,7 +424,21 @@
       <option name="project" value="LOCAL" />
       <updated>1659527753903</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="feat: endpoint for adding recipe to favorite updates list of favorite recipes &#10;&#10;todo: cover all cases">
+      <created>1659527838751</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1659527838751</updated>
+    </task>
+    <task id="LOCAL-00050" summary="fix: typo in UserInformation interface">
+      <created>1659527891992</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1659527891992</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -448,7 +457,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: added alt for image" />
     <MESSAGE value="feat: account page displays user information from firestore" />
     <MESSAGE value="feat: added creat user endpoint, calling endpoint on login and register" />
     <MESSAGE value="feat: added update_user endpoint" />
@@ -473,7 +481,8 @@
     <MESSAGE value="feat: updated recipe interface to fit data from spoonacular api" />
     <MESSAGE value="feat: user id to get user changed to dynamic id" />
     <MESSAGE value="feat: endpoint for adding recipe to favorite updates list of favorite recipes &#10;&#10;todo: cover all cases" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: endpoint for adding recipe to favorite updates list of favorite recipes &#10;&#10;todo: cover all cases" />
+    <MESSAGE value="fix: typo in UserInformation interface" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: typo in UserInformation interface" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
