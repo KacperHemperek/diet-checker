@@ -16,7 +16,6 @@ export default async function handler(
     res.status(400).json({ message: "uid is required in query" });
     return;
   }
-  console.log({ ...req.body });
   const docRef = await doc(db, "users", String(uid));
   const docSnap = await getDoc(docRef);
 

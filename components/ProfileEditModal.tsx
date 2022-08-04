@@ -5,17 +5,25 @@ import FormInput from "./FormInput";
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
 import Modal from "./Modal";
-import { UserInformation } from "../interface/UserInformation";
 import CustomButton from "./CustomButton";
+import { doc, onSnapshot } from "@firebase/firestore";
+import { db } from "../utils/firebase.utils";
 
 type Props = {
   isOpen: boolean;
   setIsOpen: Dispatch<SetStateAction<boolean>>;
 };
 
+type InitialFormikValues = {
+  name: string;
+  age: number;
+  height: number;
+  weight: number;
+};
+
 const ProfileEditModal = ({ isOpen, setIsOpen }: Props) => {
   const uid = useSelector((state: RootState) => state.user.uid);
-  const [userData, setUserData] = useState<UserInformation>();
+  const [userData, setUserData] = useState<any>({});
 
   let schema = yup.object().shape({
     name: yup.string().required("No name provided"),
@@ -30,36 +38,49 @@ const ProfileEditModal = ({ isOpen, setIsOpen }: Props) => {
 
   const formik = useFormik({
     initialValues: {
-      name: userData?.name ?? "",
-      age: userData?.age ?? "",
-      height: userData?.height ?? "",
-      weight: userData?.weight ?? "",
+      name: userData.name,
+      age: userData.age,
+      height: userData.height,
+      weight: userData.weight,
+    } as InitialFormikValues,
+    onSubmit: async (values) => {
+      try {
+        await fetch(`/api/update_user?uid=${uid}`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(values),
+        });
+        setIsOpen(false);
+      } catch (e) {
+        console.error(e);
+      }
     },
-    onSubmit: async (values) => {},
     validationSchema: schema,
     enableReinitialize: true,
   });
 
   useEffect(() => {
-    const fetchUserInfo = async () => {
-      try {
-        const res = await fetch(`/api/get_user_by_id?uid=${uid}`);
-        const data = await res.json();
-        setUserData({
-          ...data,
-        });
-        formik.values = { ...data };
-      } catch (e: any) {
-        console.error(e);
+    const userRef = doc(db, "users", String(uid));
+    onSnapshot(
+      userRef,
+      (doc) => {
+        const data = doc.data();
+        setUserData({ ...data });
+      },
+      (e) => {
+        console.error(e.message);
       }
-    };
-
-    fetchUserInfo();
-  }, [isOpen]);
+    );
+  }, [uid]);
 
   return (
     <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
-      <div className="flex w-[90vw] flex-col justify-center rounded-lg bg-white p-5 md:w-[60vw] lg:w-[40vw]">
+      <form
+        onSubmit={formik.handleSubmit}
+        className="flex w-[90vw] flex-col justify-center rounded-lg bg-white p-5 md:w-[60vw] lg:w-[40vw]"
+      >
         <div className="pr-10">
           <h1 className=" mb-4 text-left text-xl font-semibold">
             <span className="text-green-500">Update</span> Your Data
@@ -111,7 +132,7 @@ const ProfileEditModal = ({ isOpen, setIsOpen }: Props) => {
         <div>
           <CustomButton type="submit">Submit</CustomButton>
         </div>
-      </div>
+      </form>
     </Modal>
   );
 };

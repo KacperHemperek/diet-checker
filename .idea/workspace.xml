@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="style: changed alignment in food card component">
+    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="feat: user page renders new data on every user doc change in firebase">
+      <change afterPath="$PROJECT_DIR$/hooks/useFirebaseSnap.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/FoodCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/FoodCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/FormInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/FormInput.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ProfileEditModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProfileEditModal.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/account/[id]/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/account/[id]/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/update_user.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/update_user.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +21,13 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/components/FormInput.tsx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/components/ProfileEditModal.tsx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/hooks/useFirebaseSnap.tsx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/interface/UserInformation.ts" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/pages/account/[id]/index.tsx" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -92,14 +102,9 @@
       <workItem from="1659045225243" duration="25000" />
       <workItem from="1659445878355" duration="3837000" />
       <workItem from="1659516437425" duration="6451000" />
-      <workItem from="1659541496974" duration="2593000" />
-    </task>
-    <task id="LOCAL-00004" summary="fix: add userReducer to rootReducer">
-      <created>1658737695423</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1658737695423</updated>
+      <workItem from="1659541496974" duration="7208000" />
+      <workItem from="1659555571186" duration="3171000" />
+      <workItem from="1659619527915" duration="1983000" />
     </task>
     <task id="LOCAL-00005" summary="fix: export user actions">
       <created>1658738022865</created>
@@ -437,7 +442,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659543120192</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="feat: now food card displays if recipe is vegan or vegetarian">
+      <created>1659544154727</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1659544154727</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -456,8 +468,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: added update_user endpoint" />
-    <MESSAGE value="feat: liked recipes show dynamically on users page" />
     <MESSAGE value="chore: removed unnecessary comments" />
     <MESSAGE value="feat: created api path for toggling favorite recipe" />
     <MESSAGE value="feat: modal uses dialog dialog tag" />
@@ -481,7 +491,9 @@
     <MESSAGE value="fix: typo in UserInformation interface" />
     <MESSAGE value="refactor: moved creating newRecipe data, creates recipe array if it doesn't exist" />
     <MESSAGE value="style: changed alignment in food card component" />
-    <option name="LAST_COMMIT_MESSAGE" value="style: changed alignment in food card component" />
+    <MESSAGE value="feat: now food card displays if recipe is vegan or vegetarian" />
+    <MESSAGE value="feat: user page renders new data on every user doc change in firebase" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: user page renders new data on every user doc change in firebase" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

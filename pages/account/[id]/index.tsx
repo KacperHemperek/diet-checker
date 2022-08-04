@@ -1,12 +1,35 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { NextPage, NextPageContext } from "next";
 import Layout from "../../../layouts/Layout";
 import ProfileData from "../../../components/ProfileData";
 import FoodCard from "../../../components/FoodCard";
 import { UserInformation } from "../../../interface/UserInformation";
 import { Recipe } from "../../../interface/Recipe";
+import { doc, onSnapshot } from "@firebase/firestore";
+import { db } from "../../../utils/firebase.utils";
+import { useRouter } from "next/router";
 
 const Account: NextPage<UserInformation> = (props) => {
+  const router = useRouter();
+  const { id } = router.query;
+
+  useEffect(() => {
+    const docRef = doc(db, "users", String(id));
+
+    const updateProps = () => {
+      router.replace(router.asPath);
+    };
+    return onSnapshot(
+      docRef,
+      () => {
+        updateProps();
+      },
+      (e) => {
+        console.error(e.message);
+      }
+    );
+  }, [id, router]);
+
   return (
     <Layout>
       <div className="mx-4 grid gap-12 pt-8 md:mx-12 md:grid-cols-12  xl:mx-32">
