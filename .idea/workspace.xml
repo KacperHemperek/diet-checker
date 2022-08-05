@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="feat: user page renders new data on every user doc change in firebase">
-      <change afterPath="$PROJECT_DIR$/hooks/useFirebaseSnap.tsx" afterDir="false" />
+    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="fix: page rerenders infinitely">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/FormInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/FormInput.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ProfileEditModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProfileEditModal.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/account/[id]/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/account/[id]/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/update_user.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/update_user.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,14 +100,8 @@
       <workItem from="1659516437425" duration="6451000" />
       <workItem from="1659541496974" duration="7208000" />
       <workItem from="1659555571186" duration="3171000" />
-      <workItem from="1659619527915" duration="1983000" />
-    </task>
-    <task id="LOCAL-00005" summary="fix: export user actions">
-      <created>1658738022865</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1658738022865</updated>
+      <workItem from="1659619527915" duration="4440000" />
+      <workItem from="1659693575833" duration="1066000" />
     </task>
     <task id="LOCAL-00006" summary="feat: display registration error in sign up form">
       <created>1658739870311</created>
@@ -449,7 +439,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659544154727</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="feat: user page renders new data on every user doc change in firebase">
+      <created>1659621527733</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1659621527733</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -468,7 +465,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="chore: removed unnecessary comments" />
     <MESSAGE value="feat: created api path for toggling favorite recipe" />
     <MESSAGE value="feat: modal uses dialog dialog tag" />
     <MESSAGE value="feat: Modal element added" />
@@ -493,7 +489,8 @@
     <MESSAGE value="style: changed alignment in food card component" />
     <MESSAGE value="feat: now food card displays if recipe is vegan or vegetarian" />
     <MESSAGE value="feat: user page renders new data on every user doc change in firebase" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: user page renders new data on every user doc change in firebase" />
+    <MESSAGE value="fix: page rerenders infinitely" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: page rerenders infinitely" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

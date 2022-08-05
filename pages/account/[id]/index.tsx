@@ -16,19 +16,22 @@ const Account: NextPage<UserInformation> = (props) => {
   useEffect(() => {
     const docRef = doc(db, "users", String(id));
 
-    const updateProps = () => {
-      router.replace(router.asPath);
+    const updateProps = async () => {
+      await router.replace(router.asPath);
     };
-    return onSnapshot(
+    const unsub = onSnapshot(
       docRef,
-      () => {
-        updateProps();
+      async () => {
+        await updateProps();
       },
       (e) => {
         console.error(e.message);
       }
     );
-  }, [id, router]);
+    return () => {
+      unsub();
+    };
+  }, [id]);
 
   return (
     <Layout>
