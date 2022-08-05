@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="style: changed chart alignment on medium screens">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="style: image and name of recipe centered on large screens">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/RecipeTags.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/RecipeTags.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/search/[id]/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/search/[id]/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/recipe.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/recipe.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,14 +106,8 @@
       <workItem from="1659555571186" duration="3171000" />
       <workItem from="1659619527915" duration="4440000" />
       <workItem from="1659693575833" duration="7729000" />
-      <workItem from="1659711452526" duration="6954000" />
-    </task>
-    <task id="LOCAL-00016" summary="feat: add header to login form">
-      <created>1658768904867</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1658768904867</updated>
+      <workItem from="1659711452526" duration="8152000" />
+      <workItem from="1659721071736" duration="2191000" />
     </task>
     <task id="LOCAL-00017" summary="feat: change spans to anchor tags, add link to remember password page &#10;&#10;todo: change remember password link, so it goes to remember password page, add password page">
       <created>1658769429261</created>
@@ -451,7 +445,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659717961335</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="style: image and name of recipe centered on large screens">
+      <created>1659718490019</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1659718490019</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -470,7 +471,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="chore: swapped buttons with custom button component" />
     <MESSAGE value="feat: added type props to custom button component" />
     <MESSAGE value="refactor: hardcoded updating formik values now update dynamically" />
     <MESSAGE value="fix: submit button doesn't cover whole width of form" />
@@ -495,7 +495,8 @@
     <MESSAGE value="style: search item page changed" />
     <MESSAGE value="style: charts alignment changed" />
     <MESSAGE value="style: changed chart alignment on medium screens" />
-    <option name="LAST_COMMIT_MESSAGE" value="style: changed chart alignment on medium screens" />
+    <MESSAGE value="style: image and name of recipe centered on large screens" />
+    <option name="LAST_COMMIT_MESSAGE" value="style: image and name of recipe centered on large screens" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

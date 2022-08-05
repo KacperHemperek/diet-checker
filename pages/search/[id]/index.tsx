@@ -33,7 +33,7 @@ const RecipePage: NextPage = () => {
           </div>
           <div className="flex flex-grow flex-row flex-wrap justify-center md:justify-around">
             {/* charts */}
-            <div className="mx-5 my-4 h-32 w-32 border border-green-500"></div>
+            <div className="mx-5 my-4 h-32 w-32 border border-green-500"> </div>
             <div className="mx-5 my-4 h-32 w-32 border border-green-500"></div>
             <div className="mx-5 my-4 h-32 w-32 border border-green-500"></div>
           </div>
