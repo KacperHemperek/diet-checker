@@ -1,10 +1,10 @@
 {
   "vegetarian": true,
-  "vegan": false,
-  "glutenFree": false,
+  "vegan": true,
+  "glutenFree": true,
   "dairyFree": true,
   "veryHealthy": true,
-  "cheap": false,
+  "cheap": true,
   "veryPopular": false,
   "sustainable": false,
   "lowFodmap": false,

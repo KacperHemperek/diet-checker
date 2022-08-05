@@ -18,7 +18,7 @@ const RecipeTags = ({
   const svgClass = "h-6 w-6 p-1 rounded-full fill-white  lg:h-7 lg:w-7";
 
   return (
-    <div className=" m-4 flex flex-wrap items-start justify-center gap-2 lg:flex-col lg:justify-center">
+    <div className=" m-4 flex flex-wrap items-start justify-center gap-2 md:gap-6 lg:my-0 lg:flex-col lg:justify-center lg:gap-4">
       {isVegan && (
         <RecipeTag title="Vegan">
           <svg
