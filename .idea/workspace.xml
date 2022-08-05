@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="fix: user can go to login page when logged in">
-      <change beforePath="$PROJECT_DIR$/app-wrappers/RouterGuard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app-wrappers/RouterGuard.tsx" afterDir="false" />
+    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="feat: updated function to be async">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/FormInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/FormInput.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,14 +102,7 @@
       <workItem from="1659541496974" duration="7208000" />
       <workItem from="1659555571186" duration="3171000" />
       <workItem from="1659619527915" duration="4440000" />
-      <workItem from="1659693575833" duration="5847000" />
-    </task>
-    <task id="LOCAL-00010" summary="feat: add account page">
-      <created>1658762710427</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1658762710427</updated>
+      <workItem from="1659693575833" duration="6087000" />
     </task>
     <task id="LOCAL-00011" summary="fix: login error and registration error are the same">
       <created>1658762810106</created>
@@ -446,7 +440,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659699438930</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="feat: updated function to be async">
+      <created>1659699481502</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1659699481502</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -465,7 +466,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="style: made modal card as a custom component" />
     <MESSAGE value="feat: modal closes when clicking escape button" />
     <MESSAGE value="feat: form gets information from existing user" />
     <MESSAGE value="feat: form gets information from backend" />
@@ -490,7 +490,8 @@
     <MESSAGE value="feat: add route guard" />
     <MESSAGE value="chore: removed console logs" />
     <MESSAGE value="fix: user can go to login page when logged in" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: user can go to login page when logged in" />
+    <MESSAGE value="feat: updated function to be async" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: updated function to be async" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -45,7 +45,10 @@ const FormInput = ({
           } mt-2 w-full rounded-lg border p-2`}
         />
         {type === "password" && (
-          <div onClick={() => setShowPassword((prevState) => !prevState)}>
+          <div
+            className="cursor-pointer"
+            onClick={() => setShowPassword((prevState) => !prevState)}
+          >
             {showPassword ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
