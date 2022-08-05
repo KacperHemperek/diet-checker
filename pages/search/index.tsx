@@ -1,13 +1,13 @@
 import React, { SyntheticEvent, useRef } from "react";
 import { useSelector } from "react-redux";
-import Layout from "../layouts/Layout";
-import { RootState } from "../redux/store";
+import Layout from "../../layouts/Layout";
+import { RootState } from "../../redux/store";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { setSearchValue } from "../redux/features/searchData";
+import { setSearchValue } from "../../redux/features/searchData";
 import Image from "next/image";
-import descImg from "../public/search_page_img.svg";
-import SearchBarWithAdvanced from "../components/SearchBarWithAdvanced";
+import descImg from "../../public/search_page_img.svg";
+import SearchBarWithAdvanced from "../../components/SearchBarWithAdvanced";
 
 const Search = () => {
   const searchValue = useSelector((state: RootState) => state.search.value);

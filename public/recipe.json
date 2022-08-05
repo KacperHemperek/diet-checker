@@ -1,0 +1,206 @@
+{
+  "results": [
+    {
+      "vegetarian": true,
+      "vegan": false,
+      "glutenFree": false,
+      "dairyFree": true,
+      "veryHealthy": false,
+      "cheap": false,
+      "veryPopular": false,
+      "sustainable": false,
+      "lowFodmap": false,
+      "weightWatcherSmartPoints": 12,
+      "gaps": "no",
+      "preparationMinutes": -1,
+      "cookingMinutes": -1,
+      "aggregateLikes": 4,
+      "healthScore": 41,
+      "pricePerServing": 137.24,
+      "id": 642539,
+      "title": "Falafel Burger",
+      "readyInMinutes": 45,
+      "servings": 4,
+      "sourceUrl": "https://www.foodista.com/recipe/DYNQRHMK/falafel-burger",
+      "image": "https://spoonacular.com/recipeImages/642539-312x231.png",
+      "imageType": "png",
+      "summary": "You can never have too many middl eastern recipes, so give Falafel Burger a try. For <b>$1.37 per serving</b>, this recipe <b>covers 19%</b> of your daily requirements of vitamins and minerals. One portion of this dish contains around <b>12g of protein</b>, <b>20g of fat</b>, and a total of <b>402 calories</b>. This recipe serves 4. It is brought to you by Foodista. 4 people were impressed by this recipe. Head to the store and pick up onion, garlic, sriracha sauce, and a few other things to make it today. Only a few people really liked this main course. From preparation to the plate, this recipe takes about <b>about 45 minutes</b>. It is a good option if you're following a <b>dairy free and lacto ovo vegetarian</b> diet. With a spoonacular <b>score of 81%</b>, this dish is spectacular. Try <a href=\"https://spoonacular.com/recipes/clean-eating-falafel-burger-1063020\">Clean eating falafel burger</a>, <a href=\"https://spoonacular.com/recipes/clean-eating-falafel-burger-848720\">Clean eating falafel burger</a>, and <a href=\"https://spoonacular.com/recipes/falafel-veggie-burger-with-feta-yogurt-sauce-559036\">Falafel Veggie Burger with Feta Yogurt Sauce</a> for similar recipes.",
+      "cuisines": ["Middle Eastern"],
+      "dishTypes": ["lunch", "main course", "main dish", "dinner"],
+      "diets": ["dairy free", "lacto ovo vegetarian"],
+      "occasions": [],
+      "analyzedInstructions": [
+        {
+          "name": "",
+          "steps": [
+            {
+              "number": 1,
+              "step": "Pat the chickpeas dry with a paper towel and throw them into a food processor along with the garlic.",
+              "ingredients": [
+                {
+                  "id": 16057,
+                  "name": "chickpeas",
+                  "localizedName": "chickpeas",
+                  "image": "chickpeas.png"
+                },
+                {
+                  "id": 11215,
+                  "name": "garlic",
+                  "localizedName": "garlic",
+                  "image": "garlic.png"
+                }
+              ],
+              "equipment": [
+                {
+                  "id": 404771,
+                  "name": "food processor",
+                  "localizedName": "food processor",
+                  "image": "food-processor.png"
+                },
+                {
+                  "id": 405895,
+                  "name": "paper towels",
+                  "localizedName": "paper towels",
+                  "image": "paper-towels.jpg"
+                }
+              ]
+            },
+            {
+              "number": 2,
+              "step": "Puree until smooth.",
+              "ingredients": [],
+              "equipment": []
+            },
+            {
+              "number": 3,
+              "step": "Using your clean hands incorporate tahini, sriracha, parsley and onion into the chickpea mixture.",
+              "ingredients": [
+                {
+                  "id": 16057,
+                  "name": "chickpeas",
+                  "localizedName": "chickpeas",
+                  "image": "chickpeas.png"
+                },
+                {
+                  "id": 1016168,
+                  "name": "sriracha",
+                  "localizedName": "sriracha",
+                  "image": "hot-sauce-or-tabasco.png"
+                },
+                {
+                  "id": 11297,
+                  "name": "parsley",
+                  "localizedName": "parsley",
+                  "image": "parsley.jpg"
+                },
+                {
+                  "id": 12698,
+                  "name": "tahini",
+                  "localizedName": "tahini",
+                  "image": "tahini-paste.png"
+                },
+                {
+                  "id": 11282,
+                  "name": "onion",
+                  "localizedName": "onion",
+                  "image": "brown-onion.png"
+                }
+              ],
+              "equipment": []
+            },
+            {
+              "number": 4,
+              "step": "Form mixture into four patties and set aside.",
+              "ingredients": [],
+              "equipment": []
+            },
+            {
+              "number": 5,
+              "step": "Heat peanut oil in a large skillet over medium heat.",
+              "ingredients": [
+                {
+                  "id": 4042,
+                  "name": "peanut oil",
+                  "localizedName": "peanut oil",
+                  "image": "peanut-oil.jpg"
+                }
+              ],
+              "equipment": [
+                {
+                  "id": 404645,
+                  "name": "frying pan",
+                  "localizedName": "frying pan",
+                  "image": "pan.png"
+                }
+              ]
+            },
+            {
+              "number": 6,
+              "step": "Once the oil begins to shimmer add the patties and cook for three minutes per side or until golden brown.",
+              "ingredients": [
+                {
+                  "id": 4582,
+                  "name": "cooking oil",
+                  "localizedName": "cooking oil",
+                  "image": "vegetable-oil.jpg"
+                }
+              ],
+              "equipment": [],
+              "length": { "number": 3, "unit": "minutes" }
+            },
+            {
+              "number": 7,
+              "step": "Remove from and place in a hamburger bun.",
+              "ingredients": [
+                {
+                  "id": 18350,
+                  "name": "hamburger bun",
+                  "localizedName": "hamburger bun",
+                  "image": "hamburger-bun.jpg"
+                }
+              ],
+              "equipment": []
+            },
+            {
+              "number": 8,
+              "step": "Top each burger with 2 slices of tomato, 2 slices of cucumber and a dollop of tzatziki.",
+              "ingredients": [
+                {
+                  "id": 11206,
+                  "name": "cucumber",
+                  "localizedName": "cucumber",
+                  "image": "cucumber.jpg"
+                },
+                {
+                  "id": 93777,
+                  "name": "tzatziki",
+                  "localizedName": "tzatziki",
+                  "image": "raita-or-tzaziki.png"
+                },
+                {
+                  "id": 11529,
+                  "name": "tomato",
+                  "localizedName": "tomato",
+                  "image": "tomato.png"
+                }
+              ],
+              "equipment": []
+            },
+            {
+              "number": 9,
+              "step": "Serve immediately.",
+              "ingredients": [],
+              "equipment": []
+            }
+          ]
+        }
+      ],
+      "sourceName": null,
+      "creditsText": null,
+      "spoonacularSourceUrl": "https://spoonacular.com/falafel-burger-642539"
+    }
+  ],
+  "offset": 0,
+  "number": 1,
+  "totalResults": 54
+}
