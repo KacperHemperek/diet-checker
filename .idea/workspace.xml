@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="feat: updated function to be async">
+    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="style: when hovering over show password button cursor is pointer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/FormInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/FormInput.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SearchBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SearchBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SearchBarWithAdvanced.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/search/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/search/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,14 +104,7 @@
       <workItem from="1659541496974" duration="7208000" />
       <workItem from="1659555571186" duration="3171000" />
       <workItem from="1659619527915" duration="4440000" />
-      <workItem from="1659693575833" duration="6087000" />
-    </task>
-    <task id="LOCAL-00011" summary="fix: login error and registration error are the same">
-      <created>1658762810106</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1658762810106</updated>
+      <workItem from="1659693575833" duration="6326000" />
     </task>
     <task id="LOCAL-00012" summary="chore: minor changes">
       <created>1658762861489</created>
@@ -447,7 +442,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659699481502</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="style: when hovering over show password button cursor is pointer">
+      <created>1659699732554</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1659699732554</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -466,7 +468,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: modal closes when clicking escape button" />
     <MESSAGE value="feat: form gets information from existing user" />
     <MESSAGE value="feat: form gets information from backend" />
     <MESSAGE value="fix: when form is not submitted values in form are back to value from firebase" />
@@ -491,7 +492,8 @@
     <MESSAGE value="chore: removed console logs" />
     <MESSAGE value="fix: user can go to login page when logged in" />
     <MESSAGE value="feat: updated function to be async" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: updated function to be async" />
+    <MESSAGE value="style: when hovering over show password button cursor is pointer" />
+    <option name="LAST_COMMIT_MESSAGE" value="style: when hovering over show password button cursor is pointer" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
