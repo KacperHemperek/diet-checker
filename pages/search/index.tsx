@@ -7,7 +7,7 @@ import { useDispatch } from "react-redux";
 import { setSearchValue } from "../../redux/features/searchData";
 import Image from "next/image";
 import descImg from "../../public/search_page_img.svg";
-import SearchBarWithAdvanced from "../../components/SearchBarWithAdvanced";
+import SearchBar from "../../components/SearchBar";
 
 const Search = () => {
   const searchValue = useSelector((state: RootState) => state.search.value);
@@ -55,7 +55,7 @@ const Search = () => {
         <Image src={descImg} alt="search image" />
       </div>
       <div className="flex flex-col items-center px-4 py-12 md:px-12 lg:px-32">
-        <SearchBarWithAdvanced
+        <SearchBar
           onSubmit={handleSubmit}
           ref={searchRef}
           className="w-full md:w-2/3 lg:w-1/2"

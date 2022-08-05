@@ -36,7 +36,7 @@ function RouteGuard({ children }: Props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userId]);
 
-  function authCheck(url: string) {
+  async function authCheck(url: string) {
     // redirect to login page if accessing a private page and not logged in
     const publicPaths = ["/login", "/register", "/", "/about"];
     const notLoggedInPaths = ["/login", "/register"];
@@ -44,14 +44,14 @@ function RouteGuard({ children }: Props) {
 
     if (userId === "" && !publicPaths.includes(path)) {
       setAuthorized(false);
-      router.push("/login");
+      await router.push("/login");
     } else {
       setAuthorized(true);
     }
 
     if (userId !== "" && notLoggedInPaths.includes(path)) {
       setAuthorized(false);
-      router.push("/");
+      await router.push("/");
     } else {
       setAuthorized(true);
     }
