@@ -17,7 +17,7 @@ const RecipePage: NextPage = () => {
                 src={data.image}
                 alt={data.title}
               />
-              <h1 className="text-center font-semibold lg:text-xl">
+              <h1 className="max-w-[250px] text-center font-semibold lg:text-xl">
                 {data.title}
               </h1>
             </div>
@@ -29,7 +29,7 @@ const RecipePage: NextPage = () => {
               isVegetarian={data.vegetarian}
             />
           </div>
-          <div className="flex flex-grow flex-row flex-wrap justify-center  lg:justify-around">
+          <div className="flex flex-grow flex-row flex-wrap justify-center md:justify-around">
             {/* charts */}
             <div className="mx-5 my-4 h-32 w-32 border border-green-500"></div>
             <div className="mx-5 my-4 h-32 w-32 border border-green-500"></div>
