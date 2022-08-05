@@ -40,8 +40,7 @@ function RouteGuard({ children }: Props) {
     // redirect to login page if accessing a private page and not logged in
     const publicPaths = ["/login", "/register", "/account/[id]", "/", "/about"];
     const path = url.split("?")[0];
-    console.log({ router });
-    console.log(userId);
+
     if (userId === "" && !publicPaths.includes(path)) {
       setAuthorized(false);
       router.push("/login");
