@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="style: search item page changed">
+    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="style: charts alignment changed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/RecipeTags.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/RecipeTags.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/search/[id]/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/search/[id]/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -104,14 +103,7 @@
       <workItem from="1659555571186" duration="3171000" />
       <workItem from="1659619527915" duration="4440000" />
       <workItem from="1659693575833" duration="7729000" />
-      <workItem from="1659711452526" duration="6204000" />
-    </task>
-    <task id="LOCAL-00014" summary="fix: user is set more than once on login or register">
-      <created>1658764435631</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1658764435631</updated>
+      <workItem from="1659711452526" duration="6434000" />
     </task>
     <task id="LOCAL-00015" summary="fix: not needed additional state updates">
       <created>1658767982655</created>
@@ -449,7 +441,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659716479217</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="style: charts alignment changed">
+      <created>1659717768485</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1659717768485</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -468,7 +467,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix: when form is not submitted values in form are back to value from firebase" />
     <MESSAGE value="feat: added type to custom button" />
     <MESSAGE value="chore: swapped buttons with custom button component" />
     <MESSAGE value="feat: added type props to custom button component" />
@@ -493,7 +491,8 @@
     <MESSAGE value="style: when hovering over show password button cursor is pointer" />
     <MESSAGE value="chore: removed unused components" />
     <MESSAGE value="style: search item page changed" />
-    <option name="LAST_COMMIT_MESSAGE" value="style: search item page changed" />
+    <MESSAGE value="style: charts alignment changed" />
+    <option name="LAST_COMMIT_MESSAGE" value="style: charts alignment changed" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
