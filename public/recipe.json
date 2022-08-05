@@ -3,7 +3,7 @@
   "vegan": false,
   "glutenFree": false,
   "dairyFree": true,
-  "veryHealthy": false,
+  "veryHealthy": true,
   "cheap": false,
   "veryPopular": false,
   "sustainable": false,
@@ -2963,7 +2963,7 @@
     },
     "weightPerServing": { "amount": 241, "unit": "g" }
   },
-  "summary": "You can never have too many middl eastern recipes, so give Falafel Burger a try. For <b>$1.37 per serving</b>, this recipe <b>covers 19%</b> of your daily requirements of vitamins and minerals. One portion of this dish contains around <b>12g of protein</b>, <b>20g of fat</b>, and a total of <b>402 calories</b>. This recipe serves 4. It is brought to you by Foodista. 4 people were impressed by this recipe. Head to the store and pick up onion, garlic, sriracha sauce, and a few other things to make it today. Only a few people really liked this main course. From preparation to the plate, this recipe takes about <b>about 45 minutes</b>. It is a good option if you're following a <b>dairy free and lacto ovo vegetarian</b> diet. With a spoonacular <b>score of 81%</b>, this dish is spectacular. Try <a href=\"https://spoonacular.com/recipes/clean-eating-falafel-burger-1063020\">Clean eating falafel burger</a>, <a href=\"https://spoonacular.com/recipes/clean-eating-falafel-burger-848720\">Clean eating falafel burger</a>, and <a href=\"https://spoonacular.com/recipes/falafel-veggie-burger-with-feta-yogurt-sauce-559036\">Falafel Veggie Burger with Feta Yogurt Sauce</a> for similar recipes.",
+  "summary": "You can never have too many middle eastern recipes, so give Falafel Burger a try. For <b>$1.37 per serving</b>, this recipe <b>covers 19%</b> of your daily requirements of vitamins and minerals. One portion of this dish contains around <b>12g of protein</b>, <b>20g of fat</b>, and a total of <b>402 calories</b>. This recipe serves 4. It is brought to you by Foodista. 4 people were impressed by this recipe. Head to the store and pick up onion, garlic, sriracha sauce, and a few other things to make it today. Only a few people really liked this main course. From preparation to the plate, this recipe takes about <b>about 45 minutes</b>. It is a good option if you're following a <b>dairy free and lacto ovo vegetarian</b> diet. With a spoonacular <b>score of 81%</b>, this dish is spectacular. Try <a href=\"https://spoonacular.com/recipes/clean-eating-falafel-burger-1063020\">Clean eating falafel burger</a>, <a href=\"https://spoonacular.com/recipes/clean-eating-falafel-burger-848720\">Clean eating falafel burger</a>, and <a href=\"https://spoonacular.com/recipes/falafel-veggie-burger-with-feta-yogurt-sauce-559036\">Falafel Veggie Burger with Feta Yogurt Sauce</a> for similar recipes.",
   "cuisines": ["Middle Eastern"],
   "dishTypes": ["lunch", "main course", "main dish", "dinner"],
   "diets": ["dairy free", "lacto ovo vegetarian"],
