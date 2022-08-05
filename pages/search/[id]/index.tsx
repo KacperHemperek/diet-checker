@@ -13,8 +13,8 @@ const RecipePage: NextPage = () => {
     <Layout>
       <div className="mx-4  md:mx-12 xl:mx-32">
         <div className="flex flex-col py-8 lg:flex-row">
-          <div className="flex flex-col lg:flex-row">
-            <div className="max-w-1/2 flex flex-col items-center">
+          <div className="flex flex-col lg:flex-row lg:gap-4">
+            <div className="max-w-1/2 lg: flex flex-col items-center justify-center">
               <img
                 className="mb-2 aspect-square w-28 rounded-full border-2 border-green-500 lg:mb-4 "
                 src={data.image}
