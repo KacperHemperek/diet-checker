@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="chore: removed unused components">
-      <change afterPath="$PROJECT_DIR$/components/RecipeTag.tsx" afterDir="false" />
+    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="style: search item page changed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/RecipeTags.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/RecipeTags.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/search/[id]/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/search/[id]/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/recipe.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/recipe.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +50,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "yarn",
     "prettierjs.PrettierConfiguration.Package": "C:\\Users\\kacpe\\Desktop\\Projekty\\diet-checker\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "preferences.rainbow.brackets",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "ts.external.directory.path": "C:\\Users\\kacpe\\Desktop\\Projekty\\diet-checker\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -106,14 +104,7 @@
       <workItem from="1659555571186" duration="3171000" />
       <workItem from="1659619527915" duration="4440000" />
       <workItem from="1659693575833" duration="7729000" />
-      <workItem from="1659711452526" duration="4955000" />
-    </task>
-    <task id="LOCAL-00013" summary="feat: add auth listener on root component and make it possible to log out">
-      <created>1658764313968</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1658764313968</updated>
+      <workItem from="1659711452526" duration="6204000" />
     </task>
     <task id="LOCAL-00014" summary="fix: user is set more than once on login or register">
       <created>1658764435631</created>
@@ -451,7 +442,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659699994429</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="style: search item page changed">
+      <created>1659716479217</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1659716479217</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -470,7 +468,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: form gets information from backend" />
     <MESSAGE value="fix: when form is not submitted values in form are back to value from firebase" />
     <MESSAGE value="feat: added type to custom button" />
     <MESSAGE value="chore: swapped buttons with custom button component" />
@@ -495,7 +492,8 @@
     <MESSAGE value="feat: updated function to be async" />
     <MESSAGE value="style: when hovering over show password button cursor is pointer" />
     <MESSAGE value="chore: removed unused components" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: removed unused components" />
+    <MESSAGE value="style: search item page changed" />
+    <option name="LAST_COMMIT_MESSAGE" value="style: search item page changed" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
