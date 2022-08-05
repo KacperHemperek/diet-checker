@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="feat: add route guard" />
+    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="chore: removed console logs">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-wrappers/RouterGuard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app-wrappers/RouterGuard.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,14 +102,7 @@
       <workItem from="1659541496974" duration="7208000" />
       <workItem from="1659555571186" duration="3171000" />
       <workItem from="1659619527915" duration="4440000" />
-      <workItem from="1659693575833" duration="5478000" />
-    </task>
-    <task id="LOCAL-00008" summary="fix: typo in registration form">
-      <created>1658740180831</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1658740180831</updated>
+      <workItem from="1659693575833" duration="5751000" />
     </task>
     <task id="LOCAL-00009" summary="feat: reset form when there is some error and redirect user to homepage when registration was successful">
       <created>1658740812639</created>
@@ -444,7 +440,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659699009109</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="chore: removed console logs">
+      <created>1659699153335</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1659699153335</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -463,7 +466,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: modal uses dialog dialog tag" />
     <MESSAGE value="feat: Modal element added" />
     <MESSAGE value="style: made modal card as a custom component" />
     <MESSAGE value="feat: modal closes when clicking escape button" />
@@ -488,7 +490,8 @@
     <MESSAGE value="feat: user page renders new data on every user doc change in firebase" />
     <MESSAGE value="fix: page rerenders infinitely" />
     <MESSAGE value="feat: add route guard" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add route guard" />
+    <MESSAGE value="chore: removed console logs" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: removed console logs" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
