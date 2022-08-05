@@ -7,7 +7,7 @@ type Props = {
 
 const IngredientsList = ({ array }: Props) => {
   return (
-    <div className="col-span-5 p-4">
+    <div className="p-4 md:col-span-6 lg:col-span-5">
       <h2 className="mb-6 text-2xl font-semibold">Ingredients</h2>
       {array.map((item, index) => (
         <li
