@@ -4,7 +4,8 @@ import data from "../../../public/recipe.json";
 import RecipeTags from "../../../components/RecipeTags";
 import { NextPage } from "next";
 import IngredientsList from "../../../components/IngredientsList";
-import RecipeSummary from "../../../components/RecipeSummary";
+import RecipeSummary from "../../../components/RecipeSteps";
+import RecipeSteps from "../../../components/RecipeSteps";
 
 const RecipePage: NextPage = () => {
   console.log(data.vegan);
@@ -41,7 +42,7 @@ const RecipePage: NextPage = () => {
 
         <div className="grid md:grid-cols-12 md:gap-12 ">
           <IngredientsList array={data.extendedIngredients} />
-          <RecipeSummary />
+          <RecipeSteps array={data.analyzedInstructions[0].steps} />
         </div>
       </div>
     </Layout>
