@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="style: image and name of recipe centered on large screens">
+    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="chore: add recharts no dependencies">
+      <change afterPath="$PROJECT_DIR$/components/CustomPieChart.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/search/[id]/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/search/[id]/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,24 +38,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/kacpe/Desktop/Projekty/diet-checker",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "yarn",
-    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\kacpe\\Desktop\\Projekty\\diet-checker\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "C:\\Users\\kacpe\\Desktop\\Projekty\\diet-checker\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/kacpe/Desktop/Projekty/diet-checker&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\kacpe\\Desktop\\Projekty\\diet-checker\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\kacpe\\Desktop\\Projekty\\diet-checker\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\kacpe\Desktop\Projekty\diet-checker\app-wrappers" />
@@ -107,14 +106,8 @@
       <workItem from="1659619527915" duration="4440000" />
       <workItem from="1659693575833" duration="7729000" />
       <workItem from="1659711452526" duration="8152000" />
-      <workItem from="1659721071736" duration="2191000" />
-    </task>
-    <task id="LOCAL-00017" summary="feat: change spans to anchor tags, add link to remember password page &#10;&#10;todo: change remember password link, so it goes to remember password page, add password page">
-      <created>1658769429261</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1658769429261</updated>
+      <workItem from="1659721071736" duration="4918000" />
+      <workItem from="1659779131892" duration="558000" />
     </task>
     <task id="LOCAL-00018" summary="feat: create dynamic page and change account link &#10;&#10;todo: get data from firebase with an endpoint">
       <created>1658771851335</created>
@@ -452,7 +445,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659718490019</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="chore: add recharts no dependencies">
+      <created>1659726886972</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1659726886972</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -471,7 +471,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: added type props to custom button component" />
     <MESSAGE value="refactor: hardcoded updating formik values now update dynamically" />
     <MESSAGE value="fix: submit button doesn't cover whole width of form" />
     <MESSAGE value="fix: custom button isn't centered" />
@@ -496,7 +495,8 @@
     <MESSAGE value="style: charts alignment changed" />
     <MESSAGE value="style: changed chart alignment on medium screens" />
     <MESSAGE value="style: image and name of recipe centered on large screens" />
-    <option name="LAST_COMMIT_MESSAGE" value="style: image and name of recipe centered on large screens" />
+    <MESSAGE value="chore: add recharts no dependencies" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: add recharts no dependencies" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

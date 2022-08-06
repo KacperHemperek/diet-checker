@@ -4,8 +4,8 @@ import data from "../../../public/recipe.json";
 import RecipeTags from "../../../components/RecipeTags";
 import { NextPage } from "next";
 import IngredientsList from "../../../components/IngredientsList";
-import RecipeSummary from "../../../components/RecipeSteps";
 import RecipeSteps from "../../../components/RecipeSteps";
+import CustomPieChart from "../../../components/CustomPieChart";
 
 const RecipePage: NextPage = () => {
   console.log(data.vegan);
@@ -33,10 +33,15 @@ const RecipePage: NextPage = () => {
             />
           </div>
           <div className="flex flex-grow flex-row flex-wrap justify-center md:justify-around">
-            {/* charts */}
-            <div className="mx-5 my-4 h-32 w-32 border border-green-500"> </div>
-            <div className="mx-5 my-4 h-32 w-32 border border-green-500"></div>
-            <div className="mx-5 my-4 h-32 w-32 border border-green-500"></div>
+            <div className="mx-5 my-4 h-32 w-32 ">
+              <CustomPieChart />
+            </div>
+            <div className="mx-5 my-4 h-32 w-32 ">
+              <CustomPieChart />
+            </div>
+            <div className="mx-5 my-4 h-32 w-32 ">
+              <CustomPieChart />
+            </div>
           </div>
         </div>
 
