@@ -23,7 +23,6 @@
     "redux-persist": "^6.0.0",
     "yup": "^0.32.11"
   },
-  "type": "module",
   "devDependencies": {
     "@types/node": "18.0.5",
     "@types/react": "18.0.15",

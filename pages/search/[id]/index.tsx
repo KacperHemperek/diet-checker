@@ -33,14 +33,52 @@ const RecipePage: NextPage = () => {
             />
           </div>
           <div className="flex flex-grow flex-row flex-wrap justify-center md:justify-around">
-            <div className="mx-5 my-4 h-32 w-32 ">
-              <CustomPieChart />
+            <div className="mx-3 my-4 h-32 w-32 ">
+              <CustomPieChart
+                name="Calories"
+                demand={2000}
+                content={
+                  data.nutrition.nutrients.find(
+                    (item) => item.name === "Calories"
+                  )?.amount
+                }
+                color="#22c55e"
+              />
             </div>
-            <div className="mx-5 my-4 h-32 w-32 ">
-              <CustomPieChart />
+            <div className="mx-3 my-4 h-32 w-32 ">
+              <CustomPieChart
+                name="Proteins"
+                demand={200}
+                content={
+                  data.nutrition.nutrients.find(
+                    (item) => item.name === "Protein"
+                  )?.amount
+                }
+                color="#FF0000"
+              />
             </div>
-            <div className="mx-5 my-4 h-32 w-32 ">
-              <CustomPieChart />
+            <div className="mx-3 my-4 h-32 w-32 ">
+              <CustomPieChart
+                name="Carbs"
+                demand={300}
+                content={
+                  data.nutrition.nutrients.find(
+                    (item) => item.name === "Carbohydrates"
+                  )?.amount
+                }
+                color="#8B008B"
+              />
+            </div>
+            <div className="mx-3 my-4 h-32 w-32 ">
+              <CustomPieChart
+                name="Fat"
+                demand={100}
+                content={
+                  data.nutrition.nutrients.find((item) => item.name === "Fat")
+                    ?.amount
+                }
+                color="#F9512D"
+              />
             </div>
           </div>
         </div>
