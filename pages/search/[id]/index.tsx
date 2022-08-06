@@ -16,7 +16,7 @@ const RecipePage: NextPage = () => {
           <div className="flex flex-col lg:flex-row lg:gap-4">
             <div className="max-w-1/2 lg: flex flex-col items-center justify-center">
               <img
-                className="mb-2 aspect-square w-28 rounded-full border-2 border-green-500 lg:mb-4 "
+                className="mb-2 aspect-square w-28 rounded-full lg:mb-4 "
                 src={data.image}
                 alt={data.title}
               />
