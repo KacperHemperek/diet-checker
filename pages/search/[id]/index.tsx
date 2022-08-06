@@ -48,7 +48,7 @@ const RecipePage: NextPage = () => {
             <div className="mx-3 my-4 h-32 w-32 ">
               <CustomPieChart
                 name="Proteins"
-                demand={200}
+                demand={50}
                 content={
                   data.nutrition.nutrients.find(
                     (item) => item.name === "Protein"
@@ -60,7 +60,7 @@ const RecipePage: NextPage = () => {
             <div className="mx-3 my-4 h-32 w-32 ">
               <CustomPieChart
                 name="Carbs"
-                demand={300}
+                demand={275}
                 content={
                   data.nutrition.nutrients.find(
                     (item) => item.name === "Carbohydrates"

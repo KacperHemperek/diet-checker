@@ -32,7 +32,7 @@ function CustomPieChart({ name, content, demand, color }: Props) {
           paddingAngle={0}
           cornerRadius={5}
         >
-          <Cell key="test" fill="#CCC" />
+          <Cell key="test" stroke="#A9A9A9" strokeWidth={0.5} fill="#FFF" />
         </Pie>
         <text
           x="50%"
