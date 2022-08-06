@@ -1,5 +1,5 @@
 import React from "react";
-import { Cell, Pie, PieChart, ResponsiveContainer } from "recharts";
+import { Cell, Label, Pie, PieChart, ResponsiveContainer } from "recharts";
 
 type Props = {
   name: string;
@@ -36,10 +36,19 @@ function CustomPieChart({ name, content, demand, color }: Props) {
         </Pie>
         <text
           x="50%"
-          y="50%"
+          y="45%"
           textAnchor="middle"
           dominantBaseline="middle"
-          fontSize="1.5rem"
+          fontSize="1.7rem"
+        >
+          {content}
+        </text>
+        <text
+          x="50%"
+          y="65%"
+          textAnchor="middle"
+          dominantBaseline="middle"
+          fontSize="1rem"
         >
           {name}
         </text>

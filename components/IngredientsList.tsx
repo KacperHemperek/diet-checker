@@ -8,10 +8,10 @@ type Props = {
 const IngredientsList = ({ array }: Props) => {
   return (
     <div className="py-4 md:col-span-6 lg:col-span-5">
-      <h2 className="mb-6 text-2xl font-semibold">Ingredients</h2>
+      <h2 className="mb-6 text-2xl font-semibold xl:text-3xl">Ingredients</h2>
       {array.map((item, index) => (
         <li
-          className="mb-1 flex items-baseline gap-2 fill-green-500"
+          className="mb-1 flex items-baseline gap-2 fill-green-500 xl:text-lg"
           key={index}
         >
           <svg

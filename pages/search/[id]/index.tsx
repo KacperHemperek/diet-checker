@@ -20,7 +20,7 @@ const RecipePage: NextPage = () => {
                 src={data.image}
                 alt={data.title}
               />
-              <h1 className="max-w-[250px] text-center font-semibold lg:text-xl">
+              <h1 className="max-w-[250px] text-center text-xl font-semibold lg:text-2xl">
                 {data.title}
               </h1>
             </div>
@@ -33,7 +33,7 @@ const RecipePage: NextPage = () => {
             />
           </div>
           <div className="flex flex-grow flex-row flex-wrap justify-center md:justify-around">
-            <div className="mx-3 my-4 h-32 w-32 ">
+            <div className="mx-3 my-4 h-32 w-32 lg:h-40 lg:w-40 ">
               <CustomPieChart
                 name="Calories"
                 demand={2000}
@@ -45,7 +45,7 @@ const RecipePage: NextPage = () => {
                 color="#22c55e"
               />
             </div>
-            <div className="mx-3 my-4 h-32 w-32 ">
+            <div className="mx-3 my-4 h-32 w-32 lg:h-40 lg:w-40 ">
               <CustomPieChart
                 name="Proteins"
                 demand={50}
@@ -57,9 +57,9 @@ const RecipePage: NextPage = () => {
                 color="#FF0000"
               />
             </div>
-            <div className="mx-3 my-4 h-32 w-32 ">
+            <div className="mx-3 my-4 h-32 w-32 lg:h-40 lg:w-40 ">
               <CustomPieChart
-                name="Carbs"
+                name="Carbohydrates"
                 demand={275}
                 content={
                   data.nutrition.nutrients.find(
@@ -69,7 +69,7 @@ const RecipePage: NextPage = () => {
                 color="#8B008B"
               />
             </div>
-            <div className="mx-3 my-4 h-32 w-32 ">
+            <div className="mx-3 my-4 h-32 w-32 lg:h-40 lg:w-40 ">
               <CustomPieChart
                 name="Fat"
                 demand={100}
