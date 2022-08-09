@@ -1,37 +1,24 @@
-import React, { useEffect } from "react";
-import { onAuthStateChanged } from "@firebase/auth";
-import { auth } from "../utils/firebase.utils";
-import { useDispatch, useSelector } from "react-redux";
-import { clearUserInfo, setUser } from "../redux/features/userData";
-import { RootState } from "../redux/store";
-import { useRouter } from "next/router";
+import React from "react";
+import { Provider } from "react-redux";
+import { persistor, store } from "../redux/store";
+import { PersistGate } from "redux-persist/integration/react";
+import RouterGuard from "./RouterGuard";
+import AuthWrapper from "./AuthWrapper";
 
 type Props = {
   children: any;
 };
 
 const AppWrapper = ({ children }: Props) => {
-  const dispatch = useDispatch();
-  const uid = useSelector((state: RootState) => state.user.uid);
-  const router = useRouter();
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, () => {
-      if (auth.currentUser) {
-        if (!uid) {
-          dispatch(setUser(auth.currentUser));
-        }
-      } else {
-        if (uid) {
-          dispatch(clearUserInfo());
-          router.push("/login");
-        }
-      }
-    });
-
-    return unsubscribe();
-  });
-
-  return <>{children}</>;
+  return (
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <AuthWrapper>
+          <RouterGuard>{children}</RouterGuard>
+        </AuthWrapper>
+      </PersistGate>
+    </Provider>
+  );
 };
 
 export default AppWrapper;
