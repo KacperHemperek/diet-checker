@@ -12,7 +12,7 @@ const RecipeSteps = ({ array }: Props) => {
       </h2>
       <ol>
         {array.map((item, index) => (
-          <li className="mb-1 xl:text-lg">
+          <li className="mb-1 xl:text-lg" key={index}>
             <span className="font-semibold text-green-500 ">
               {index + 1 + ". "}
             </span>{" "}

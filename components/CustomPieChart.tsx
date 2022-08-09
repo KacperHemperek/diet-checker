@@ -1,10 +1,10 @@
 import React from "react";
-import { Cell, Label, Pie, PieChart, ResponsiveContainer } from "recharts";
+import { Cell, Pie, PieChart, ResponsiveContainer } from "recharts";
 
 type Props = {
   name: string;
   demand: number;
-  content?: number;
+  content: number | undefined;
   color: string;
 };
 
@@ -19,41 +19,35 @@ function CustomPieChart({ name, content, demand, color }: Props) {
   ];
 
   return (
-    <ResponsiveContainer>
-      <PieChart width={50} height={50}>
-        <Pie
-          data={data}
-          dataKey="value"
-          innerRadius="80%"
-          outerRadius="100%"
-          fill={color}
-          startAngle={-270}
-          endAngle={90}
-          paddingAngle={0}
-          cornerRadius={5}
-        >
-          <Cell key="test" stroke="#A9A9A9" strokeWidth={0.5} fill="#FFF" />
-        </Pie>
-        <text
-          x="50%"
-          y="45%"
-          textAnchor="middle"
-          dominantBaseline="middle"
-          fontSize="1.7rem"
-        >
-          {content}
-        </text>
-        <text
-          x="50%"
-          y="65%"
-          textAnchor="middle"
-          dominantBaseline="middle"
-          fontSize="1rem"
-        >
-          {name}
-        </text>
-      </PieChart>
-    </ResponsiveContainer>
+    <>
+      <ResponsiveContainer>
+        <PieChart width={50} height={50}>
+          <Pie
+            data={data}
+            dataKey="value"
+            innerRadius="80%"
+            outerRadius="100%"
+            fill={color}
+            startAngle={-270}
+            endAngle={90}
+            paddingAngle={0}
+            cornerRadius={5}
+          >
+            <Cell key="test" stroke="#A9A9A9" strokeWidth={0.5} fill="#FFF" />
+          </Pie>
+          <text
+            x="50%"
+            y="52%"
+            textAnchor="middle"
+            dominantBaseline="middle"
+            fontSize="1.7rem"
+          >
+            {content}
+          </text>
+        </PieChart>
+      </ResponsiveContainer>
+      <div className="mt-1 text-center">{name}</div>
+    </>
   );
 }
 
