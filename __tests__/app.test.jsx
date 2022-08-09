@@ -1,18 +1,10 @@
 import { render, screen } from "@testing-library/react";
-import Home from "../pages/index";
 import "@testing-library/jest-dom";
-import AppWrapper from "../app-wrappers/AppWrapper";
+import HomepageCards from "../components/HomepageCards";
 
-describe("Home", () => {
-  it("renders a heading", () => {
-    render(
-      <AppWrapper>
-        <Home />
-      </AppWrapper>
-    );
+it("renders card", () => {
+  render(<HomepageCards />);
 
-    const main = screen.getByTestId("main");
-
-    expect(main).toBeInTheDocument();
-  });
+  const cards = screen.getByTestId("homepage-cards");
+  expect(cards).toBeInTheDocument();
 });

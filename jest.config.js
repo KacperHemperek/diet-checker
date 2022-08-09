@@ -3,7 +3,7 @@ const nextJest = require("next/jest");
 const createJestConfig = nextJest();
 
 const customJestConfig = {
-  globalSetup: "<rootDir>/__tests__/setupEnv.js",
+  globalSetup: "<rootDir>/setupEnv.js",
   moduleDirectories: ["node_modules", "<rootDir>/"],
   testEnvironment: "jest-environment-jsdom",
   // ...your custom config

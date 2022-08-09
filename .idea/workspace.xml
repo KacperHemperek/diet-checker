@@ -3,8 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="refactor: uid in ProfileEditModal is taken from url not from store">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app-wrappers/RouterGuard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app-wrappers/RouterGuard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/NavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/NavBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__tests__/TestWrapper.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__tests__/app.test.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/app.test.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__tests__/setupEnv.js" beforeDir="false" afterPath="$PROJECT_DIR$/setupEnv.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/HomepageCards.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/HomepageCards.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jest.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/jest.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +52,7 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/kacpe/Desktop/Projekty/diet-checker&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs.jest.jest_package&quot;: &quot;C:/Users/kacpe/Desktop/Projekty/diet-checker/node_modules/jest&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\kacpe\\Desktop\\Projekty\\diet-checker\\node_modules\\prettier&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
@@ -57,12 +62,22 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kacpe\Desktop\Projekty\diet-checker" />
       <recent name="C:\Users\kacpe\Desktop\Projekty\diet-checker\app-wrappers" />
       <recent name="C:\Users\kacpe\Desktop\Projekty\diet-checker\pages\account\[id]" />
       <recent name="C:\Users\kacpe\Desktop\Projekty\diet-checker\pages\account" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.test">
+    <configuration name="All Tests" type="JavaScriptTestRunnerJest" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
     <configuration name="dev" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -73,6 +88,21 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="test" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Jest.All Tests" />
+      <item itemvalue="npm.test" />
+      <item itemvalue="npm.dev" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -107,6 +137,7 @@
       <workItem from="1659711452526" duration="8152000" />
       <workItem from="1659721071736" duration="4918000" />
       <workItem from="1659779131892" duration="558000" />
+      <workItem from="1660049195878" duration="782000" />
     </task>
     <task id="LOCAL-00022" summary="feat: created nested route for user settings">
       <created>1658830138989</created>
