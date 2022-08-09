@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="refactor: uid in ProfileEditModal is taken from url not from store">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app-wrappers/RouterGuard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app-wrappers/RouterGuard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/NavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/NavBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/search/[id]/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/search/[id]/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +61,7 @@
       <recent name="C:\Users\kacpe\Desktop\Projekty\diet-checker\pages\account" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="dev" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -73,6 +72,20 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="test" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="npm.dev" />
+      <item itemvalue="npm.test" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -470,7 +483,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix: typo in interface name" />
     <MESSAGE value="feat: updated recipe interface to fit data from spoonacular api" />
     <MESSAGE value="feat: user id to get user changed to dynamic id" />
     <MESSAGE value="feat: endpoint for adding recipe to favorite updates list of favorite recipes &#10;&#10;todo: cover all cases" />
@@ -495,7 +507,8 @@
     <MESSAGE value="style: changed width of chart on large screens" />
     <MESSAGE value="style: changed missing values color on chart" />
     <MESSAGE value="refactor: uid in ProfileEditModal is taken from url not from store" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: uid in ProfileEditModal is taken from url not from store" />
+    <MESSAGE value="feat: assembled test to work on simple component" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: assembled test to work on simple component" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

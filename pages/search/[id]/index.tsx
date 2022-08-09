@@ -21,7 +21,7 @@ const RecipePage: NextPage = () => {
                   src={data.image}
                   alt={data.title}
                 />
-                <div className="absolute bottom-2 right-2 z-10 rounded-full bg-white px-1.5 pt-1 lg:bottom-3.5 lg:right-3">
+                <div className="absolute bottom-1 right-1 z-10 flex aspect-square rounded-full bg-white p-1.5 lg:bottom-2 lg:right-2">
                   <button className="  fill-pink-600 transition hover:fill-pink-600/80">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
