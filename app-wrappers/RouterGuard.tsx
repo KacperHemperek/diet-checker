@@ -41,7 +41,6 @@ function RouteGuard({ children }: Props) {
     const publicPaths = ["/login", "/register", "/", "/about"];
     const loggedInGuardedPaths = ["/login", "/register"];
     const path = url.split("?")[0];
-    console.log(path);
     if (userId === "" && !publicPaths.includes(path)) {
       setAuthorized(false);
       await router.push("/login");

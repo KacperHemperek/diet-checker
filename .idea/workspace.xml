@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="style: changed missing values color on chart">
+    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="refactor: uid in ProfileEditModal is taken from url not from store">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app-wrappers/RouterGuard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app-wrappers/RouterGuard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ProfileEditModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProfileEditModal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/search/[id]/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/search/[id]/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/NavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/NavBar.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,13 +107,6 @@
       <workItem from="1659711452526" duration="8152000" />
       <workItem from="1659721071736" duration="4918000" />
       <workItem from="1659779131892" duration="558000" />
-    </task>
-    <task id="LOCAL-00021" summary="feat: after log out user is redirected to login page">
-      <created>1658829861695</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1658829861695</updated>
     </task>
     <task id="LOCAL-00022" summary="feat: created nested route for user settings">
       <created>1658830138989</created>
@@ -452,7 +444,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660047415716</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="refactor: uid in ProfileEditModal is taken from url not from store">
+      <created>1660048122420</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1660048122420</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -471,7 +470,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: add favorite icon and button to foodcard component &#10;&#10;todo: add toggle function, add link to foodcard" />
     <MESSAGE value="fix: typo in interface name" />
     <MESSAGE value="feat: updated recipe interface to fit data from spoonacular api" />
     <MESSAGE value="feat: user id to get user changed to dynamic id" />
@@ -496,7 +494,8 @@
     <MESSAGE value="style: change where name of nutrient is displayed" />
     <MESSAGE value="style: changed width of chart on large screens" />
     <MESSAGE value="style: changed missing values color on chart" />
-    <option name="LAST_COMMIT_MESSAGE" value="style: changed missing values color on chart" />
+    <MESSAGE value="refactor: uid in ProfileEditModal is taken from url not from store" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: uid in ProfileEditModal is taken from url not from store" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
