@@ -39,9 +39,9 @@ function RouteGuard({ children }: Props) {
   async function authCheck(url: string) {
     // redirect to login page if accessing a private page and not logged in
     const publicPaths = ["/login", "/register", "/", "/about"];
-    const notLoggedInPaths = ["/login", "/register"];
+    const loggedInGuardedPaths = ["/login", "/register"];
     const path = url.split("?")[0];
-
+    console.log(path);
     if (userId === "" && !publicPaths.includes(path)) {
       setAuthorized(false);
       await router.push("/login");
@@ -49,7 +49,7 @@ function RouteGuard({ children }: Props) {
       setAuthorized(true);
     }
 
-    if (userId !== "" && notLoggedInPaths.includes(path)) {
+    if (userId !== "" && loggedInGuardedPaths.includes(path)) {
       setAuthorized(false);
       await router.push("/");
     } else {

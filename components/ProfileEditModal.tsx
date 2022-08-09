@@ -2,12 +2,12 @@ import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { useFormik } from "formik";
 import * as yup from "yup";
 import FormInput from "./FormInput";
-import { useSelector } from "react-redux";
-import { RootState } from "../redux/store";
+
 import Modal from "./Modal";
 import CustomButton from "./CustomButton";
 import { doc, onSnapshot } from "@firebase/firestore";
 import { db } from "../utils/firebase.utils";
+import { useRouter } from "next/router";
 
 type Props = {
   isOpen: boolean;
@@ -22,7 +22,8 @@ type InitialFormikValues = {
 };
 
 const ProfileEditModal = ({ isOpen, setIsOpen }: Props) => {
-  const uid = useSelector((state: RootState) => state.user.uid);
+  const router = useRouter();
+  const uid = router.query.id;
   const [userData, setUserData] = useState<any>({});
 
   let schema = yup.object().shape({
@@ -63,7 +64,7 @@ const ProfileEditModal = ({ isOpen, setIsOpen }: Props) => {
 
   useEffect(() => {
     const userRef = doc(db, "users", String(uid));
-    onSnapshot(
+    const unsub = onSnapshot(
       userRef,
       (doc) => {
         const data = doc.data();
@@ -73,6 +74,9 @@ const ProfileEditModal = ({ isOpen, setIsOpen }: Props) => {
         console.error(e.message);
       }
     );
+    return () => {
+      unsub();
+    };
   }, [uid]);
 
   return (
