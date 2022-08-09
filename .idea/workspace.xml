@@ -1,22 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="initialize tests">
-      <change afterPath="$PROJECT_DIR$/.env.test.local" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/__tests__/TestWrapper.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/__tests__/app.test.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/__tests__/setupEnv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-wrappers/AuthWrapper.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jest.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="refactor: uid in ProfileEditModal is taken from url not from store">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app-wrappers/AppWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app-wrappers/AppWrapper.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/Layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/firebase.utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/utils/firebase.utils.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-wrappers/RouterGuard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app-wrappers/RouterGuard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/NavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/NavBar.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +14,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev" />
+        <entry key="$PROJECT_DIR$" value="testing" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -60,7 +48,6 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/kacpe/Desktop/Projekty/diet-checker&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs.jest.jest_package&quot;: &quot;C:/Users/kacpe/Desktop/Projekty/diet-checker/node_modules/jest&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\kacpe\\Desktop\\Projekty\\diet-checker\\node_modules\\prettier&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
@@ -69,43 +56,13 @@
   }
 }</component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\kacpe\Desktop\Projekty\diet-checker" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\kacpe\Desktop\Projekty\diet-checker\app-wrappers" />
       <recent name="C:\Users\kacpe\Desktop\Projekty\diet-checker\pages\account\[id]" />
       <recent name="C:\Users\kacpe\Desktop\Projekty\diet-checker\pages\account" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.test">
-    <configuration name="Unnamed" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/__tests__/app.test.jsx" />
-      <test-names>
-        <test-name value="" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name=".renders homepage" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/__tests__/app.test.jsx" />
-      <test-names>
-        <test-name value="" />
-        <test-name value="renders homepage" />
-      </test-names>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager">
     <configuration name="dev" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -116,28 +73,6 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="test" type="js.build_tools.npm" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="test" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <list>
-      <item itemvalue="Jest..renders homepage" />
-      <item itemvalue="Jest.Unnamed" />
-      <item itemvalue="npm.dev" />
-      <item itemvalue="npm.test" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Jest.Unnamed" />
-        <item itemvalue="Jest..renders homepage" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -171,29 +106,7 @@
       <workItem from="1659693575833" duration="7729000" />
       <workItem from="1659711452526" duration="8152000" />
       <workItem from="1659721071736" duration="4918000" />
-      <workItem from="1659779131892" duration="4215000" />
-      <workItem from="1660039491276" duration="2779000" />
-    </task>
-    <task id="LOCAL-00019" summary="fix: account navlink is highlighted when user is on account page">
-      <created>1658829655677</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1658829655677</updated>
-    </task>
-    <task id="LOCAL-00020" summary="chore: removed console log from navlink">
-      <created>1658829729819</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1658829729819</updated>
-    </task>
-    <task id="LOCAL-00021" summary="feat: after log out user is redirected to login page">
-      <created>1658829861695</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1658829861695</updated>
+      <workItem from="1659779131892" duration="558000" />
     </task>
     <task id="LOCAL-00022" summary="feat: created nested route for user settings">
       <created>1658830138989</created>
@@ -510,14 +423,35 @@
       <option name="project" value="LOCAL" />
       <updated>1659726886972</updated>
     </task>
-    <task id="LOCAL-00067" summary="feat: add pie charts with mock data">
-      <created>1659779724934</created>
+    <task id="LOCAL-00067" summary="style: change where name of nutrient is displayed">
+      <created>1660046878385</created>
       <option name="number" value="00067" />
       <option name="presentableId" value="LOCAL-00067" />
       <option name="project" value="LOCAL" />
-      <updated>1659779724934</updated>
+      <updated>1660046878385</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="style: changed width of chart on large screens">
+      <created>1660047128139</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1660047128139</updated>
+    </task>
+    <task id="LOCAL-00069" summary="style: changed missing values color on chart">
+      <created>1660047415716</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1660047415716</updated>
+    </task>
+    <task id="LOCAL-00070" summary="refactor: uid in ProfileEditModal is taken from url not from store">
+      <created>1660048122420</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1660048122420</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -536,8 +470,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix: custom button isn't centered" />
-    <MESSAGE value="feat: add favorite icon and button to foodcard component &#10;&#10;todo: add toggle function, add link to foodcard" />
     <MESSAGE value="fix: typo in interface name" />
     <MESSAGE value="feat: updated recipe interface to fit data from spoonacular api" />
     <MESSAGE value="feat: user id to get user changed to dynamic id" />
@@ -559,9 +491,11 @@
     <MESSAGE value="style: changed chart alignment on medium screens" />
     <MESSAGE value="style: image and name of recipe centered on large screens" />
     <MESSAGE value="chore: add recharts no dependencies" />
-    <MESSAGE value="feat: add pie charts with mock data" />
-    <MESSAGE value="initialize tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="initialize tests" />
+    <MESSAGE value="style: change where name of nutrient is displayed" />
+    <MESSAGE value="style: changed width of chart on large screens" />
+    <MESSAGE value="style: changed missing values color on chart" />
+    <MESSAGE value="refactor: uid in ProfileEditModal is taken from url not from store" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: uid in ProfileEditModal is taken from url not from store" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
