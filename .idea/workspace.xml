@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="chore: add recharts no dependencies">
+    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="style: change where name of nutrient is displayed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/CustomPieChart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/CustomPieChart.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/RecipeSteps.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/RecipeSteps.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/search/[id]/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/search/[id]/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,13 +106,6 @@
       <workItem from="1659711452526" duration="8152000" />
       <workItem from="1659721071736" duration="4918000" />
       <workItem from="1659779131892" duration="558000" />
-    </task>
-    <task id="LOCAL-00018" summary="feat: create dynamic page and change account link &#10;&#10;todo: get data from firebase with an endpoint">
-      <created>1658771851335</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1658771851335</updated>
     </task>
     <task id="LOCAL-00019" summary="fix: account navlink is highlighted when user is on account page">
       <created>1658829655677</created>
@@ -451,7 +443,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659726886972</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="style: change where name of nutrient is displayed">
+      <created>1660046878385</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1660046878385</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -470,7 +469,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="refactor: hardcoded updating formik values now update dynamically" />
     <MESSAGE value="fix: submit button doesn't cover whole width of form" />
     <MESSAGE value="fix: custom button isn't centered" />
     <MESSAGE value="feat: add favorite icon and button to foodcard component &#10;&#10;todo: add toggle function, add link to foodcard" />
@@ -495,7 +493,8 @@
     <MESSAGE value="style: changed chart alignment on medium screens" />
     <MESSAGE value="style: image and name of recipe centered on large screens" />
     <MESSAGE value="chore: add recharts no dependencies" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: add recharts no dependencies" />
+    <MESSAGE value="style: change where name of nutrient is displayed" />
+    <option name="LAST_COMMIT_MESSAGE" value="style: change where name of nutrient is displayed" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
