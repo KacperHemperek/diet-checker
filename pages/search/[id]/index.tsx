@@ -10,22 +10,20 @@ import RecipePage from "../../../interface/RecipePage";
 import { getRecipePage } from "../../api/recipe_page";
 
 const Recipe: NextPage<RecipePage> = (props) => {
-  console.log({ props });
-
   return (
     <Layout>
       <div className="mx-4 pb-20 md:mx-12 xl:mx-32">
         <div className="flex flex-col py-8 lg:flex-row">
           <div className="flex flex-col lg:flex-row lg:gap-4">
-            <div className="max-w-1/2 lg: flex flex-col items-center justify-center">
-              <div className="relative">
+            <div className="max-w-1/2   flex flex-col items-center justify-center">
+              <div className="relative mb-2 lg:mb-4">
                 <img
                   src={props.image}
                   alt={props.title}
-                  className="mb-2  h-28 w-28 rounded-full lg:mb-4"
+                  className="  h-28 w-28 rounded-full "
                 />
 
-                <div className="absolute bottom-1 right-1 z-10 flex aspect-square rounded-full bg-white p-1.5 lg:bottom-2 lg:right-2">
+                <div className="absolute bottom-0 right-0 z-10 flex aspect-square rounded-full bg-white p-1.5 ">
                   <button className="  fill-pink-600 transition hover:fill-pink-600/80">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
