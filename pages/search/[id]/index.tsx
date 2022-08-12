@@ -1,14 +1,17 @@
 import React from "react";
 import Layout from "../../../layouts/Layout";
-import data from "../../../public/recipe.json";
 import RecipeTags from "../../../components/RecipeTags";
-import { NextPage } from "next";
+import { NextPage, NextPageContext } from "next";
 import IngredientsList from "../../../components/IngredientsList";
 import RecipeSteps from "../../../components/RecipeSteps";
 import CustomPieChart from "../../../components/CustomPieChart";
 
-const RecipePage: NextPage = () => {
-  console.log(data.vegan);
+import RecipePage from "../../../interface/RecipePage";
+import { getRecipePage } from "../../api/recipe_page";
+
+const Recipe: NextPage<RecipePage> = (props) => {
+  console.log({ props });
+
   return (
     <Layout>
       <div className="mx-4 pb-20 md:mx-12 xl:mx-32">
@@ -17,10 +20,11 @@ const RecipePage: NextPage = () => {
             <div className="max-w-1/2 lg: flex flex-col items-center justify-center">
               <div className="relative">
                 <img
-                  className="mb-2 aspect-square w-28 rounded-full lg:mb-4"
-                  src={data.image}
-                  alt={data.title}
+                  src={props.image}
+                  alt={props.title}
+                  className="mb-2  h-28 w-28 rounded-full lg:mb-4"
                 />
+
                 <div className="absolute bottom-1 right-1 z-10 flex aspect-square rounded-full bg-white p-1.5 lg:bottom-2 lg:right-2">
                   <button className="  fill-pink-600 transition hover:fill-pink-600/80">
                     <svg
@@ -34,15 +38,15 @@ const RecipePage: NextPage = () => {
                 </div>
               </div>
               <h1 className="max-w-[250px] text-center text-xl font-semibold lg:text-2xl">
-                {data.title}
+                {props.title}
               </h1>
             </div>
             <RecipeTags
-              isCheap={data.cheap}
-              isDiaryFree={data.dairyFree}
-              isGlutenFree={data.glutenFree}
-              isVegan={data.vegan}
-              isVegetarian={data.vegetarian}
+              isCheap={props.cheap}
+              isDiaryFree={props.dairyFree}
+              isGlutenFree={props.glutenFree}
+              isVegan={props.vegan}
+              isVegetarian={props.vegetarian}
             />
           </div>
           <div className="flex flex-grow flex-row flex-wrap justify-center md:justify-around">
@@ -50,11 +54,7 @@ const RecipePage: NextPage = () => {
               <CustomPieChart
                 name="Calories"
                 demand={2000}
-                content={
-                  data.nutrition.nutrients.find(
-                    (item) => item.name === "Calories"
-                  )?.amount
-                }
+                content={props.calories}
                 color="#22c55e"
               />
             </div>
@@ -62,11 +62,7 @@ const RecipePage: NextPage = () => {
               <CustomPieChart
                 name="Proteins"
                 demand={50}
-                content={
-                  data.nutrition.nutrients.find(
-                    (item) => item.name === "Protein"
-                  )?.amount
-                }
+                content={props.protein}
                 color="#FF0000"
               />
             </div>
@@ -74,11 +70,7 @@ const RecipePage: NextPage = () => {
               <CustomPieChart
                 name="Carbohydrates"
                 demand={275}
-                content={
-                  data.nutrition.nutrients.find(
-                    (item) => item.name === "Carbohydrates"
-                  )?.amount
-                }
+                content={props.carbohydrates}
                 color="#8B008B"
               />
             </div>
@@ -86,10 +78,7 @@ const RecipePage: NextPage = () => {
               <CustomPieChart
                 name="Fat"
                 demand={100}
-                content={
-                  data.nutrition.nutrients.find((item) => item.name === "Fat")
-                    ?.amount
-                }
+                content={props.fat}
                 color="#F9512D"
               />
             </div>
@@ -97,12 +86,21 @@ const RecipePage: NextPage = () => {
         </div>
 
         <div className="grid md:grid-cols-12 md:gap-12 ">
-          <IngredientsList array={data.extendedIngredients} />
-          <RecipeSteps array={data.analyzedInstructions[0].steps} />
+          <IngredientsList array={props.extendedIngredients} />
+          <RecipeSteps array={props.steps} />
         </div>
       </div>
     </Layout>
   );
 };
 
-export default RecipePage;
+export default Recipe;
+
+export async function getServerSideProps(ctx: NextPageContext) {
+  console.log({ id: ctx.query.id });
+  const data = await getRecipePage(String(ctx.query.id));
+
+  return {
+    props: data,
+  };
+}

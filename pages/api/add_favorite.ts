@@ -51,7 +51,7 @@ export default async function handler(
           recipes: arrayUnion(newRecipe),
         });
 
-        res.status(200).json({ message: "successfully added recipe" });
+        res.status(200).json({ ...data });
         return;
       } else {
         await updateDoc(docRef, {
