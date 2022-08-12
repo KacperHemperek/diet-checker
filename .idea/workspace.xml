@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="style: changed fav button placement recipe page">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/__tests__/app.test.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/app.test.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="feat: first test">
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,13 +152,6 @@
       <workItem from="1659721071736" duration="4918000" />
       <workItem from="1659779131892" duration="558000" />
       <workItem from="1660049195878" duration="782000" />
-    </task>
-    <task id="LOCAL-00022" summary="feat: created nested route for user settings">
-      <created>1658830138989</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1658830138989</updated>
     </task>
     <task id="LOCAL-00023" summary="feat: get user by id endpoint returns data saved in firebase">
       <created>1658835809527</created>
@@ -497,7 +489,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660048122420</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="feat: first test">
+      <created>1660309418062</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1660309418063</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -516,7 +515,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix: typo in interface name" />
     <MESSAGE value="feat: updated recipe interface to fit data from spoonacular api" />
     <MESSAGE value="feat: user id to get user changed to dynamic id" />
     <MESSAGE value="feat: endpoint for adding recipe to favorite updates list of favorite recipes &#10;&#10;todo: cover all cases" />
@@ -541,7 +539,8 @@
     <MESSAGE value="style: changed width of chart on large screens" />
     <MESSAGE value="style: changed missing values color on chart" />
     <MESSAGE value="refactor: uid in ProfileEditModal is taken from url not from store" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: uid in ProfileEditModal is taken from url not from store" />
+    <MESSAGE value="feat: first test" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: first test" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
