@@ -47,6 +47,7 @@ const Recipe: NextPage<RecipePage> = (props) => {
               isGlutenFree={props.glutenFree}
               isVegan={props.vegan}
               isVegetarian={props.vegetarian}
+              card={false}
             />
           </div>
           <div className="flex flex-grow flex-row flex-wrap justify-center md:justify-around">
