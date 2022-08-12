@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { NextPage } from "next";
 import Layout from "../../../layouts/Layout";
 import ProfileData from "../../../components/ProfileData";
@@ -8,11 +8,17 @@ import { Recipe } from "../../../interface/Recipe";
 import { doc, onSnapshot } from "@firebase/firestore";
 import { db } from "../../../utils/firebase.utils";
 import { useRouter } from "next/router";
+import autoAnimate from "@formkit/auto-animate";
 
 const Account: NextPage = () => {
   const router = useRouter();
   const { id } = router.query;
   const [userData, setUserData] = useState<UserInformation>();
+  const listRef = useRef<HTMLDivElement>(null);
+  //animate list of favorites
+  if (listRef.current) {
+    autoAnimate(listRef.current);
+  }
 
   useEffect(() => {
     const docRef = doc(db, "users", String(id));
@@ -52,7 +58,10 @@ const Account: NextPage = () => {
           <h2 className="mb-6 text-2xl font-semibold">
             <span className="text-green-500">Your</span> favorite recipes
           </h2>
-          <div className="grid grid-cols-2 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <div
+            className="grid grid-cols-2 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+            ref={listRef}
+          >
             {userData?.recipes &&
               userData.recipes.map((item: Recipe) => (
                 <FoodCard
