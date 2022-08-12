@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "./Card";
+import Card from "@/components/Card";
 
 const HomepageCards = () => {
   const svgWidthHeight = "h-14 w-14";

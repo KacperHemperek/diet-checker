@@ -6,6 +6,9 @@ const customJestConfig = {
   globalSetup: "<rootDir>/setupEnv.js",
   moduleDirectories: ["node_modules", "<rootDir>/"],
   testEnvironment: "jest-environment-jsdom",
+  moduleNameMapper: {
+    "^@/components/(.*)$": "<rootDir>/components/$1",
+  },
   // ...your custom config
 };
 
