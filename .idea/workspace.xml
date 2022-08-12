@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="refactor: uid in ProfileEditModal is taken from url not from store">
+    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="style: changed fav button placement recipe page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/__tests__/TestWrapper.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/__tests__/app.test.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/app.test.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/__tests__/setupEnv.js" beforeDir="false" afterPath="$PROJECT_DIR$/setupEnv.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/HomepageCards.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/HomepageCards.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jest.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/jest.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,7 +14,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="testing" />
+        <entry key="$PROJECT_DIR$" value="dev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -78,6 +74,19 @@
       <scope-kind value="ALL" />
       <method v="2" />
     </configuration>
+    <configuration name="renders card" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/__tests__/app.test.jsx" />
+      <test-names>
+        <test-name value="renders card" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="dev" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -100,9 +109,15 @@
     </configuration>
     <list>
       <item itemvalue="Jest.All Tests" />
+      <item itemvalue="Jest.renders card" />
       <item itemvalue="npm.test" />
       <item itemvalue="npm.dev" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.renders card" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
