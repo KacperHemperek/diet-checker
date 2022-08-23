@@ -13,9 +13,16 @@ function CustomPieChart({ name, content, demand, color }: Props) {
     {
       id: "1",
       name: "L1",
-      value: demand - (typeof content === "undefined" ? 0 : content),
+      value: Math.max(
+        demand - (typeof content === "undefined" ? 0 : content),
+        0
+      ),
     },
-    { id: "2", name: "L2", value: content },
+    {
+      id: "2",
+      name: "L2",
+      value: Math.min(demand, typeof content === "undefined" ? 0 : content),
+    },
   ];
 
   return (
@@ -30,7 +37,7 @@ function CustomPieChart({ name, content, demand, color }: Props) {
             fill={color}
             startAngle={-270}
             endAngle={90}
-            paddingAngle={0}
+            paddingAngle={2}
             cornerRadius={5}
           >
             <Cell key="test" strokeWidth={0.5} fill="#e5e7eb" />

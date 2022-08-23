@@ -5,5 +5,8 @@ export interface Recipe {
   img: string;
   vegan: boolean;
   vegetarian: boolean;
+  cheap: boolean;
+  glutenfree: boolean;
+  dairyfree: boolean;
   diets: string[];
 }

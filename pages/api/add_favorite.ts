@@ -31,6 +31,9 @@ export default async function handler(
       img: data.image,
       vegan: data.vegan,
       vegetarian: data.vegetarian,
+      cheap: data.cheap,
+      dairyfree: data.dairyFree,
+      glutenfree: data.glutenFree,
       diets: data.diets,
     };
 

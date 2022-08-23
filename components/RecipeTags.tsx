@@ -6,6 +6,7 @@ type Props = {
   isDiaryFree: boolean;
   isGlutenFree: boolean;
   isCheap: boolean;
+  card: boolean;
 };
 
 const RecipeTags = ({
@@ -14,13 +15,22 @@ const RecipeTags = ({
   isCheap,
   isDiaryFree,
   isGlutenFree,
+  card,
 }: Props) => {
-  const svgClass = "h-6 w-6 p-1 rounded-full fill-white  lg:h-7 lg:w-7";
+  const svgClass = card
+    ? "h-6 w-6 p-1 rounded-full fill-white  lg:h-6 lg:w-6"
+    : "h-6 w-6 p-1 rounded-full fill-white  lg:h-7 lg:w-7";
 
   return (
-    <div className=" m-4 flex flex-wrap items-start justify-center gap-2 md:gap-6 lg:my-0 lg:flex-col lg:justify-center lg:gap-4">
+    <div
+      className={
+        card
+          ? "mt-2 flex flex-wrap items-start justify-around gap-1"
+          : "m-4 flex flex-wrap items-start justify-center gap-2 md:gap-6 lg:my-0 lg:flex-col lg:justify-center lg:gap-4"
+      }
+    >
       {isVegan && (
-        <RecipeTag title="Vegan">
+        <RecipeTag label={!card} title="Vegan">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"
@@ -31,7 +41,7 @@ const RecipeTags = ({
         </RecipeTag>
       )}
       {isDiaryFree && (
-        <RecipeTag title="Diary-free">
+        <RecipeTag label={!card} title="Diary-free">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 640 512"
@@ -42,7 +52,7 @@ const RecipeTags = ({
         </RecipeTag>
       )}
       {isVegetarian && (
-        <RecipeTag title="Vegetarian">
+        <RecipeTag label={!card} title="Vegetarian">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 640 512"
@@ -53,7 +63,7 @@ const RecipeTags = ({
         </RecipeTag>
       )}
       {isGlutenFree && (
-        <RecipeTag title="Gluten-free">
+        <RecipeTag label={!card} title="Gluten-free">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 640 512"
@@ -64,7 +74,7 @@ const RecipeTags = ({
         </RecipeTag>
       )}
       {isCheap && (
-        <RecipeTag title="Cheap">
+        <RecipeTag label={!card} title="Cheap">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 640 512"
