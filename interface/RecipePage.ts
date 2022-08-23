@@ -11,5 +11,5 @@ export default interface RecipePage {
   carbohydrates: number;
   fat: number;
   extendedIngredients: any[];
-  steps: any[];
+  steps: any[] | string;
 }

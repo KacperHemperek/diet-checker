@@ -11,8 +11,11 @@ body {
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
+    @apply text-green-500 underline transition-all;
+}
+
+a:hover {
+    @apply text-green-400;
 }
 
 * {
