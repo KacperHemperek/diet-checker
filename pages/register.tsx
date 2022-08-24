@@ -85,7 +85,6 @@ const Register = () => {
       <h1 className="mb-4 text-xl font-semibold">
         <span className="text-green-500">Create</span> Account
       </h1>
-
       <p className="mb-4">
         Save your diet plans to access them whenever you need to.{" "}
       </p>

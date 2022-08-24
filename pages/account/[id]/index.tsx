@@ -73,6 +73,7 @@ const Account: NextPage = () => {
                   image={item.img}
                   name={item.name}
                   calories={item.cal}
+                  glutenfree={item.glutenfree}
                   favorite={true}
                   vegan={item.vegan}
                   vegetarian={item.vegetarian}

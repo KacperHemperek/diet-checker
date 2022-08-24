@@ -31,7 +31,6 @@ const FoodCard = ({
   dairyfree = false,
   glutenfree = false,
 }: Props) => {
-  // const url = `/search/${id}`;
   const [loading, setLoading] = useState<boolean>(false);
 
   const uid = useSelector((state: RootState) => state.user.uid);
@@ -61,7 +60,11 @@ const FoodCard = ({
 
       <div className="flex flex-grow flex-col justify-between p-4">
         <div>
-          <h1 className="text-lg font-bold text-gray-700">{name}</h1>
+          <h1 className="mb-4 text-lg font-bold text-gray-700">
+            {name.length < 30
+              ? name
+              : name.split("").splice(0, 30).join("").trimEnd() + "..."}
+          </h1>
           <RecipeTags
             isCheap={cheap}
             isDiaryFree={dairyfree}

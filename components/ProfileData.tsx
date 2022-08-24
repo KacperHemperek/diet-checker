@@ -23,7 +23,7 @@ const TextSkeleton = ({
   backgroundColor?: string;
 }) => {
   return (
-    <div
+    <span
       style={{
         width,
         backgroundColor,
@@ -31,13 +31,15 @@ const TextSkeleton = ({
         height: "1em",
       }}
       className="animate-pulse rounded-full bg-gray-200 text-inherit"
-    ></div>
+    >
+      .
+    </span>
   );
 };
 
 const ProfileData = ({ email, name, age, height, weight }: Props) => {
   const uid = useSelector((state: RootState) => state.user.uid);
-  
+
   const [dialogOpen, setDialogOpen] = useState<boolean>(false);
 
   return (

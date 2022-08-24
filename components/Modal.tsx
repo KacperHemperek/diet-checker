@@ -13,15 +13,15 @@ type Props = {
 };
 
 const Modal = ({ isOpen, setIsOpen, children }: Props) => {
+  const closeOnEscape = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setIsOpen(false);
+      }
+    },
+    [isOpen]
+  );
   useEffect(() => {
-    const closeOnEscape = useCallback(
-      (e: KeyboardEvent) => {
-        if (e.key === "Escape") {
-          setIsOpen(false);
-        }
-      },
-      [isOpen]
-    );
     if (isOpen) {
       document.body.style.overflowY = "hidden";
     } else {
