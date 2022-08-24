@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { clearUserInfo, setUser } from "../redux/features/userData";
 import { RootState } from "../redux/store";
 import { useRouter } from "next/router";
+import { SkeletonTheme } from "react-loading-skeleton";
 
 type Props = {
   children: any;
@@ -31,7 +32,11 @@ const AppWrapper = ({ children }: Props) => {
     return unsubscribe();
   });
 
-  return <>{children}</>;
+  return (
+    <SkeletonTheme baseColor="#cbd5e1" highlightColor="#e4e4e7">
+      {children}
+    </SkeletonTheme>
+  );
 };
 
 export default AppWrapper;

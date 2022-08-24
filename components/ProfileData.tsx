@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
 import ProfileEditModal from "./ProfileEditModal";
 import CustomButton from "./CustomButton";
+import Skeleton from "react-loading-skeleton";
 
 type Props = {
   email: string | undefined;
@@ -14,26 +15,54 @@ type Props = {
   weight?: number | undefined;
 };
 
+const TextSkeleton = ({
+  width,
+  backgroundColor = "#e5e7eb",
+}: {
+  width: string;
+  backgroundColor?: string;
+}) => {
+  return (
+    <div
+      style={{
+        width,
+        backgroundColor,
+        color: backgroundColor,
+        height: "1em",
+      }}
+      className="animate-pulse rounded-full bg-gray-200 text-inherit"
+    ></div>
+  );
+};
+
 const ProfileData = ({ email, name, age, height, weight }: Props) => {
   const uid = useSelector((state: RootState) => state.user.uid);
+  
   const [dialogOpen, setDialogOpen] = useState<boolean>(false);
+
   return (
     <div className="grid gap-6 rounded-lg md:col-span-6 md:border md:p-10 lg:col-span-5 xl:col-span-4 ">
       <div className="z-0">
-        <div className="mx-auto mb-4 w-2/5">
+        <div className="mx-auto mb-4 w-2/5  overflow-hidden rounded-full">
           <Image src={profilePic} alt="Profile Picture" />
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center ">
           <h1 className="mx-auto w-full text-center text-3xl font-semibold">
-            {name ?? `user${uid.slice(0, 8)}...`}
+            {name ?? <TextSkeleton width="100%" />}
           </h1>
         </div>
       </div>
 
       <div>
-        <p className="text-base text-gray-500">email</p>
-        <h2 className="mb-4 text-xl">{email}</h2>
-        <p className="text-gray-500">Age</p>
+        <p className="mb-2 text-base text-gray-500">
+          {email ? "Email" : <TextSkeleton width="80px" />}
+        </p>
+        <h2 className="mb-4 text-xl">
+          {email ?? <TextSkeleton width="80%" />}
+        </h2>
+        <p className="text-gray-500">
+          {age ? "age" : <TextSkeleton width="20%" />}
+        </p>
         <h2 className="mb-4 text-xl">{age ?? "Add your age "}</h2>
         <p className="text-gray-500">Height</p>
         <h2 className="mb-4 text-xl">
@@ -43,6 +72,7 @@ const ProfileData = ({ email, name, age, height, weight }: Props) => {
         <h2 className="mb-8 text-xl">
           {weight ? weight + " kg" : "Add your weight"}
         </h2>
+
         <CustomButton empty={true} onClick={() => setDialogOpen(true)}>
           <p>Edit</p>
           <svg

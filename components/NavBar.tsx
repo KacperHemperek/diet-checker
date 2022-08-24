@@ -1,5 +1,10 @@
 import { useRouter } from "next/router";
-import React, { ChangeEvent, SyntheticEvent, useState } from "react";
+import React, {
+  ChangeEvent,
+  SyntheticEvent,
+  useCallback,
+  useState,
+} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setSearchValue } from "../redux/features/searchData";
 import LogInButton from "./LogInButton";
@@ -23,17 +28,20 @@ const NavBar = () => {
     (el: string) => router.pathname.includes(el)
   );
 
-  const handleSearchInput = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleSearchInput = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(e.target.value);
-  };
+  }, []);
 
-  const handleSubmit = (e: SyntheticEvent) => {
-    e.preventDefault();
-    dispatch(setSearchValue(searchTerm));
-    router.push(`/search`);
-  };
+  const handleSubmit = useCallback(
+    (e: SyntheticEvent) => {
+      e.preventDefault();
+      dispatch(setSearchValue(searchTerm));
+      router.push(`/search`);
+    },
+    [searchTerm]
+  );
 
-  const handleLogout = async () => {
+  const handleLogout = useCallback(async () => {
     console.log("click");
     try {
       await signOut(auth);
@@ -41,7 +49,7 @@ const NavBar = () => {
     } catch (e: any) {
       console.log(e);
     }
-  };
+  }, [auth]);
 
   return (
     <header className="fixed z-30 flex w-full bg-white/95 backdrop-blur">

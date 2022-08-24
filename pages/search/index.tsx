@@ -1,4 +1,4 @@
-import React, { SyntheticEvent, useRef } from "react";
+import React, { SyntheticEvent, useCallback, useRef } from "react";
 import { useSelector } from "react-redux";
 import Layout from "../../layouts/Layout";
 import { RootState } from "../../redux/store";
@@ -16,7 +16,7 @@ const Search = () => {
   const searchRef = useRef<HTMLInputElement>(null);
   const initialSearchValue = useRef<string>("");
 
-  const fetchSearchResults = async (search: string) => {
+  const fetchSearchResults = useCallback(async (search: string) => {
     try {
       const response = await fetch(`/api/search_items?query=${search}`, {
         method: "POST",
@@ -26,7 +26,7 @@ const Search = () => {
     } catch (error) {
       console.log(error);
     }
-  };
+  }, []);
 
   useEffect(() => {
     if (!isMounted.current) {

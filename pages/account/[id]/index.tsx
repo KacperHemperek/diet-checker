@@ -14,6 +14,7 @@ const Account: NextPage = () => {
   const router = useRouter();
   const { id } = router.query;
   const [userData, setUserData] = useState<UserInformation>();
+
   const listRef = useRef<HTMLDivElement>(null);
   //animate list of favorites
   if (listRef.current) {

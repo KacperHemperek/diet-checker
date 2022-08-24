@@ -40,8 +40,6 @@ const FormInput = ({
           placeholder={placeholder}
           className={`${
             error ? "outline-red-500" : "focus:outline-green-500"
-          } ${
-            type === "password" && "tracking-wider"
           } mt-2 w-full rounded-lg border p-2`}
         />
         {type === "password" && (

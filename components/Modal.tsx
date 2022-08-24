@@ -1,4 +1,10 @@
-import React, { Dispatch, ReactNode, SetStateAction, useEffect } from "react";
+import React, {
+  Dispatch,
+  ReactNode,
+  SetStateAction,
+  useCallback,
+  useEffect,
+} from "react";
 
 type Props = {
   isOpen: boolean;
@@ -8,11 +14,14 @@ type Props = {
 
 const Modal = ({ isOpen, setIsOpen, children }: Props) => {
   useEffect(() => {
-    const closeOnEscape = (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
-        setIsOpen(false);
-      }
-    };
+    const closeOnEscape = useCallback(
+      (e: KeyboardEvent) => {
+        if (e.key === "Escape") {
+          setIsOpen(false);
+        }
+      },
+      [isOpen]
+    );
     if (isOpen) {
       document.body.style.overflowY = "hidden";
     } else {

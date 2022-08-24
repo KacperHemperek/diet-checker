@@ -47,7 +47,7 @@ const FoodCard = ({
       console.error(error);
     }
     setLoading(false);
-  }, []);
+  }, [id, uid]);
 
   return (
     <div className="group flex h-full transform flex-col overflow-hidden rounded-lg bg-white shadow-lg transition-all duration-500 hover:scale-105 hover:cursor-pointer hover:shadow-xl">
