@@ -25,7 +25,7 @@ const Account: NextPage = () => {
 
     const unsub = onSnapshot(
       docRef,
-      async (snapshot) => {
+      (snapshot) => {
         setUserData({
           name: snapshot.data()?.name,
           email: snapshot.data()?.email,

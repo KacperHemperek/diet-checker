@@ -1,14 +1,21 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { doc, getDoc, updateDoc } from "@firebase/firestore";
+import {
+  doc,
+  getDoc,
+  updateDoc,
+  arrayRemove,
+  arrayUnion,
+} from "@firebase/firestore";
 import { db } from "../../utils/firebase.utils";
 import { Recipe } from "../../interface/Recipe";
-import { arrayUnion } from "@firebase/firestore";
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
   const { uid, itemId } = req.query;
+
+  console.log(req.method);
 
   if (!uid) {
     res.status(400).json({ message: "user id is required" });
@@ -18,6 +25,11 @@ export default async function handler(
     res.status(400).json({ message: "product id is required" });
     return;
   }
+  if (req.method !== "PUT") {
+    res.status(405).json({ message: "method not allowed" });
+    return;
+  }
+
   try {
     const response = await fetch(
       `https://api.spoonacular.com/recipes/${itemId}/information?apiKey=${process.env.SPOONACULAR_API_KEY}&includeNutrition=true`
@@ -46,7 +58,9 @@ export default async function handler(
         const ids = userData.recipes.map((item: Recipe) => item.id);
         console.log(ids);
         if (ids.includes(Number(itemId))) {
-          res.status(200).json({ message: "recipe is already in favorite" });
+          await updateDoc(docRef, { recipes: arrayRemove(newRecipe) });
+
+          res.status(200).json({ message: "recipe was removed from favorite" });
           return;
         }
 
@@ -56,11 +70,6 @@ export default async function handler(
 
         res.status(200).json({ ...data });
         return;
-      } else {
-        await updateDoc(docRef, {
-          recipes: arrayUnion(newRecipe),
-        });
-        res.status(200).json({ message: "successfully added recipe" });
       }
     } catch (e) {
       console.error(e);

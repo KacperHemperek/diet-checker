@@ -1,13 +1,32 @@
-import React, { useState } from "react";
+import Image from "next/image";
+import React, { useEffect, useState } from "react";
 
-const FavoriteButton = () => {
-  const [isFavourite, setIsFavourite] = useState(false);
+import loadingImg from "../public/oval.svg";
+
+type Props = {
+  uid: string;
+  recipeId: string | number;
+  favoriteLoading: boolean;
+  toggleFavorite: () => void;
+  favorite: boolean;
+};
+
+const FavButton = ({
+  uid,
+  recipeId,
+  favoriteLoading,
+  toggleFavorite,
+  favorite,
+}: Props) => {
   return (
     <button
-      className="fill-pink-600 hover:fill-pink-600/80"
-      onClick={(e) => setIsFavourite(!isFavourite)}
+      disabled={favoriteLoading}
+      className="  h-6 w-6 fill-pink-600 transition hover:fill-pink-600/80"
+      onClick={toggleFavorite}
     >
-      {isFavourite ? (
+      {favoriteLoading ? (
+        <Image src={loadingImg} />
+      ) : favorite ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 512 512"
@@ -28,4 +47,4 @@ const FavoriteButton = () => {
   );
 };
 
-export default FavoriteButton;
+export default FavButton;
