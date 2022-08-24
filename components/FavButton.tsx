@@ -6,7 +6,7 @@ import loadingImg from "../public/oval.svg";
 type Props = {
   toggleFavorite: () => void;
   favorite: boolean;
-  favoriteLoading?: boolean;
+  favoriteLoading?: boolean | undefined;
 };
 
 const FavButton = ({ toggleFavorite, favorite, favoriteLoading }: Props) => {

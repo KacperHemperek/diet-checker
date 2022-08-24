@@ -1,4 +1,9 @@
-import FavouriteButton from "./FavouriteButton";
+import { useCallback, useState } from "react";
+
+import { useSelector } from "react-redux";
+import { RootState } from "../redux/store";
+
+import FavButton from "./FavButton";
 import RecipeTags from "./RecipeTags";
 
 type Props = {
@@ -26,9 +31,23 @@ const FoodCard = ({
   dairyfree = false,
   glutenfree = false,
 }: Props) => {
-  const toggleFavorite = () => {
-    console.log("toggle favorite");
-  };
+  // const url = `/search/${id}`;
+  const [loading, setLoading] = useState<boolean>(false);
+
+  const uid = useSelector((state: RootState) => state.user.uid);
+
+  const toggleFavorite = useCallback(async () => {
+    setLoading(true);
+    console.log(id);
+    try {
+      await fetch(`/api/toggle_favorite?uid=${uid}&itemId=${id}`, {
+        method: "PUT",
+      });
+    } catch (error) {
+      console.error(error);
+    }
+    setLoading(false);
+  }, []);
 
   return (
     <div className="group flex h-full transform flex-col overflow-hidden rounded-lg bg-white shadow-lg transition-all duration-500 hover:scale-105 hover:cursor-pointer hover:shadow-xl">
@@ -52,9 +71,15 @@ const FoodCard = ({
             card={true}
           />
         </div>
+
         <div className="mt-4 flex items-center justify-between">
           <div className="text-gray-700">{calories} kcal</div>
-          {favorite && <FavouriteButton />}
+
+          <FavButton
+            toggleFavorite={toggleFavorite}
+            favoriteLoading={loading}
+            favorite={favorite}
+          />
         </div>
       </div>
     </div>

@@ -50,26 +50,26 @@ export default async function handler(
     };
 
     try {
-      const docRef = await doc(db, "users", String(uid));
+      const docRef = doc(db, "users", String(uid));
       const userSnap = await getDoc(docRef);
       const userData = userSnap.data();
 
       if (userData?.recipes) {
         const ids = userData.recipes.map((item: Recipe) => item.id);
-        console.log(ids);
+
         if (ids.includes(Number(itemId))) {
           await updateDoc(docRef, { recipes: arrayRemove(newRecipe) });
 
           res.status(200).json({ message: "recipe was removed from favorite" });
           return;
+        } else {
+          await updateDoc(docRef, {
+            recipes: arrayUnion(newRecipe),
+          });
+
+          res.status(200).json({ ...data });
+          return;
         }
-
-        await updateDoc(docRef, {
-          recipes: arrayUnion(newRecipe),
-        });
-
-        res.status(200).json({ ...data });
-        return;
       }
     } catch (e) {
       console.error(e);

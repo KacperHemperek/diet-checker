@@ -25,14 +25,16 @@ const Account: NextPage = () => {
 
     const unsub = onSnapshot(
       docRef,
-      (snapshot) => {
+      (doc) => {
+        const data = doc.data();
+        console.log(data?.recipes);
         setUserData({
-          name: snapshot.data()?.name,
-          email: snapshot.data()?.email,
-          age: snapshot.data()?.age,
-          recipes: snapshot.data()?.recipes,
-          height: snapshot.data()?.height,
-          weight: snapshot.data()?.weight,
+          name: data?.name,
+          email: data?.email,
+          age: data?.age,
+          recipes: data?.recipes,
+          height: data?.height,
+          weight: data?.weight,
         });
       },
       (e) => {
