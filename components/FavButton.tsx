@@ -4,20 +4,12 @@ import React, { useEffect, useState } from "react";
 import loadingImg from "../public/oval.svg";
 
 type Props = {
-  uid: string;
-  recipeId: string | number;
-  favoriteLoading: boolean;
   toggleFavorite: () => void;
   favorite: boolean;
+  favoriteLoading?: boolean;
 };
 
-const FavButton = ({
-  uid,
-  recipeId,
-  favoriteLoading,
-  toggleFavorite,
-  favorite,
-}: Props) => {
+const FavButton = ({ toggleFavorite, favorite, favoriteLoading }: Props) => {
   return (
     <button
       disabled={favoriteLoading}

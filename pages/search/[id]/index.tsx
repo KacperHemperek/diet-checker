@@ -80,8 +80,6 @@ const Recipe: NextPage<RecipePage> = (props) => {
                   >
                     {favoriteLoading ? (
                       <FavButton
-                        recipeId={recipeId}
-                        uid={uid}
                         favorite={favorite}
                         favoriteLoading={favoriteLoading}
                         toggleFavorite={toggleFavorite}
