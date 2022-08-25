@@ -5,11 +5,14 @@ import { NextPage } from "next";
 import Layout from "../../layouts/Layout";
 
 import SearchForm from "../../components/SearchForm";
+import Container from "../../components/Container";
 
 const Search: NextPage = () => {
   return (
     <Layout>
-      <SearchForm />
+      <Container>
+        <SearchForm />
+      </Container>
     </Layout>
   );
 };

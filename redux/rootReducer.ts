@@ -1,8 +1,6 @@
-import searchReducer from "./features/searchData";
-import userReducer from "./features/userData"
+import userReducer from "./features/userData";
 const rootReducer = {
-    search: searchReducer,
-    user: userReducer
+  user: userReducer,
 };
 
 export default rootReducer;

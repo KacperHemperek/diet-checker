@@ -1,22 +1,20 @@
 import { useRouter } from "next/router";
 import React, { FormEvent, useCallback, useRef } from "react";
-import { useDispatch } from "react-redux";
-import { setSearchValue } from "../redux/features/searchData";
+
 
 type Props = {
   className?: string;
-  onChange?: React.ChangeEventHandler<HTMLInputElement>;
 };
 
-const SearchBar = ({ className, onChange }: Props) => {
+const SearchBar = ({ className }: Props) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const router = useRouter();
-  const dispatch = useDispatch();
 
   const hanldeSubmit = useCallback((e: FormEvent) => {
     e.preventDefault();
+    const value = (inputRef.current as HTMLInputElement).value;
 
-    router.push(`/search/${(inputRef.current as HTMLInputElement).value}`);
+    router.push(`/search/${value}`);
   }, []);
 
   return (

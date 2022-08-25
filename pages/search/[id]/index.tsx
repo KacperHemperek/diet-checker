@@ -8,6 +8,7 @@ import Layout from "../../../layouts/Layout";
 
 import { Recipe } from "../../../interface/Recipe";
 import SearchForm from "../../../components/SearchForm";
+import Container from "../../../components/Container";
 
 const Index: NextPage = () => {
   const router = useRouter();
@@ -34,12 +35,12 @@ const Index: NextPage = () => {
 
   return (
     <Layout>
-      <div className="mx-4 flex flex-col justify-center py-20 md:mx-12 xl:mx-32">
+      <Container>
         <div className="mb-8">
           <SearchForm />
         </div>
         <FoodCardList FoodCardList={searchRes} size="md" />
-      </div>
+      </Container>
     </Layout>
   );
 };
