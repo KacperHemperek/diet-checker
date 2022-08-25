@@ -76,9 +76,9 @@ const FoodCardList = ({
       } `}
       ref={listRef}
     >
-      {listWithFavorite.length <= 0
-        ? placeholderArray.map((item) => <FoodCard {...item} key={item.id} />)
-        : listWithFavorite.map((item) => <FoodCard key={item.id} {...item} />)}
+      {listWithFavorite?.length > 0
+        ? listWithFavorite.map((item) => <FoodCard key={item.id} {...item} />)
+        : placeholderArray.map((item) => <FoodCard {...item} key={item.id} />)}
     </div>
   );
 };
