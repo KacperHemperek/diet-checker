@@ -55,11 +55,7 @@ const Search = () => {
         <Image src={descImg} alt="search image" />
       </div>
       <div className="flex flex-col items-center px-4 py-12 md:px-12 lg:px-32">
-        <SearchBar
-          onSubmit={handleSubmit}
-          ref={searchRef}
-          className="w-full md:w-2/3 lg:w-1/2"
-        />
+        <SearchBar className="w-full md:w-2/3 lg:w-1/2" />
       </div>
     </Layout>
   );

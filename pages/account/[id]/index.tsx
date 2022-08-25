@@ -9,6 +9,7 @@ import { doc, onSnapshot } from "@firebase/firestore";
 import { db } from "../../../utils/firebase.utils";
 import { useRouter } from "next/router";
 import autoAnimate from "@formkit/auto-animate";
+import FoodCardList from "../../../components/FoodCardList";
 
 const Account: NextPage = () => {
   const router = useRouter();
@@ -61,25 +62,7 @@ const Account: NextPage = () => {
           <h2 className="mb-6 text-2xl font-semibold">
             <span className="text-green-500">Your</span> favorite recipes
           </h2>
-          <div
-            className="grid grid-cols-2 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
-            ref={listRef}
-          >
-            {userData?.recipes &&
-              userData.recipes.map((item: Recipe) => (
-                <FoodCard
-                  id={item.id}
-                  key={item.id}
-                  image={item.img}
-                  name={item.name}
-                  calories={item.cal}
-                  glutenfree={item.glutenfree}
-                  favorite={true}
-                  vegan={item.vegan}
-                  vegetarian={item.vegetarian}
-                />
-              ))}
-          </div>
+          <FoodCardList FoodCardList={userData?.recipes ?? []} />
         </div>
       </div>
     </Layout>

@@ -36,7 +36,7 @@ const NavBar = () => {
     (e: SyntheticEvent) => {
       e.preventDefault();
       dispatch(setSearchValue(searchTerm));
-      router.push(`/search`);
+      router.push(`/search/${searchTerm}`);
     },
     [searchTerm]
   );
@@ -57,11 +57,7 @@ const NavBar = () => {
         <div className="flex items-center">
           <NavLogo />
           {!doNotShowSearchBar && uid && (
-            <SearchBar
-              onSubmit={handleSubmit}
-              onChange={handleSearchInput}
-              className="ml-8 hidden md:block md:min-w-[300px] lg:min-w-[240px] xl:min-w-[360px]"
-            />
+            <SearchBar className="ml-8 hidden md:block md:min-w-[300px] lg:min-w-[240px] xl:min-w-[360px]" />
           )}
         </div>
         <div className=" lg:flex lg:items-center">
@@ -109,11 +105,7 @@ const NavBar = () => {
         <div className="flex h-full flex-col justify-between p-4 md:px-12">
           <div className="flex flex-col">
             {!doNotShowSearchBar && uid && (
-              <SearchBar
-                onSubmit={handleSubmit}
-                onChange={handleSearchInput}
-                className="mb-6 flex w-full md:hidden"
-              />
+              <SearchBar className="mb-6 flex w-full md:hidden" />
             )}
             <NavLinksGroup />
           </div>

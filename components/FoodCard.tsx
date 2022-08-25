@@ -6,11 +6,11 @@ import { RootState } from "../redux/store";
 import FavButton from "./FavButton";
 import RecipeTags from "./RecipeTags";
 
-type Props = {
+export type FoodCardProps = {
   id: number;
-  image: string;
+  img: string;
   name: string;
-  calories: number;
+  cal: number;
   vegan?: boolean;
   vegetarian?: boolean;
   cheap?: boolean;
@@ -21,16 +21,16 @@ type Props = {
 
 const FoodCard = ({
   id,
-  image,
+  img,
   name,
-  calories,
+  cal,
   favorite = false,
   vegan = false,
   vegetarian = false,
   cheap = false,
   dairyfree = false,
   glutenfree = false,
-}: Props) => {
+}: FoodCardProps) => {
   const [loading, setLoading] = useState<boolean>(false);
 
   const uid = useSelector((state: RootState) => state.user.uid);
@@ -53,7 +53,7 @@ const FoodCard = ({
       <div className="overflow-hidden">
         <img
           className="h-full object-fill transition duration-500 group-hover:scale-105"
-          src={image}
+          src={img}
           alt="recipe thumbnail"
         />
       </div>
@@ -76,7 +76,7 @@ const FoodCard = ({
         </div>
 
         <div className="mt-4 flex items-center justify-between">
-          <div className="text-gray-700">{calories} kcal</div>
+          <div className="text-gray-700">{cal} kcal</div>
 
           <FavButton
             toggleFavorite={toggleFavorite}
