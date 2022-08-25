@@ -1,6 +1,6 @@
 import autoAnimate from "@formkit/auto-animate";
-import { doc, DocumentSnapshot, onSnapshot } from "firebase/firestore";
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import { doc, onSnapshot } from "firebase/firestore";
+import React, { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
 import { Recipe } from "../interface/Recipe";
 import { UserInformation } from "../interface/UserInformation";
@@ -10,6 +10,7 @@ import FoodCard, { FoodCardProps } from "./FoodCard";
 
 type Props = {
   FoodCardList: Recipe[];
+  placeholderArray?: { id: number }[];
   smCols?: number;
   mdCols?: number;
   lgCols?: number;
@@ -18,9 +19,11 @@ type Props = {
 
 const FoodCardList = ({
   FoodCardList,
+  // array for loading skeletons
+  placeholderArray = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }],
+  smCols = 2,
   mdCols = 2,
-  lgCols = 2,
-  smCols = 3,
+  lgCols = 3,
   xlCols = 4,
 }: Props) => {
   const [listWithFavorite, setListWithFavorite] = useState<FoodCardProps[]>([]);
@@ -60,9 +63,9 @@ const FoodCardList = ({
       className={`grid grid-cols-${smCols} gap-6 md:grid-cols-${mdCols}  lg:grid-cols-${lgCols} xl:grid-cols-${xlCols}`}
       ref={listRef}
     >
-      {listWithFavorite.map((item) => (
-        <FoodCard key={item.id} {...item} />
-      ))}
+      {listWithFavorite.length <= 0
+        ? placeholderArray.map((item) => <FoodCard {...item} />)
+        : listWithFavorite.map((item) => <FoodCard key={item.id} {...item} />)}
     </div>
   );
 };

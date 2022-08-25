@@ -15,28 +15,6 @@ type Props = {
   weight?: number | undefined;
 };
 
-const TextSkeleton = ({
-  width,
-  backgroundColor = "#e5e7eb",
-}: {
-  width: string;
-  backgroundColor?: string;
-}) => {
-  return (
-    <span
-      style={{
-        width,
-        backgroundColor,
-        color: backgroundColor,
-        height: "1em",
-      }}
-      className="animate-pulse rounded-full bg-gray-200 text-inherit"
-    >
-      .
-    </span>
-  );
-};
-
 const ProfileData = ({ email, name, age, height, weight }: Props) => {
   const uid = useSelector((state: RootState) => state.user.uid);
 
@@ -45,30 +23,40 @@ const ProfileData = ({ email, name, age, height, weight }: Props) => {
   return (
     <div className="grid gap-6 rounded-lg md:col-span-6 md:border md:p-10 lg:col-span-5 xl:col-span-4 ">
       <div className="z-0">
-        <div className="mx-auto mb-4 w-2/5  overflow-hidden rounded-full">
-          <Image src={profilePic} alt="Profile Picture" />
+        <div className="mx-auto mb-4 aspect-square w-2/5  overflow-hidden rounded-full">
+          {email ? (
+            <Image src={profilePic} alt="Profile Picture" />
+          ) : (
+            <Skeleton width="100%" height="100%" circle={true} />
+          )}
         </div>
         <div className="flex items-center ">
           <h1 className="mx-auto w-full text-center text-3xl font-semibold">
-            {name ?? <Skeleton width="100%" />}
+            {name ?? <Skeleton width="80%" />}
           </h1>
         </div>
       </div>
 
       <div>
-        <p className="mb-2 text-base text-gray-500">Email</p>
+        <p className="mb-2 text-base text-gray-500">
+          {email ? "Email" : <Skeleton width="20%" />}
+        </p>
+        <h2 className="mb-4 text-xl">{email ?? <Skeleton width="50%" />}</h2>
+        <p className="text-gray-500">
+          {age ? "Age" : <Skeleton width="10%" />}
+        </p>
+        <h2 className="mb-4 text-xl">{age ?? <Skeleton width="30%" />}</h2>
+        <p className="text-gray-500">
+          {height ? "Height" : <Skeleton width="20%" />}
+        </p>
         <h2 className="mb-4 text-xl">
-          {email ?? <TextSkeleton width="80%" />}
+          {height ? height + " cm" : <Skeleton width="30%" />}
         </h2>
-        <p className="text-gray-500">Age</p>
-        <h2 className="mb-4 text-xl">{age ?? "Add your age "}</h2>
-        <p className="text-gray-500">Height</p>
-        <h2 className="mb-4 text-xl">
-          {height ? height + " cm" : "Add your height"}
-        </h2>
-        <p className="text-gray-500">Weight</p>
+        <p className="text-gray-500">
+          {weight ? "Weight" : <Skeleton width="20%" />}
+        </p>
         <h2 className="mb-8 text-xl">
-          {weight ? weight + " kg" : "Add your weight"}
+          {weight ? weight + " kg" : <Skeleton width="25%" />}
         </h2>
 
         <CustomButton empty={true} onClick={() => setDialogOpen(true)}>

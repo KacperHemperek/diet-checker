@@ -5,6 +5,7 @@ import { persistor, store } from "../redux/store";
 import { PersistGate } from "redux-persist/integration/react";
 import AppWrapper from "../app-wrappers/AppWrapper";
 import RouterGuard from "../app-wrappers/RouterGuard";
+import "react-loading-skeleton/dist/skeleton.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

@@ -1,7 +1,6 @@
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
-
-import loadingImg from "../public/oval.svg";
+import React from "react";
+import Skeleton from "react-loading-skeleton";
 
 type Props = {
   toggleFavorite: () => void;
@@ -9,7 +8,11 @@ type Props = {
   favoriteLoading?: boolean | undefined;
 };
 
-const FavButton = ({ toggleFavorite, favorite, favoriteLoading }: Props) => {
+const FavButton = ({
+  toggleFavorite,
+  favorite,
+  favoriteLoading = false,
+}: Props) => {
   return (
     <button
       disabled={favoriteLoading}
@@ -17,7 +20,8 @@ const FavButton = ({ toggleFavorite, favorite, favoriteLoading }: Props) => {
       onClick={toggleFavorite}
     >
       {favoriteLoading ? (
-        <Image src={loadingImg} />
+        // <Image src={loadingImg} />
+        <Skeleton width="100%" height="100%" circle={true} />
       ) : favorite ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"

@@ -1,4 +1,6 @@
 import { useCallback, useState } from "react";
+import ContentLoader from "react-content-loader";
+import Skeleton from "react-loading-skeleton";
 
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
@@ -8,9 +10,9 @@ import RecipeTags from "./RecipeTags";
 
 export type FoodCardProps = {
   id: number;
-  img: string;
-  name: string;
-  cal: number;
+  img?: string;
+  name?: string;
+  cal?: number;
   vegan?: boolean;
   vegetarian?: boolean;
   cheap?: boolean;
@@ -51,19 +53,29 @@ const FoodCard = ({
   return (
     <div className="group flex h-full transform flex-col overflow-hidden rounded-lg bg-white shadow-lg transition-all duration-500 hover:scale-105 hover:cursor-pointer hover:shadow-xl">
       <div className="overflow-hidden">
-        <img
-          className="h-full object-fill transition duration-500 group-hover:scale-105"
-          src={img}
-          alt="recipe thumbnail"
-        />
+        {img ? (
+          <img
+            className="h-full object-fill transition duration-500 group-hover:scale-105"
+            src={img}
+            alt="recipe thumbnail"
+          />
+        ) : (
+          <Skeleton style={{ aspectRatio: "16/9" }} width="100%" />
+        )}
       </div>
 
       <div className="flex flex-grow flex-col justify-between p-4">
         <div>
           <h1 className="mb-4 text-lg font-bold text-gray-700">
-            {name.length < 30
-              ? name
-              : name.split("").splice(0, 30).join("").trimEnd() + "..."}
+            {name ? (
+              name.length < 30 ? (
+                name
+              ) : (
+                name.split("").splice(0, 30).join("").trimEnd() + "..."
+              )
+            ) : (
+              <Skeleton count={1.7} />
+            )}
           </h1>
           <RecipeTags
             isCheap={cheap}
@@ -76,11 +88,13 @@ const FoodCard = ({
         </div>
 
         <div className="mt-4 flex items-center justify-between">
-          <div className="text-gray-700">{cal} kcal</div>
+          <div className="text-gray-700">
+            {cal ? cal + " kcal" : <Skeleton width="60px" />}
+          </div>
 
           <FavButton
             toggleFavorite={toggleFavorite}
-            favoriteLoading={loading}
+            favoriteLoading={loading || name === undefined}
             favorite={favorite}
           />
         </div>

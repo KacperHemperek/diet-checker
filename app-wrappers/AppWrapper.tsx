@@ -32,11 +32,7 @@ const AppWrapper = ({ children }: Props) => {
     return unsubscribe();
   });
 
-  return (
-    <SkeletonTheme baseColor="#cbd5e1" highlightColor="#e4e4e7">
-      {children}
-    </SkeletonTheme>
-  );
+  return <SkeletonTheme>{children}</SkeletonTheme>;
 };
 
 export default AppWrapper;
