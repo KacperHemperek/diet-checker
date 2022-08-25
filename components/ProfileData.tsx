@@ -50,21 +50,17 @@ const ProfileData = ({ email, name, age, height, weight }: Props) => {
         </div>
         <div className="flex items-center ">
           <h1 className="mx-auto w-full text-center text-3xl font-semibold">
-            {name ?? <TextSkeleton width="100%" />}
+            {name ?? <Skeleton width="100%" />}
           </h1>
         </div>
       </div>
 
       <div>
-        <p className="mb-2 text-base text-gray-500">
-          {email ? "Email" : <TextSkeleton width="80px" />}
-        </p>
+        <p className="mb-2 text-base text-gray-500">Email</p>
         <h2 className="mb-4 text-xl">
           {email ?? <TextSkeleton width="80%" />}
         </h2>
-        <p className="text-gray-500">
-          {age ? "age" : <TextSkeleton width="20%" />}
-        </p>
+        <p className="text-gray-500">Age</p>
         <h2 className="mb-4 text-xl">{age ?? "Add your age "}</h2>
         <p className="text-gray-500">Height</p>
         <h2 className="mb-4 text-xl">
