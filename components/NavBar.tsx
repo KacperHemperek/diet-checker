@@ -1,12 +1,7 @@
 import { useRouter } from "next/router";
-import React, {
-  ChangeEvent,
-  SyntheticEvent,
-  useCallback,
-  useState,
-} from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { setSearchValue } from "../redux/features/searchData";
+import React, { useCallback, useState } from "react";
+import { useSelector } from "react-redux";
+
 import LogInButton from "./LogInButton";
 import NavLinksGroup from "./NavLinksGroup";
 import NavLogo from "./NavLogo";
@@ -18,27 +13,13 @@ import { signOut } from "@firebase/auth";
 import { RootState } from "../redux/store";
 
 const NavBar = () => {
-  const dispatch = useDispatch();
   const [navOpen, setNavOpen] = useState<boolean>(false);
-  const [searchTerm, setSearchTerm] = useState<string>("");
+
   const uid = useSelector((state: RootState) => state.user.uid);
   const router = useRouter();
 
   const doNotShowSearchBar = ["search", "login", "register"].some(
     (el: string) => router.pathname.includes(el)
-  );
-
-  const handleSearchInput = useCallback((e: ChangeEvent<HTMLInputElement>) => {
-    setSearchTerm(e.target.value);
-  }, []);
-
-  const handleSubmit = useCallback(
-    (e: SyntheticEvent) => {
-      e.preventDefault();
-      dispatch(setSearchValue(searchTerm));
-      router.push(`/search/${searchTerm}`);
-    },
-    [searchTerm]
   );
 
   const handleLogout = useCallback(async () => {

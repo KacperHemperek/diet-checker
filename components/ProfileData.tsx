@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import profilePic from "../public/profile_pic.svg";
+import profilePic from "../public/images/profile_pic.svg";
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
 import ProfileEditModal from "./ProfileEditModal";

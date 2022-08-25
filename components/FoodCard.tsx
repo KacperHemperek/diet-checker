@@ -1,5 +1,4 @@
 import { useCallback, useState } from "react";
-import ContentLoader from "react-content-loader";
 import Skeleton from "react-loading-skeleton";
 
 import { useSelector } from "react-redux";

@@ -1,13 +1,12 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { PropsWithChildren } from "react";
 
 type Props = {
-  children: React.ReactNode;
   href: string;
 };
 
-const NavLink = ({ children, href }: Props) => {
+const NavLink = ({ children, href }: PropsWithChildren<Props>) => {
   const router = useRouter();
 
   return (

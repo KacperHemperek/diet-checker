@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import React from "react";
 import Skeleton from "react-loading-skeleton";
 
@@ -20,7 +20,6 @@ const FavButton = ({
       onClick={toggleFavorite}
     >
       {favoriteLoading ? (
-        // <Image src={loadingImg} />
         <Skeleton width="100%" height="100%" circle={true} />
       ) : favorite ? (
         <svg

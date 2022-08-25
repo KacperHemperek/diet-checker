@@ -1,12 +1,13 @@
 import { NextPage } from "next";
 import { useRouter } from "next/router";
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 
 import FoodCardList from "../../../components/FoodCardList";
 
 import Layout from "../../../layouts/Layout";
 
 import { Recipe } from "../../../interface/Recipe";
+import SearchForm from "../../../components/SearchForm";
 
 const Index: NextPage = () => {
   const router = useRouter();
@@ -33,7 +34,10 @@ const Index: NextPage = () => {
 
   return (
     <Layout>
-      <div className="mx-4 flex justify-center py-20 md:mx-12 xl:mx-32">
+      <div className="mx-4 flex flex-col justify-center py-20 md:mx-12 xl:mx-32">
+        <div className="mb-8">
+          <SearchForm />
+        </div>
         <FoodCardList FoodCardList={searchRes} size="md" />
       </div>
     </Layout>

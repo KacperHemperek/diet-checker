@@ -110,7 +110,7 @@ const Recipe: NextPage<RecipePage> = (props) => {
             </div>
             <RecipeTags
               isCheap={props.cheap}
-              isDiaryFree={props.dairyFree}
+              isDiaryFree={props.diaryFree}
               isGlutenFree={props.glutenFree}
               isVegan={props.vegan}
               isVegetarian={props.vegetarian}

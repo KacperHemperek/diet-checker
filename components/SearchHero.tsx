@@ -1,7 +1,6 @@
-import Image from "next/image";
-import Link from "next/link";
+
 import React from "react";
-import HeroImage from "../public/undraw_shopping_app_flsj.svg";
+import HeroImage from "../public/images/undraw_shopping_app_flsj.svg";
 import HeroComponent from "./HeroComponent";
 import SquareCustomButton from "./SquareCustomButton";
 const SearchHero = () => {

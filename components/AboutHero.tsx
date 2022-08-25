@@ -1,5 +1,5 @@
 import React from "react";
-import HeroImage from "../public/about_us.svg";
+import HeroImage from "../public/images/about_us.svg";
 import HeroComponent from "./HeroComponent";
 
 const HomeHero = () => {

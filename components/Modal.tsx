@@ -1,6 +1,6 @@
 import React, {
   Dispatch,
-  ReactNode,
+  PropsWithChildren,
   SetStateAction,
   useCallback,
   useEffect,
@@ -9,10 +9,9 @@ import React, {
 type Props = {
   isOpen: boolean;
   setIsOpen: Dispatch<SetStateAction<boolean>>;
-  children: ReactNode;
 };
 
-const Modal = ({ isOpen, setIsOpen, children }: Props) => {
+const Modal = ({ isOpen, setIsOpen, children }: PropsWithChildren<Props>) => {
   const closeOnEscape = useCallback(
     (e: KeyboardEvent) => {
       if (e.key === "Escape") {

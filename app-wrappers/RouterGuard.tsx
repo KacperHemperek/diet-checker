@@ -1,15 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, PropsWithChildren } from "react";
 import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
 
 export { RouteGuard };
 
-type Props = {
-  children: any;
-};
-
-function RouteGuard({ children }: Props) {
+function RouteGuard({ children }: PropsWithChildren) {
   const router = useRouter();
   const [authorized, setAuthorized] = useState(false);
   const userId = useSelector((state: RootState) => state.user.uid);
@@ -56,7 +52,7 @@ function RouteGuard({ children }: Props) {
     }
   }
 
-  return authorized && children;
+  return authorized ? <>{children}</> : <></>;
 }
 
 export default RouteGuard;

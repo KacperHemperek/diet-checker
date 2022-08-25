@@ -1,8 +1,7 @@
-import React, { MouseEventHandler, ReactNode } from "react";
+import React, { MouseEventHandler, PropsWithChildren } from "react";
 import Link from "next/link";
 
 type Props = {
-  children: ReactNode | ReactNode[];
   type?: "button" | "submit" | "reset";
   onClick?: MouseEventHandler<HTMLButtonElement>;
   mobile?: boolean;
@@ -17,7 +16,7 @@ function CustomButton({
   empty = false,
   type = "button",
   href,
-}: Props) {
+}: PropsWithChildren<Props>) {
   const mobileButton = (
     <button
       className="aspect-square rounded-full bg-green-500 fill-white p-4"

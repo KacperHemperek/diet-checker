@@ -4,7 +4,7 @@ import { useFormik } from "formik";
 import FormInput from "../components/FormInput";
 import CustomFormWrapper from "../components/CustomFormWrapper";
 import Link from "next/link";
-import descImg from "../public/login_form_img.svg";
+import descImg from "../public/images/login_form_img.svg";
 import Image from "next/image";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../utils/firebase.utils";

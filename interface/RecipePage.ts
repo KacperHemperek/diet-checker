@@ -2,7 +2,7 @@ export default interface RecipePage {
   img: string;
   name: string;
   cheap: boolean;
-  dairyFree: boolean;
+  diaryFree: boolean;
   glutenFree: boolean;
   vegan: boolean;
   vegetarian: boolean;

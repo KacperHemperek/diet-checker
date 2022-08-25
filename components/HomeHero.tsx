@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import HeroImage from "../public/undraw_diet_ghvw.svg";
+import HeroImage from "../public/images/undraw_diet_ghvw.svg";
 import { RootState } from "../redux/store";
 import HeroComponent from "./HeroComponent";
 import SquareCustomButton from "./SquareCustomButton";

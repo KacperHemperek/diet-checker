@@ -6,7 +6,7 @@ import FormInput from "../components/FormInput";
 import CustomFormWrapper from "../components/CustomFormWrapper";
 import Link from "next/link";
 import Image from "next/image";
-import descImg from "../public/sign_up_form_img.svg";
+import descImg from "../public/images/sign_up_form_img.svg";
 import { auth } from "../utils/firebase.utils";
 import { createUserWithEmailAndPassword } from "@firebase/auth";
 import { useDispatch, useSelector } from "react-redux";

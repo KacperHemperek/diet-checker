@@ -58,7 +58,7 @@ export default async function handler(
         (item: any) => item.original
       ),
       steps: recipeData.analyzedInstructions[0]?.steps ?? recipeData.summary,
-    });
+    } as RecipePage);
     return;
   } catch (e) {
     console.error(e);
