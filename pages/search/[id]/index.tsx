@@ -11,7 +11,7 @@ import { Recipe } from "../../../interface/Recipe";
 const Index: NextPage = () => {
   const router = useRouter();
   const searchValue = router.query.id;
-  const isMounted = useRef(false);
+
   const [searchRes, setSearchRes] = useState<Recipe[]>([]);
 
   const fetchSearchResults = useCallback(async (search: string) => {
@@ -30,17 +30,21 @@ const Index: NextPage = () => {
   useEffect(() => {
     fetchSearchResults(String(searchValue));
   }, [searchValue]);
+  // for testing purposes
+  const mockCardlist = [
+    { id: 1 },
+    { id: 2 },
+    { id: 3 },
+    { id: 4 },
+    { id: 5 },
+    { id: 6 },
+  ];
 
   return (
     <Layout>
       <div className="mx-4 flex justify-center py-20 md:mx-12 xl:mx-32">
-        <FoodCardList
-          FoodCardList={searchRes}
-          smCols={2}
-          mdCols={3}
-          lgCols={5}
-          xlCols={6}
-        />
+        <FoodCardList FoodCardList={mockCardlist as Recipe[]} size="md" />
+        <FoodCardList FoodCardList={searchRes} size="md" />
       </div>
     </Layout>
   );
