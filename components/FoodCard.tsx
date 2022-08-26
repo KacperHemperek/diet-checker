@@ -50,11 +50,12 @@ const FoodCard = ({
     setLoading(false);
   }, [id, uid]);
   return (
-    <div className="group flex h-full transform flex-col overflow-hidden rounded-lg bg-white shadow-lg transition-all duration-500 hover:scale-105  hover:shadow-xl">
-      <Link
-        href={`/item/${id}`}
-        className={name === undefined ? "pointer-events-none " : ""}
-      >
+    <div
+      className={`${
+        name === undefined && "pointer-events-none"
+      } group flex h-full transform flex-col overflow-hidden rounded-lg bg-white shadow-lg transition-all duration-500 hover:scale-105  hover:shadow-xl`}
+    >
+      <Link href={`/item/${id}`}>
         <div
           className={`${
             name !== undefined && "cursor-pointer"
