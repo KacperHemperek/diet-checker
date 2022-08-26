@@ -6,7 +6,7 @@ import FormInput from "../components/FormInput";
 import CustomFormWrapper from "../components/CustomFormWrapper";
 import Link from "next/link";
 import Image from "next/image";
-import descImg from "../public/sign_up_form_img.svg";
+import descImg from "../public/images/sign_up_form_img.svg";
 import { auth } from "../utils/firebase.utils";
 import { createUserWithEmailAndPassword } from "@firebase/auth";
 import { useDispatch, useSelector } from "react-redux";
@@ -81,18 +81,17 @@ const Register = () => {
   ];
 
   const description = (
-    <div className="flex flex-col p-8">
-      <h1 className=" mb-4 text-xl font-semibold">
+    <div className="my-8 flex flex-col lg:p-8">
+      <h1 className="mb-4 text-xl font-semibold">
         <span className="text-green-500">Create</span> Account
       </h1>
-
       <p className="mb-4">
         Save your diet plans to access them whenever you need to.{" "}
       </p>
       <h2 className="mb-2 text-lg">
         <span className="font-semibold text-green-500">Main</span> features:{" "}
       </h2>
-      <ul className="mb-8 ml-2">
+      <ul className=" ml-2 md:mb-8">
         {benefits.map((item, index) => (
           <li
             className="mb-1 flex items-baseline gap-2 fill-green-500"
@@ -110,7 +109,7 @@ const Register = () => {
         ))}
       </ul>
       <div className="flex w-full ">
-        <div className="w-full xl:w-3/4">
+        <div className="hidden w-full lg:block xl:w-3/4">
           <Image src={descImg} alt="register image" />
         </div>
       </div>
@@ -119,11 +118,12 @@ const Register = () => {
 
   return (
     <Layout>
-      <div className="mt-6 flex justify-center p-4">
+      <div className="flex justify-center p-4 lg:mt-6">
         <CustomFormWrapper
           onSubmit={formik.handleSubmit}
           description={description}
         >
+          <div className="lg:hidden">{description}</div>
           <FormInput
             label="Email"
             name="email"

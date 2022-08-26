@@ -1,62 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a82be70c-d6f4-4d88-b6b1-5a1d0ce83fca" name="Changes" comment="merge dev into main">
-      <change afterPath="$PROJECT_DIR$/.idea/diet-checker.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/AppWrapper.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/CustomButton.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/CustomFormWrapper.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/FoodCard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/FormInput.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/LogInButton.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ProfileData.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/SearchBar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/SearchBarWithAdvanced.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/SignUpButton.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/helpers/errorHelper.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/account/[id]/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/account/[id]/settings.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/api/create_user.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/api/get_user_by_id.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/api/search_items.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/api/update_user.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/login.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/register.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/search.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/login_form_img.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/message.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/profile_pic.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/search_page_img.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/sign_up_form_img.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redux/features/searchData.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redux/features/userData.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redux/hooks.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redux/rootReducer.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redux/store.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/firebase.utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/AboutHero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/AboutHero.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Card.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/HeroComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/HeroComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/HomepageCards.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/HomepageCards.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/NavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/NavBar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/NavLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/NavLink.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/NavLinksGroup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/NavLinksGroup.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/NavLogo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/NavLogo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/SearchHero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SearchHero.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/about.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/about.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/get_token.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    <list default="true" id="81045190-e5ab-4455-a4d9-f0ebed1b34d9" name="Changes" comment="feat: recipe page gets dynamic data from api">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/search/[id]/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/search/[id]/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +11,19 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="testing" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/components/FormInput.tsx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/components/ProfileEditModal.tsx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/hooks/useFirebaseSnap.tsx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/interface/UserInformation.ts" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/pages/account/[id]/index.tsx" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -77,18 +36,57 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "yarn",
-    "ts.external.directory.path": "C:\\Users\\kacpe\\Desktop\\Projekty\\diet-checker\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/kacpe/Desktop/Projekty/diet-checker&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\kacpe\\Desktop\\Projekty\\diet-checker\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\kacpe\\Desktop\\Projekty\\diet-checker\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kacpe\Desktop\Projekty\diet-checker\app-wrappers" />
+      <recent name="C:\Users\kacpe\Desktop\Projekty\diet-checker\pages\account\[id]" />
+      <recent name="C:\Users\kacpe\Desktop\Projekty\diet-checker\pages\account" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.dev">
+    <configuration name="dev" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="npm.dev" />
+      <item itemvalue="npm.test" />
+    </list>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -96,9 +94,380 @@
       <created>1658870298549</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1658870298549</updated>
-      <workItem from="1658870300778" duration="427000" />
+      <updated>1658694560937</updated>
+      <workItem from="1658694563026" duration="168000" />
+      <workItem from="1658694741901" duration="457000" />
+      <workItem from="1658695231146" duration="1365000" />
+      <workItem from="1658697130438" duration="1038000" />
+      <workItem from="1658738217361" duration="381000" />
+      <workItem from="1658738610157" duration="2986000" />
+      <workItem from="1658747404198" duration="102000" />
+      <workItem from="1658757220935" duration="2722000" />
+      <workItem from="1658761226534" duration="4468000" />
+      <workItem from="1658768168358" duration="3962000" />
+      <workItem from="1658829273595" duration="13132000" />
+      <workItem from="1658855084456" duration="7243000" />
+      <workItem from="1658863913431" duration="5000" />
+      <workItem from="1658869192199" duration="948000" />
+      <workItem from="1659016773767" duration="18745000" />
+      <workItem from="1659045225243" duration="25000" />
+      <workItem from="1659445878355" duration="3837000" />
+      <workItem from="1659516437425" duration="6451000" />
+      <workItem from="1659541496974" duration="7208000" />
+      <workItem from="1659555571186" duration="3171000" />
+      <workItem from="1659619527915" duration="4440000" />
+      <workItem from="1659693575833" duration="7729000" />
+      <workItem from="1659711452526" duration="8152000" />
+      <workItem from="1659721071736" duration="4918000" />
+      <workItem from="1659779131892" duration="558000" />
+      <workItem from="1660069406768" duration="945000" />
+      <workItem from="1660124992220" duration="3165000" />
+      <workItem from="1660306981704" duration="1800000" />
     </task>
+    <task id="LOCAL-00025" summary="feat: added alt for image">
+      <created>1658838672152</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1658838672152</updated>
+    </task>
+    <task id="LOCAL-00026" summary="feat: account page displays user information from firestore">
+      <created>1658842687430</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1658842687430</updated>
+    </task>
+    <task id="LOCAL-00027" summary="feat: added creat user endpoint, calling endpoint on login and register">
+      <created>1658858032471</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1658858032471</updated>
+    </task>
+    <task id="LOCAL-00028" summary="feat: added update_user endpoint">
+      <created>1658861610503</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1658861610503</updated>
+    </task>
+    <task id="LOCAL-00029" summary="feat: liked recipes show dynamically on users page">
+      <created>1658870043732</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1658870043732</updated>
+    </task>
+    <task id="LOCAL-00030" summary="chore: removed unnecessary comments">
+      <created>1658870892741</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1658870892741</updated>
+    </task>
+    <task id="LOCAL-00031" summary="feat: created api path for toggling favorite recipe">
+      <created>1659020257580</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1659020257580</updated>
+    </task>
+    <task id="LOCAL-00032" summary="feat: modal uses dialog dialog tag">
+      <created>1659021271844</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1659021271844</updated>
+    </task>
+    <task id="LOCAL-00033" summary="feat: Modal element added">
+      <created>1659029321808</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1659029321808</updated>
+    </task>
+    <task id="LOCAL-00034" summary="style: made modal card as a custom component">
+      <created>1659029519424</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1659029519424</updated>
+    </task>
+    <task id="LOCAL-00035" summary="feat: modal closes when clicking escape button">
+      <created>1659030331493</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1659030331493</updated>
+    </task>
+    <task id="LOCAL-00036" summary="feat: form gets information from existing user">
+      <created>1659033787199</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1659033787199</updated>
+    </task>
+    <task id="LOCAL-00037" summary="feat: form gets information from backend">
+      <created>1659035281940</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1659035281940</updated>
+    </task>
+    <task id="LOCAL-00038" summary="fix: when form is not submitted values in form are back to value from firebase">
+      <created>1659037520962</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1659037520962</updated>
+    </task>
+    <task id="LOCAL-00039" summary="feat: added type to custom button">
+      <created>1659044653752</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1659044653752</updated>
+    </task>
+    <task id="LOCAL-00040" summary="chore: swapped buttons with custom button component">
+      <created>1659044710723</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1659044710723</updated>
+    </task>
+    <task id="LOCAL-00041" summary="feat: added type props to custom button component">
+      <created>1659044747158</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1659044747158</updated>
+    </task>
+    <task id="LOCAL-00042" summary="refactor: hardcoded updating formik values now update dynamically">
+      <created>1659044977761</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1659044977761</updated>
+    </task>
+    <task id="LOCAL-00043" summary="fix: submit button doesn't cover whole width of form">
+      <created>1659045011824</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1659045011824</updated>
+    </task>
+    <task id="LOCAL-00044" summary="fix: custom button isn't centered">
+      <created>1659045099396</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1659045099396</updated>
+    </task>
+    <task id="LOCAL-00045" summary="feat: add favorite icon and button to foodcard component &#10;&#10;todo: add toggle function, add link to foodcard">
+      <created>1659449220952</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1659449220952</updated>
+    </task>
+    <task id="LOCAL-00046" summary="fix: typo in interface name">
+      <created>1659527592401</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1659527592401</updated>
+    </task>
+    <task id="LOCAL-00047" summary="feat: updated recipe interface to fit data from spoonacular api">
+      <created>1659527634627</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1659527634627</updated>
+    </task>
+    <task id="LOCAL-00048" summary="feat: user id to get user changed to dynamic id">
+      <created>1659527753903</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1659527753903</updated>
+    </task>
+    <task id="LOCAL-00049" summary="feat: endpoint for adding recipe to favorite updates list of favorite recipes &#10;&#10;todo: cover all cases">
+      <created>1659527838751</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1659527838751</updated>
+    </task>
+    <task id="LOCAL-00050" summary="fix: typo in UserInformation interface">
+      <created>1659527891992</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1659527891992</updated>
+    </task>
+    <task id="LOCAL-00051" summary="refactor: moved creating newRecipe data, creates recipe array if it doesn't exist">
+      <created>1659543055029</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1659543055030</updated>
+    </task>
+    <task id="LOCAL-00052" summary="style: changed alignment in food card component">
+      <created>1659543120192</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1659543120192</updated>
+    </task>
+    <task id="LOCAL-00053" summary="feat: now food card displays if recipe is vegan or vegetarian">
+      <created>1659544154727</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1659544154727</updated>
+    </task>
+    <task id="LOCAL-00054" summary="feat: user page renders new data on every user doc change in firebase">
+      <created>1659621527733</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1659621527733</updated>
+    </task>
+    <task id="LOCAL-00055" summary="fix: page rerenders infinitely">
+      <created>1659694681133</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1659694681133</updated>
+    </task>
+    <task id="LOCAL-00056" summary="feat: add route guard">
+      <created>1659699009109</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1659699009109</updated>
+    </task>
+    <task id="LOCAL-00057" summary="chore: removed console logs">
+      <created>1659699153335</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1659699153335</updated>
+    </task>
+    <task id="LOCAL-00058" summary="fix: user can go to login page when logged in">
+      <created>1659699438930</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1659699438930</updated>
+    </task>
+    <task id="LOCAL-00059" summary="feat: updated function to be async">
+      <created>1659699481502</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1659699481502</updated>
+    </task>
+    <task id="LOCAL-00060" summary="style: when hovering over show password button cursor is pointer">
+      <created>1659699732554</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1659699732554</updated>
+    </task>
+    <task id="LOCAL-00061" summary="chore: removed unused components">
+      <created>1659699994429</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1659699994429</updated>
+    </task>
+    <task id="LOCAL-00062" summary="style: search item page changed">
+      <created>1659716479217</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1659716479217</updated>
+    </task>
+    <task id="LOCAL-00063" summary="style: charts alignment changed">
+      <created>1659717768485</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1659717768485</updated>
+    </task>
+    <task id="LOCAL-00064" summary="style: changed chart alignment on medium screens">
+      <created>1659717961335</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1659717961335</updated>
+    </task>
+    <task id="LOCAL-00065" summary="style: image and name of recipe centered on large screens">
+      <created>1659718490019</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1659718490019</updated>
+    </task>
+    <task id="LOCAL-00066" summary="chore: add recharts no dependencies">
+      <created>1659726886972</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1659726886972</updated>
+    </task>
+    <task id="LOCAL-00067" summary="style: change where name of nutrient is displayed">
+      <created>1660046878385</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1660046878385</updated>
+    </task>
+    <task id="LOCAL-00068" summary="style: changed width of chart on large screens">
+      <created>1660047128139</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1660047128139</updated>
+    </task>
+    <task id="LOCAL-00069" summary="style: changed missing values color on chart">
+      <created>1660047415716</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1660047415716</updated>
+    </task>
+    <task id="LOCAL-00070" summary="refactor: uid in ProfileEditModal is taken from url not from store">
+      <created>1660048122420</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1660048122420</updated>
+    </task>
+    <task id="LOCAL-00071" summary="style: adjusted favorite button on item page">
+      <created>1660063629490</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1660063629490</updated>
+    </task>
+    <task id="LOCAL-00072" summary="feat: when deleting favorite list animates">
+      <created>1660125728082</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1660125728082</updated>
+    </task>
+    <task id="LOCAL-00073" summary="feat: recipe page gets dynamic data from api">
+      <created>1660308122745</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1660308122745</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,7 +485,36 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="merge dev into main" />
-    <option name="LAST_COMMIT_MESSAGE" value="merge dev into main" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="fix: typo in UserInformation interface" />
+    <MESSAGE value="refactor: moved creating newRecipe data, creates recipe array if it doesn't exist" />
+    <MESSAGE value="style: changed alignment in food card component" />
+    <MESSAGE value="feat: now food card displays if recipe is vegan or vegetarian" />
+    <MESSAGE value="feat: user page renders new data on every user doc change in firebase" />
+    <MESSAGE value="fix: page rerenders infinitely" />
+    <MESSAGE value="feat: add route guard" />
+    <MESSAGE value="chore: removed console logs" />
+    <MESSAGE value="fix: user can go to login page when logged in" />
+    <MESSAGE value="feat: updated function to be async" />
+    <MESSAGE value="style: when hovering over show password button cursor is pointer" />
+    <MESSAGE value="chore: removed unused components" />
+    <MESSAGE value="style: search item page changed" />
+    <MESSAGE value="style: charts alignment changed" />
+    <MESSAGE value="style: changed chart alignment on medium screens" />
+    <MESSAGE value="style: image and name of recipe centered on large screens" />
+    <MESSAGE value="chore: add recharts no dependencies" />
+    <MESSAGE value="style: change where name of nutrient is displayed" />
+    <MESSAGE value="style: changed width of chart on large screens" />
+    <MESSAGE value="style: changed missing values color on chart" />
+    <MESSAGE value="refactor: uid in ProfileEditModal is taken from url not from store" />
+    <MESSAGE value="feat: assembled test to work on simple component" />
+    <MESSAGE value="style: adjusted favorite button on item page" />
+    <MESSAGE value="feat: when deleting favorite list animates" />
+    <MESSAGE value="feat: recipe page gets dynamic data from api" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: recipe page gets dynamic data from api" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

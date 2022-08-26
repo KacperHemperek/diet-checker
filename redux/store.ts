@@ -7,15 +7,15 @@ import storage from "redux-persist/lib/storage";
 const logger = createLogger();
 
 const persistConfig = {
-    key: "root",
-    storage,
+  key: "root",
+  storage,
 };
 
 const persistedReducer = persistCombineReducers(persistConfig, rootReducer);
 
 export const store = configureStore({
-    reducer: persistedReducer,
-    middleware: [logger],
+  reducer: persistedReducer,
+  middleware: [logger],
 });
 export const persistor = persistStore(store);
 

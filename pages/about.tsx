@@ -1,13 +1,11 @@
 import React from "react";
 import Layout from "../layouts/Layout";
-
+import AboutHero from "../components/AboutHero";
 
 const About = () => {
   return (
     <Layout>
-      <div className="p-10">
-
-      </div>
+      <AboutHero />
     </Layout>
   );
 };

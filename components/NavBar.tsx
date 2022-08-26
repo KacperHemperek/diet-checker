@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
-import React, { ChangeEvent, SyntheticEvent, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { setSearchValue } from "../redux/features/searchData";
+import React, { useCallback, useState } from "react";
+import { useSelector } from "react-redux";
+
 import LogInButton from "./LogInButton";
 import NavLinksGroup from "./NavLinksGroup";
 import NavLogo from "./NavLogo";
@@ -13,9 +13,8 @@ import { signOut } from "@firebase/auth";
 import { RootState } from "../redux/store";
 
 const NavBar = () => {
-  const dispatch = useDispatch();
   const [navOpen, setNavOpen] = useState<boolean>(false);
-  const [searchTerm, setSearchTerm] = useState<string>("");
+
   const uid = useSelector((state: RootState) => state.user.uid);
   const router = useRouter();
 
@@ -23,17 +22,7 @@ const NavBar = () => {
     (el: string) => router.pathname.includes(el)
   );
 
-  const handleSearchInput = (e: ChangeEvent<HTMLInputElement>) => {
-    setSearchTerm(e.target.value);
-  };
-
-  const handleSubmit = (e: SyntheticEvent) => {
-    e.preventDefault();
-    dispatch(setSearchValue(searchTerm));
-    router.push(`/search`);
-  };
-
-  const handleLogout = async () => {
+  const handleLogout = useCallback(async () => {
     console.log("click");
     try {
       await signOut(auth);
@@ -41,19 +30,15 @@ const NavBar = () => {
     } catch (e: any) {
       console.log(e);
     }
-  };
+  }, [auth]);
 
   return (
-    <header className="fixed z-50 flex w-full bg-white/95 backdrop-blur">
+    <header className="fixed z-30 flex w-full bg-white/95 backdrop-blur">
       <div className="flex w-full justify-between  p-4 md:px-12 xl:px-32">
         <div className="flex items-center">
           <NavLogo />
-          {!doNotShowSearchBar && (
-            <SearchBar
-              onSubmit={handleSubmit}
-              onChange={handleSearchInput}
-              className="ml-8 hidden md:block md:min-w-[300px] lg:min-w-[240px] xl:min-w-[360px]"
-            />
+          {!doNotShowSearchBar && uid && (
+            <SearchBar className="ml-8 hidden md:block md:min-w-[300px] lg:min-w-[240px] xl:min-w-[360px]" />
           )}
         </div>
         <div className=" lg:flex lg:items-center">
@@ -100,12 +85,8 @@ const NavBar = () => {
         </div>
         <div className="flex h-full flex-col justify-between p-4 md:px-12">
           <div className="flex flex-col">
-            {!doNotShowSearchBar && (
-              <SearchBar
-                onSubmit={handleSubmit}
-                onChange={handleSearchInput}
-                className="mb-6 flex w-full md:hidden"
-              />
+            {!doNotShowSearchBar && uid && (
+              <SearchBar className="mb-6 flex w-full md:hidden" />
             )}
             <NavLinksGroup />
           </div>
