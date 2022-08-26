@@ -13,7 +13,7 @@ const CustomFormWrapper = ({
   return (
     <form
       className={`${
-        description ? "lg:w-4/5 xl:w-7/12" : "lg:w-1/2 xl:w-1/4"
+        description ? "lg:w-4/5 xl:w-1/2" : "lg:w-1/2 xl:w-1/5"
       } mb-8 flex w-full md:mb-0 md:w-3/5`}
       onSubmit={onSubmit}
     >

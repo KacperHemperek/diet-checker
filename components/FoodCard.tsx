@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useCallback, useState } from "react";
 import Skeleton from "react-loading-skeleton";
 
@@ -48,46 +49,63 @@ const FoodCard = ({
     }
     setLoading(false);
   }, [id, uid]);
-
   return (
-    <div className="group flex h-full transform flex-col overflow-hidden rounded-lg bg-white shadow-lg transition-all duration-500 hover:scale-105 hover:cursor-pointer hover:shadow-xl">
-      <div className="overflow-hidden">
-        {img ? (
-          <img
-            className="h-full object-fill transition duration-500 group-hover:scale-105"
-            src={img}
-            alt="recipe thumbnail"
-          />
-        ) : (
-          <Skeleton style={{ aspectRatio: "16/9" }} width="100%" />
-        )}
-      </div>
+    <div className="group flex h-full transform flex-col overflow-hidden rounded-lg bg-white shadow-lg transition-all duration-500 hover:scale-105  hover:shadow-xl">
+      <Link
+        href={`/item/${id}`}
+        className={name === undefined ? "pointer-events-none " : ""}
+      >
+        <div
+          className={`${
+            name !== undefined && "cursor-pointer"
+          } overflow-hidden`}
+        >
+          {img ? (
+            <img
+              className="h-full object-fill transition duration-500 group-hover:scale-105"
+              src={img}
+              alt="recipe thumbnail"
+            />
+          ) : (
+            <Skeleton style={{ aspectRatio: "16/9" }} width="100%" />
+          )}
+        </div>
+      </Link>
 
       <div className="flex flex-grow flex-col justify-between p-4">
-        <div>
-          <h1 className="mb-4 text-lg font-bold text-gray-700">
-            {name ? (
-              name.length < 30 ? (
-                name
+        <Link
+          href={`/item/${id}`}
+          className={name === undefined ? "pointer-events-none " : ""}
+        >
+          <div
+            className={`flex flex-grow ${
+              name !== undefined && "cursor-pointer"
+            }  `}
+          >
+            <h1 className="mb-4 w-full text-lg font-bold text-gray-700">
+              {name ? (
+                name.length < 30 ? (
+                  name
+                ) : (
+                  name.split("").splice(0, 30).join("").trimEnd() + "..."
+                )
               ) : (
-                name.split("").splice(0, 30).join("").trimEnd() + "..."
-              )
-            ) : (
-              <Skeleton count={1.7} />
-            )}
-          </h1>
-          <RecipeTags
-            isCheap={cheap}
-            isDiaryFree={dairyfree}
-            isGlutenFree={glutenfree}
-            isVegan={vegan}
-            isVegetarian={vegetarian}
-            card={true}
-          />
-        </div>
+                <Skeleton count={1.7} />
+              )}
+            </h1>
+          </div>
+        </Link>
+        <RecipeTags
+          isCheap={cheap}
+          isDiaryFree={dairyfree}
+          isGlutenFree={glutenfree}
+          isVegan={vegan}
+          isVegetarian={vegetarian}
+          card={true}
+        />
 
         <div className="mt-4 flex items-center justify-between">
-          <div className="text-gray-700">
+          <div className=" text-gray-700">
             {cal ? cal + " kcal" : <Skeleton width="60px" />}
           </div>
 

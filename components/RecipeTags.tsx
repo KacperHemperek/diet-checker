@@ -25,7 +25,7 @@ const RecipeTags = ({
     <div
       className={
         card
-          ? "mt-2 flex flex-wrap items-start justify-start gap-2"
+          ? "mt-2 flex w-full flex-wrap items-start justify-start gap-2"
           : "m-4 flex flex-wrap items-start justify-center gap-2 md:gap-6 lg:my-0 lg:flex-col lg:justify-center lg:gap-4"
       }
     >

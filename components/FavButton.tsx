@@ -1,9 +1,8 @@
-
-import React from "react";
+import React, { MouseEvent } from "react";
 import Skeleton from "react-loading-skeleton";
 
 type Props = {
-  toggleFavorite: () => void;
+  toggleFavorite: ((e: MouseEvent) => void) | (() => void);
   favorite: boolean;
   favoriteLoading?: boolean | undefined;
 };
@@ -20,7 +19,12 @@ const FavButton = ({
       onClick={toggleFavorite}
     >
       {favoriteLoading ? (
-        <Skeleton width="100%" height="100%" circle={true} />
+        <Skeleton
+          width="24px"
+          height="24px"
+          circle={true}
+          className="-translate-y-1"
+        />
       ) : favorite ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"

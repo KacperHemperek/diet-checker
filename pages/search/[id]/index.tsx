@@ -39,7 +39,7 @@ const Index: NextPage = () => {
         <div className="mb-8">
           <SearchForm />
         </div>
-        <FoodCardList FoodCardList={searchRes} size="md" />
+        <FoodCardList FoodCardList={searchRes} size="lg" />
       </Container>
     </Layout>
   );
