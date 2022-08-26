@@ -16,8 +16,8 @@ const HomeHero = () => {
         <p>
           This easy-to-use application saves you a lot of time by bringing the
           creation of a diet down to simply adding items to a list. You also
-          don't have to count all the micro and macro elements yourself, we'll
-          do it for you!
+          don&apos;t have to count all the micro and macro elements yourself,
+          we&apos;ll do it for you!
         </p>
         {uid ? (
           <SquareCustomButton text="Your Diets" href={`account/${uid}`} />
