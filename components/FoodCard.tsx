@@ -39,7 +39,7 @@ const FoodCard = ({
 
   const toggleFavorite = useCallback(async () => {
     setLoading(true);
-    
+
     try {
       await fetch(`/api/toggle_favorite?uid=${uid}&itemId=${id}`, {
         method: "PUT",
@@ -58,7 +58,7 @@ const FoodCard = ({
         <div
           className={`${
             name !== undefined && "cursor-pointer"
-          } overflow-hidden`}
+          } aspect-video overflow-hidden`}
         >
           {img ? (
             <img
