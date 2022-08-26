@@ -15,7 +15,6 @@ export default async function handler(
 ) {
   const { uid, itemId } = req.query;
 
-  console.log(req.method);
 
   if (!uid) {
     res.status(400).json({ message: "user id is required" });

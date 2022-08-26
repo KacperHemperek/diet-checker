@@ -41,7 +41,7 @@ const FoodCardList = ({
   ] as { name: Sizes; className: string }[];
 
   useEffect(() => {
-    console.log(FoodCardList);
+    
 
     const userRef = doc(db, "users", String(uid));
     const unsub = onSnapshot(userRef, (doc) => {

@@ -29,7 +29,7 @@ const Login = () => {
           values.email,
           values.password
         );
-        console.log({ userCred });
+        
 
         dispatch(setLoginError(""));
         await fetch(
@@ -37,7 +37,7 @@ const Login = () => {
         );
         await router.push("/");
       } catch (e: any) {
-        console.log(e.code);
+        console.error(e.code);
         values.password = "";
         dispatch(setLoginError(e.code));
       }

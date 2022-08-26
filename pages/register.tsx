@@ -56,7 +56,7 @@ const Register = () => {
         dispatch(setRegistrationError(""));
         await router.push("/");
       } catch (e: any) {
-        console.log(e.code);
+        console.error(e.code);
         values.password = "";
         values.repeatPassword = "";
         dispatch(setRegistrationError(e.code));

@@ -23,12 +23,12 @@ const NavBar = () => {
   );
 
   const handleLogout = useCallback(async () => {
-    console.log("click");
+    
     try {
       await signOut(auth);
       await router.push("/login");
     } catch (e: any) {
-      console.log(e);
+      console.error(e);
     }
   }, [auth]);
 

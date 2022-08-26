@@ -39,7 +39,7 @@ const FoodCard = ({
 
   const toggleFavorite = useCallback(async () => {
     setLoading(true);
-    console.log(id);
+    
     try {
       await fetch(`/api/toggle_favorite?uid=${uid}&itemId=${id}`, {
         method: "PUT",

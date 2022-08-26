@@ -13,7 +13,6 @@ import Container from "../../../components/Container";
 const Index: NextPage = () => {
   const router = useRouter();
   const searchValue = router.query.id;
-
   const [searchRes, setSearchRes] = useState<Recipe[]>([]);
 
   const fetchSearchResults = useCallback(async (search: string) => {
@@ -22,10 +21,10 @@ const Index: NextPage = () => {
         method: "POST",
       });
       const data = (await response.json()).responseData as Recipe[];
-      console.log(data);
+
       setSearchRes(data);
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   }, []);
 
@@ -39,7 +38,20 @@ const Index: NextPage = () => {
         <div className="mb-8">
           <SearchForm />
         </div>
-        <FoodCardList FoodCardList={searchRes} size="lg" />
+        <FoodCardList
+          FoodCardList={searchRes}
+          placeholderArray={[
+            { id: 1 },
+            { id: 2 },
+            { id: 3 },
+            { id: 4 },
+            { id: 5 },
+            { id: 6 },
+            { id: 7 },
+            { id: 8 },
+          ]}
+          size="lg"
+        />
       </Container>
     </Layout>
   );

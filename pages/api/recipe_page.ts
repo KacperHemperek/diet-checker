@@ -12,7 +12,7 @@ export const getRecipePage = async (id: string) => {
 
     return await res.json();
   } catch (e) {
-    console.log(e);
+    console.error(e);
     throw Error("Couldn't retrieve data");
   }
 };

@@ -27,7 +27,7 @@ const Account: NextPage = () => {
       docRef,
       (doc) => {
         const data = doc.data();
-        console.log(data?.recipes);
+        
         setUserData({
           name: data?.name,
           email: data?.email,

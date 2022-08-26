@@ -12,7 +12,7 @@ export default async function handler(
 
     const data = await response.json();
 
-    console.log(data.results);
+  
 
     const responseData: Recipe[] = data.results.map(
       (item: any) =>

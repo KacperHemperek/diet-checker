@@ -168,7 +168,6 @@ const Recipe: NextPage<RecipePage> = (props) => {
 export default Recipe;
 
 export async function getServerSideProps(ctx: NextPageContext) {
-  console.log({ id: ctx.query.id });
   const data = await getRecipePage(String(ctx.query.id));
 
   return {
