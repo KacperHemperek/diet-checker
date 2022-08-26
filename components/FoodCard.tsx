@@ -62,7 +62,7 @@ const FoodCard = ({
         >
           {img ? (
             <img
-              className="h-full object-fill transition duration-500 group-hover:scale-105"
+              className="w-full object-fill transition duration-500 group-hover:scale-105"
               src={img}
               alt="recipe thumbnail"
             />
