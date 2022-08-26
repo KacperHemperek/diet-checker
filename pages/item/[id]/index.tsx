@@ -20,6 +20,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../../redux/store";
 import { UserInformation } from "../../../interface/UserInformation";
 import { Recipe } from "../../../interface/Recipe";
+import Image from "next/image";
 
 const Recipe: NextPage<RecipePage> = (props) => {
   const router = useRouter();
@@ -66,10 +67,13 @@ const Recipe: NextPage<RecipePage> = (props) => {
           <div className="flex flex-col lg:flex-row lg:gap-4">
             <div className="max-w-1/2   flex flex-col items-center justify-center">
               <div className="relative mb-2 lg:mb-4">
-                <img
+                <Image
                   src={props.img}
                   alt={props.name}
-                  className="  h-28 w-28 rounded-full "
+                  width="100%"
+                  height="100%"
+                  objectFit="cover"
+                  className=" rounded-full "
                 />
 
                 <div className="absolute bottom-0 right-0 z-10 flex aspect-square rounded-full bg-white p-1.5 ">
