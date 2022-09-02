@@ -8,12 +8,13 @@ import { db } from "../../../utils/firebase.utils";
 import { useRouter } from "next/router";
 import autoAnimate from "@formkit/auto-animate";
 import FoodCardList from "../../../components/FoodCardList";
+import { Recipe } from "../../../interface/Recipe";
 
 const Account: NextPage = () => {
   const router = useRouter();
   const { id } = router.query;
   const [userData, setUserData] = useState<UserInformation>();
-
+  const [loading, setLoading] = useState<boolean>(true);
   const listRef = useRef<HTMLDivElement>(null);
   //animate list of favorites
   if (listRef.current) {
@@ -27,15 +28,19 @@ const Account: NextPage = () => {
       docRef,
       (doc) => {
         const data = doc.data();
-        
+
         setUserData({
           name: data?.name,
           email: data?.email,
           age: data?.age,
-          recipes: data?.recipes,
+          recipes: data?.recipes.map((recipe: Recipe[]) => ({
+            ...recipe,
+            favorite: true,
+          })),
           height: data?.height,
           weight: data?.weight,
         });
+        setLoading(false);
       },
       (e) => {
         console.error(e.message);
@@ -60,7 +65,10 @@ const Account: NextPage = () => {
           <h2 className="mb-6 text-2xl font-semibold">
             <span className="text-green-500">Your</span> favorite recipes
           </h2>
-          <FoodCardList FoodCardList={userData?.recipes ?? []} />
+          <FoodCardList
+            FoodCardList={userData?.recipes ?? []}
+            loading={loading}
+          />
         </div>
       </div>
     </Layout>

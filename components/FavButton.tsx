@@ -15,7 +15,7 @@ const FavButton = ({
   return (
     <button
       disabled={favoriteLoading}
-      className="  h-6 w-6 fill-pink-600 transition hover:fill-pink-600/80"
+      className=" h-6 w-6 fill-pink-600 transition hover:fill-pink-600/80"
       onClick={toggleFavorite}
     >
       {favoriteLoading ? (

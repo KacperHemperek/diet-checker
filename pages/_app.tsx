@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <PersistGate loading={null} persistor={persistor}>
         <AppWrapper>
           <RouterGuard>
-            <Component {...pageProps} />
+            <Component {...pageProps } />
           </RouterGuard>
         </AppWrapper>
       </PersistGate>
