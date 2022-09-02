@@ -62,7 +62,7 @@ const Account: NextPage = () => {
           height={userData?.height}
           weight={userData?.weight}
         />
-        <div className=" md:col-span-6 lg:col-span-7 xl:col-span-8">
+        <div className="mb-8 md:col-span-6 lg:col-span-7 xl:col-span-8">
           <h2 className="mb-6 text-2xl font-semibold">
             <span className="text-green-500">Your</span> favorite recipes
           </h2>
