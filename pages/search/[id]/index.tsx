@@ -43,7 +43,7 @@ const Index: NextPage = () => {
   );
 
   useEffect(() => {
-    // fetchSearchResults(String(searchValue));
+    fetchSearchResults(String(searchValue));
   }, []);
 
   useEffect(() => {
