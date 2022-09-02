@@ -44,6 +44,7 @@ const Account: NextPage = () => {
       },
       (e) => {
         console.error(e.message);
+        setLoading(false);
       }
     );
     return () => {

@@ -49,9 +49,9 @@ const Index: NextPage = () => {
   useEffect(() => {
     const userRef = doc(db, "users", String(uid));
 
-    const unsub = onSnapshot(userRef, async (doc) => {
-      try {
-        console.log("setting true");
+    const unsub = onSnapshot(
+      userRef,
+      async (doc) => {
         setLoading(true);
         const data = doc.data() as UserInformation;
 
@@ -69,12 +69,14 @@ const Index: NextPage = () => {
           }) ?? searchRes;
 
         setListFavorite(temp);
-        console.log("setting false");
+
         setLoading(false);
-      } catch (err) {
-        console.error(err);
+      },
+      (err) => {
+        console.error(err.code);
+        setLoading(false);
       }
-    });
+    );
 
     return () => {
       unsub();
